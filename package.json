@@ -51,6 +51,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "lint": "node scripts/lint.js",
+    "lint-fix": "node scripts/lint.js --fix",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -94,5 +95,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "@endouble.com/eslint-config-endouble": "^1.2.1",
+    "yargs": "^12.0.1"
   }
 }
