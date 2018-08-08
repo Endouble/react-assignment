@@ -1,0 +1,21 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700');
+@import './base.scss';
+
+:global {
+  /*
+    Bootstrap: We don't need to include the whole bootstrap classes
+    we're using it for the grid, so we import only those files.
+
+    These imports should be done through node-sass and sass-loader with webpack
+    However, for the sake of not adding more third-party libarries, we're importing
+    them like so:
+  */
+  @import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+  @import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+  html,
+  body {
+    color: $dark-text;
+    font-family: $roboto-slab;
+  }
+}
