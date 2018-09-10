@@ -19,8 +19,10 @@ const paths = require('../config/paths');
 const CLIEngine = require("eslint").CLIEngine;
 const cli = new CLIEngine({
     useEslintrc: true,
+    fix: true
 });
 const report = cli.executeOnFiles([paths.appSrc]);
+CLIEngine.outputFixes(report);
 const formatter = cli.getFormatter();
 process.stdout.write(formatter(report.results));
 if (report.errorCount) {
