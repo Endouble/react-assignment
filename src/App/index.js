@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Modal from '../Modal';
+import ModalContainer from '../ModalContainer';
 import './App.scss';
 
 /* eslint-env browser */
@@ -15,6 +17,7 @@ class App extends Component {
         this.onBreweryClick = this.onBreweryClick.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
         this.onFilterSubmit = this.onFilterSubmit.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     }
 
     componentDidMount() {
@@ -34,8 +37,7 @@ class App extends Component {
 
     onBreweryClick(evt, breweryId) {
         evt.preventDefault();
-
-        alert(this.state.breweries[breweryId].name);
+        this.showModal(breweryId);
     }
 
     onFilterChange(evt) {
@@ -57,6 +59,18 @@ class App extends Component {
                     }), {}),
                 });
             });
+    }
+
+    hideModal() {
+        this.setState({
+            selectedBreweryId: undefined,
+        });
+    }
+
+    showModal(breweryId) {
+        this.setState({
+            selectedBreweryId: breweryId,
+        });
     }
 
     renderBreweries() {
@@ -100,6 +114,25 @@ class App extends Component {
         );
     }
 
+    renderModal() {
+        const { selectedBreweryId } = this.state;
+        if (!selectedBreweryId) {
+            return null;
+        }
+
+        const selectedBrewery = this.state.breweries[selectedBreweryId];
+
+        return (
+            <ModalContainer>
+                <Modal
+                    onCloseClick={this.hideModal}
+                >
+                    {selectedBrewery.name}
+                </Modal>
+            </ModalContainer>
+        );
+    }
+
     render() {
         return (
             <div className="App">
@@ -111,6 +144,7 @@ class App extends Component {
                     {this.renderFiler()}
                     {this.renderBreweries()}
                 </div>
+                {this.renderModal()}
             </div>
         );
     }
