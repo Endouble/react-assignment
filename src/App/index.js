@@ -25,6 +25,7 @@ class App extends Component {
     componentDidMount() {
         /* eslint-disable react/no-did-mount-set-state */
 
+        // Fetch data from API and save it in state
         fetch('/breweries')
             .then(response => response.json())
             .then((arr) => {
@@ -49,6 +50,7 @@ class App extends Component {
         });
     }
 
+    // Fetch filtered data on filter form submit
     onFilterSubmit(evt) {
         evt.preventDefault();
 
