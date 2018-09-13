@@ -25,4 +25,23 @@
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
     }
+
+    &__search-form {
+        margin: 20px 0;
+    }
+
+    &__breweries {
+        margin: 20px 0;
+    }
+
+    @media screen and (min-width: 760px) {
+        &__breweries {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__brewery-container {
+            width: 25%;
+        }
+    }
 }

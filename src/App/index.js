@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Modal from '../Modal';
 import ModalContainer from '../ModalContainer';
+import BreweryCard from '../BreweryCard';
+import Brewery from '../Brewery';
 import './App.scss';
 
 /* eslint-env browser */
@@ -81,30 +83,26 @@ class App extends Component {
         }
 
         return (
-            <React.Fragment>
+            <div className="App__breweries">
                 {Object.values(breweries).map(this.renderBrewery, this)}
-            </React.Fragment>
+            </div>
         );
     }
 
     renderBrewery(brewery) {
         return (
-            <div
-                tabIndex={0}
-                onClick={evt => this.onBreweryClick(evt, brewery.id)}
-                onFocus={() => {}}
-                onKeyDown={() => {}}
-                key={brewery.id}
-                role="button"
-            >
-                {brewery.name}
+            <div className="App__brewery-container" key={brewery.id}>
+                <BreweryCard
+                    onClick={this.onBreweryClick}
+                    brewery={brewery}
+                />
             </div>
         );
     }
 
     renderFiler() {
         return (
-            <form onSubmit={this.onFilterSubmit}>
+            <form onSubmit={this.onFilterSubmit} className="App__search-form">
                 <label htmlFor="filter">
                     City name:
                     <input id="filter" type="text" value={this.state.filterValue} onChange={this.onFilterChange} />
@@ -127,7 +125,7 @@ class App extends Component {
                 <Modal
                     onCloseClick={this.hideModal}
                 >
-                    {selectedBrewery.name}
+                    <Brewery brewery={selectedBrewery} />
                 </Modal>
             </ModalContainer>
         );
