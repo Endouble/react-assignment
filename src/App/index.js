@@ -34,7 +34,8 @@ class App extends Component {
                         [brewery.id]: brewery,
                     }), {}),
                 });
-            });
+            })
+            .catch(() => { });
     }
 
     onBreweryClick(evt, breweryId) {
@@ -60,7 +61,8 @@ class App extends Component {
                         [brewery.id]: brewery,
                     }), {}),
                 });
-            });
+            })
+            .catch(() => { });
     }
 
     hideModal() {

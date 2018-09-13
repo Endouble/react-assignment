@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brewery renders correctly 1`] = `
+<div
+  className="Brewery"
+>
+  <div
+    className="Brewery__title"
+  >
+    Avondale Brewing Co
+  </div>
+  <div
+    className="Brewery__info-item"
+  >
+    Country: 
+    United States
+  </div>
+  <div
+    className="Brewery__info-item"
+  >
+    State: 
+    Alabama
+  </div>
+  <div
+    className="Brewery__info-item"
+  >
+    City: 
+    Birmingham
+  </div>
+  <div
+    className="Brewery__info-item"
+  >
+    Phone: 
+    2057775456
+  </div>
+  <div
+    className="Brewery__info-item"
+  >
+    Website: 
+    <a
+      href="http://www.avondalebrewing.com"
+    >
+      http://www.avondalebrewing.com
+    </a>
+  </div>
+</div>
+`;

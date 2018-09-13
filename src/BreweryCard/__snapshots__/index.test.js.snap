@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreweryCard renders correctly 1`] = `
+<div
+  className="Brewery-card"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  Avondale Brewing Co
+</div>
+`;

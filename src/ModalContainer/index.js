@@ -1,8 +1,8 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
 /* eslint-env browser */
-/* eslint-disable */
 class ModalContainer extends Component {
     constructor(props) {
         super(props);
@@ -26,5 +26,13 @@ class ModalContainer extends Component {
         );
     }
 }
+
+ModalContainer.defaultProps = {
+    children: '',
+};
+
+ModalContainer.propTypes = {
+    children: PropTypes.node,
+};
 
 export default ModalContainer;

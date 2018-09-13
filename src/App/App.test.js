@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './index.js';
 
 /* eslint-env browser, mocha */
 it('renders without crashing', () => {
