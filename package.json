@@ -62,8 +62,10 @@
         "whatwg-fetch": "2.0.3"
     },
     "dependencies": {
+        "prop-types": "^15.6.2",
         "react": "^16.4.2",
-        "react-dom": "^16.4.2"
+        "react-dom": "^16.4.2",
+        "watchman": "^1.0.0"
     },
     "jest": {
         "collectCoverageFrom": [
