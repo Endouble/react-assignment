@@ -3,13 +3,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Button from '../Button/Button.component';
+import Flash from '../Button/Flash.component';
 
 // import { colors } from '../../styles/vars';
 
 const Header = () => (
     <StyledHeader>
         <div className="pokeHeader__flash">
-            <Button isShiny />
+            <Flash />
+            <Button isPlain={false} />
         </div>
     </StyledHeader>
 );

@@ -27,13 +27,13 @@ const StyledButton = styled.div`
         position: relative;
         cursor: pointer;
         transition: all 250ms ease;
-        ${props => (props.isPlain && boxShadow(8))};
-        border: ${props => (props.isPlain ? 'none' : '4px solid')};
+        ${props => (!props.isPlain && boxShadow(8))};
+        border: ${props => (props.isPlain ? '4px solid' : 'none')};
         background: ${props => props.backColor || colors.gray};
 
         &:hover {
-            left: ${props => (props.isPlain && '8px' : '0')};
-            top: ${props => (props.isPlain && '8px' : '0')};
+            left: ${props => (props.isPlain && '0' : '8px')};
+            top: ${props => (props.isPlain && '0' : '8px')};
             ${props => (props.isPlain && boxShadow(0))};
 
         }
