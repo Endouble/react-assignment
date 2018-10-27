@@ -5,13 +5,17 @@ import styled from 'styled-components';
 import Button from '../Button/Button.component';
 import Flash from '../Button/Flash.component';
 
-// import { colors } from '../../styles/vars';
+import { colors } from '../../styles/vars';
 
 const Header = () => (
     <StyledHeader>
         <div className="pokeHeader__flash">
             <Flash />
-            <Button isPlain={false} />
+        </div>
+        <div className="pokeHeader__buttons">
+            <Button size={4} backColor={colors.red} />
+            <Button size={4} backColor={colors.yellow} />
+            <Button size={4} backColor={colors.green} />
         </div>
     </StyledHeader>
 );
@@ -20,8 +24,23 @@ const Header = () => (
     Header Styles
 */
 const StyledHeader = styled.header`
+    background: ${colors.magenta};
+    border-bottom: 8px solid ${colors.darkPurple};
+    display: flex;
+
     .pokeHeader__flash {
-        padding: 0 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .pokeHeader__buttons {
+        overflow: hidden;
+        display: flex;
+        padding-top: 8px;
+
+        > div {
+            margin-right: 15px;
+        }
     }
 
 `;

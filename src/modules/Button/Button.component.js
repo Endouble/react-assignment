@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { colors } from '../../styles/vars';
 import { boxShadow } from '../../styles/mixins';
 
-
 const Button = props => (
     <StyledButton {...props}>
         <button className="pokeButton" type="button">
@@ -19,11 +18,11 @@ const Button = props => (
 */
 const StyledButton = styled.div`
     .pokeButton {
-        width: 50px;
-        height: 50px;
+        width: ${props => props.size * 10}px;
+        height: ${props => props.size * 10}px;
         left: 0;
         top: 0;
-        border-radius: 50px;
+        border-radius: 50%;
         position: relative;
         cursor: pointer;
         transition: all 250ms ease;
@@ -32,9 +31,9 @@ const StyledButton = styled.div`
         background: ${props => props.backColor || colors.gray};
 
         &:hover {
-            left: ${props => (props.isPlain && '0' : '8px')};
-            top: ${props => (props.isPlain && '0' : '8px')};
-            ${props => (props.isPlain && boxShadow(0))};
+            left: ${props => (!props.isPlain && '8px' : '0')};
+            top: ${props => (!props.isPlain && '8px' : '0')};
+            ${props => (!props.isPlain && boxShadow(0))};
 
         }
 
@@ -72,13 +71,15 @@ Button.propTypes = {
     className: PropTypes.string,
     backColor: PropTypes.string,
     isPlain: PropTypes.bool,
-
+    size: PropTypes.number,
 };
+
 Button.defaultProps = {
     copy: '',
     className: '',
     backColor: '',
     isPlain: true,
+    size: 5,
 };
 
 export default Button;

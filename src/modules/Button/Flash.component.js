@@ -16,10 +16,11 @@ const Flash = () => (
     Flash Styles
 */
 const StyledFlash = styled.div`
+    ${boxShadow(5)}
+    background: white;
     border-radius: 50%;
     padding: 30px;
     display: inline-block;
-    ${boxShadow(5)}
     position: relative;
 
     &:after {
