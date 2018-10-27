@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from './Button.component';
+import Button from './';
 
 import { boxShadow } from '../../styles/mixins';
 import { colors } from '../../styles/vars';

@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Button from '../Button/Button.component';
+import Button from '../Button';
 import Flash from '../Button/Flash.component';
 
 import { colors } from '../../styles/vars';
