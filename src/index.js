@@ -2,9 +2,31 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createGlobalStyle } from 'styled-components';
+import { Normalize } from 'styled-normalize';
 
-import App from './pages';
+import Home from './pages/Home';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const GlobalStyle = createGlobalStyle`
+    ul, ol {
+        list-style: none;
+        padding: 0;
+    }
+    * {
+        font-family: 'Roboto';
+        box-sizing: border-box;
+    }
+`;
+
+const NormalizedApp = () => (
+    <React.Fragment>
+        <Normalize />
+        <GlobalStyle />
+        <Home />
+    </React.Fragment>
+);
+
+ReactDOM.render(<NormalizedApp />, document.getElementById('root'));
+
 registerServiceWorker();

@@ -1,11 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+import { sizes } from '../styles/vars';
 
 const Layout = ({ children }) => (
-    <div>
+    <StyledLayout>
         {children}
-    </div>
+    </StyledLayout>
 );
+
+/*
+    Error Styles
+*/
+const StyledLayout = styled.div`
+    max-width: ${sizes.desktop};
+    margin: 0 auto;
+`;
 
 /*
     Layout propTypes
