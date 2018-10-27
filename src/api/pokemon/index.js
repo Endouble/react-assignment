@@ -3,7 +3,7 @@ import axios from 'axios';
 const serverUrl = 'https://api.pokemontcg.io/v1';
 
 const urls = {
-    pokemon: `${serverUrl}/cards?pageSize=10&types=fire`,
+    pokemon: `${serverUrl}/cards?pageSize=12&types=fire`,
 };
 
 /*

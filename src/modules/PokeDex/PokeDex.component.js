@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/vars';
+import { colors, sizes } from '../../styles/vars';
 
 const PokeDex = ({ cards }) => (
     <StyledPokeDex>
         <ul className="pokeDex__list">
             {cards.map(c => (
                 <StyledList key={c.id}>
-                    <img className="pokeDex__img" alt={c.name} src={c.imageUrl} />
                     <p>{c.name}</p>
+                    <img className="pokeDex__img" alt={c.name} src={c.imageUrl} />
                 </StyledList>
             ))}
         </ul>
@@ -38,10 +38,13 @@ const StyledPokeDex = styled.div`
 const StyledList = styled.li`
     padding: 10px;
     text-align: center;
-    margin: 0 auto;
 
     .pokeDex__img {
         width: 100%;
+    }
+
+    @media (min-width: ${sizes.tablet}) {
+        width: 25%;
     }
 `;
 
