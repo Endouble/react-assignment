@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { sizes } from '../../styles/vars';
 
 const Card = ({ name, imageUrl, types, number, artist }) => (
     <StyledCard>
@@ -50,10 +49,6 @@ const StyledCard = styled.article`
         background: #000850;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-    }
-
-    @media (min-width: ${sizes.tablet}) {
-        width: 25%;
     }
 `;
 

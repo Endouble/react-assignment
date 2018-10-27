@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 import Card from '../Card';
 
-import { colors } from '../../styles/vars';
+import { colors, sizes } from '../../styles/vars';
 
 const PokeDex = ({ cards }) => (
     <StyledPokeDex>
         <ul className="pokeDex__list">
-            {cards.map(c => <Card key={c.id} {...c} />)}
+            {cards.map(c => <li key={c.id}><Card {...c} /></li>)}
         </ul>
     </StyledPokeDex>
 );
@@ -29,6 +29,14 @@ const StyledPokeDex = styled.div`
         background: ${colors.blue};
         border-left: 10px solid ${colors.darkPurple};
         border-right: 10px solid ${colors.darkPurple};
+
+        li {
+            margin: 0 auto;
+
+            @media (min-width: ${sizes.tablet}) {
+                width: 25%;
+            }
+        }
     }
 `;
 
