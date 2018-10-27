@@ -8480,6 +8480,11 @@ styled-components@^4.0.2:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
 
+styled-media-query@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/styled-media-query/-/styled-media-query-2.0.2.tgz#65347d5367f69458f86dc7dd723f42faae304ad1"
+  integrity sha512-fRLVVa9cXvNiDYw/EqhIR7keXOQSdnUVGnWBd5xnvFUKwCAVOLTqjQBblZnE/HverH+hNeNQY2APf96mrjYqGA==
+
 styled-normalize@^8.0.3:
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/styled-normalize/-/styled-normalize-8.0.3.tgz#c8d71240a0fa6e17d1443dd5aa837c8287a77f26"
