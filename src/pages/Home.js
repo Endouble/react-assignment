@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../modules/Layout/Layout.component';
+import Layout from '../modules/Layout';
 import Header from '../modules/Header';
 import PokeDex from '../modules/PokeDex';
 

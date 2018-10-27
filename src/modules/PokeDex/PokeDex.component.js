@@ -2,17 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { colors, sizes } from '../../styles/vars';
+import Card from '../Card';
+
+import { colors } from '../../styles/vars';
 
 const PokeDex = ({ cards }) => (
     <StyledPokeDex>
         <ul className="pokeDex__list">
-            {cards.map(c => (
-                <StyledList key={c.id}>
-                    <p>{c.name}</p>
-                    <img className="pokeDex__img" alt={c.name} src={c.imageUrl} />
-                </StyledList>
-            ))}
+            {cards.map(c => <Card key={c.id} {...c} />)}
         </ul>
     </StyledPokeDex>
 );
@@ -32,19 +29,6 @@ const StyledPokeDex = styled.div`
         background: ${colors.blue};
         border-left: 10px solid ${colors.darkPurple};
         border-right: 10px solid ${colors.darkPurple};
-    }
-`;
-
-const StyledList = styled.li`
-    padding: 10px;
-    text-align: center;
-
-    .pokeDex__img {
-        width: 100%;
-    }
-
-    @media (min-width: ${sizes.tablet}) {
-        width: 25%;
     }
 `;
 
