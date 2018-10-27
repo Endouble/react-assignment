@@ -19,7 +19,7 @@ const PokeDex = ({ cards }) => (
 */
 const StyledPokeDex = styled.div`
     background: ${colors.magenta};
-    padding: 0 30px;
+    padding: 0 30px 80px;
 
     .pokeDex__list {
         padding: 0 20px;

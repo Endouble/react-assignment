@@ -6,6 +6,7 @@ import Button from '../Button';
 import Flash from '../Button/Flash.component';
 
 import { colors } from '../../styles/vars';
+import { boldBorders } from '../../styles/mixins';
 
 const Header = () => (
     <StyledHeader>
@@ -26,6 +27,7 @@ const Header = () => (
 const StyledHeader = styled.header`
     background: ${colors.magenta};
     border-bottom: 8px solid ${colors.darkPurple};
+    ${boldBorders()};
     display: flex;
 
     .pokeHeader__flash {

@@ -4,9 +4,14 @@ import styled from 'styled-components';
 
 import { sizes } from '../../styles/vars';
 
+import Header from '../../modules/Header';
+import Footer from '../../modules/Footer';
+
 const Layout = ({ children }) => (
     <StyledLayout>
+        <Header />
         {children}
+        <Footer />
     </StyledLayout>
 );
 
