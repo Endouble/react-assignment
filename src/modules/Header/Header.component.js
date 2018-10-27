@@ -9,7 +9,7 @@ import Button from '../Button/Button.component';
 const Header = () => (
     <StyledHeader>
         <div className="pokeHeader__flash">
-            <Button className="daniel" />
+            <Button isShiny />
         </div>
     </StyledHeader>
 );
@@ -19,7 +19,7 @@ const Header = () => (
 */
 const StyledHeader = styled.header`
     .pokeHeader__flash {
-
+        padding: 0 15px;
     }
 
 `;
