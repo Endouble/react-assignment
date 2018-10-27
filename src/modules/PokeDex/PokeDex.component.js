@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const PokeDex = ({ pokemons }) => (
+const PokeDex = ({ cards }) => (
     <StyledPokeDex>
-        {pokemons[0]}
+        {cards.map(c => <li key={c.id}>{c.name}</li>)}
     </StyledPokeDex>
 );
 
 /*
     PokeDex Styles
 */
-const StyledPokeDex = styled.section`
+const StyledPokeDex = styled.ul`
 `;
 
 /*
     PokeDex propTypes
 */
 PokeDex.propTypes = {
-    pokemons: PropTypes.arrayOf(PropTypes.shape()),
+    cards: PropTypes.arrayOf(PropTypes.shape()),
 };
 PokeDex.defaultProps = {
-    pokemons: [],
+    cards: [],
 };
 
 export default PokeDex;
