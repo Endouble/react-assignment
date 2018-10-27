@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { sizes } from '../styles/vars';
+import { sizes } from '../../styles/vars';
 
 const Layout = ({ children }) => (
     <StyledLayout>
@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
 );
 
 /*
-    Error Styles
+    Layout Styles
 */
 const StyledLayout = styled.div`
     max-width: ${sizes.desktop};

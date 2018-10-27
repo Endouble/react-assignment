@@ -1,12 +1,11 @@
 import React from 'react';
 
 import Layout from '../modules/Layout/Layout.component';
+import Header from '../modules/Header/Header.component';
 
 const App = () => (
     <Layout>
-        <header>
-            <h1>Welcome to React</h1>
-        </header>
+        <Header />
         <p>
             To get started, edit <code>src/App.js</code> and save to reload.
         </p>
