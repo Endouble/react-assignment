@@ -6,17 +6,23 @@ const Card = (props) => {
     const setCurrentCard = () => {
         props.clickHandler(props);
     };
+    const noLink = (ev) => {
+        ev.preventDefault();
+        return false;
+    };
     const { name, imageUrl, types, number, artist, bioInfo, className } = props;
     const footStyles = `pokeCard__foot ${className && className}`;
     return (
         <StyledCard onClick={setCurrentCard}>
-            <p className="pokeCard__name">{number && `${number} - `} {name}</p>
-            <img className="pokeCard__img" alt={name} src={imageUrl} />
-            <footer className={footStyles}>
-                <p>Types: {types.map(t => t)}</p>
-                <p>Artist: {artist}</p>
-                {bioInfo && bioInfo}
-            </footer>
+            <a className="pokeCard__item" href="/" onClick={noLink}>
+                <p className="pokeCard__name">{number && `${number} - `} {name}</p>
+                <img className="pokeCard__img" alt={name} src={imageUrl} />
+                <footer className={footStyles}>
+                    <p>Types: {types.map(t => t)}</p>
+                    <p>Artist: {artist}</p>
+                    {bioInfo && bioInfo}
+                </footer>
+            </a>
         </StyledCard>
     );
 };
@@ -28,6 +34,11 @@ const StyledCard = styled.article`
     padding: 10px;
     text-align: center;
     cursor: pointer;
+
+    .pokeCard__item {
+        text-decoration: none;
+        color: inherit;
+    }
 
     .pokeCard__name {
         margin: 5px;
