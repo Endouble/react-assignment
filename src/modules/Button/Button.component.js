@@ -18,8 +18,8 @@ const Button = props => (
 */
 const StyledButton = styled.div`
     .pokeButton {
-        width: ${props => props.size * 10}px;
-        height: ${props => props.size * 10}px;
+        width: ${props => props.sizeIndex * 10}px;
+        height: ${props => props.sizeIndex * 10}px;
         left: 0;
         top: 0;
         border-radius: 50%;
@@ -71,7 +71,7 @@ Button.propTypes = {
     className: PropTypes.string,
     backColor: PropTypes.string,
     isPlain: PropTypes.bool,
-    size: PropTypes.number,
+    sizeIndex: PropTypes.number,
 };
 
 Button.defaultProps = {
@@ -79,7 +79,7 @@ Button.defaultProps = {
     className: '',
     backColor: '',
     isPlain: true,
-    size: 5,
+    sizeIndex: 5,
 };
 
 export default Button;

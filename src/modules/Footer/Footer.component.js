@@ -5,10 +5,12 @@ import { sizes, colors } from '../../styles/vars';
 import { boldBorders } from '../../styles/mixins';
 
 import Button from '../Button';
+import Input from '../Form/Input';
 
 const Footer = () => (
     <StyledFooter>
-        <Button />
+        <Input />
+        <Button isPlain={false} />
     </StyledFooter>
 );
 

@@ -14,9 +14,9 @@ const Header = () => (
             <Flash />
         </div>
         <div className="pokeHeader__buttons">
-            <Button size={4} backColor={colors.red} />
-            <Button size={4} backColor={colors.yellow} />
-            <Button size={4} backColor={colors.green} />
+            <Button sizeIndex={4} backColor={colors.red} />
+            <Button sizeIndex={4} backColor={colors.yellow} />
+            <Button sizeIndex={4} backColor={colors.green} />
         </div>
     </StyledHeader>
 );

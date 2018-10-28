@@ -1,30 +1,25 @@
+/* eslint-disable */
 import React from 'react';
 
 import PokeDex from './PokeDex.component';
+import { CardsContext } from '../../pages/Home';
 
 import getPokemons from '../../api/pokemon';
 
 class PokeDexData extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            cards: [],
-        };
-    }
-
     componentDidMount() {
         getPokemons()
             .then((data) => {
-                this.setState({
-                    cards: data.cards,
-                });
+                this.props.setCards(data.cards)
             });
     }
 
     render() {
-        const { cards } = this.state;
-        return <PokeDex cards={cards} />;
+        return (
+            <CardsContext.Consumer>
+                {cards => (<PokeDex cards={cards} />)}
+            </CardsContext.Consumer>
+        );
     }
 }
 
