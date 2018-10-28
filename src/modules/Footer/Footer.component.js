@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { sizes, colors } from '../../styles/vars';
 import { boldBorders } from '../../styles/mixins';
@@ -7,10 +8,11 @@ import { boldBorders } from '../../styles/mixins';
 import Button from '../Button';
 import Input from '../Form/Input';
 
-const Footer = () => (
+const Footer = ({ filter }) => (
     <StyledFooter>
         <Input />
         <Button isPlain={false} />
+        {filter.d}
     </StyledFooter>
 );
 
@@ -29,5 +31,13 @@ const StyledFooter = styled.footer`
 
     padding: 10px;
 `;
+
+Footer.propTypes = {
+    filter: PropTypes.shape({}),
+};
+
+Footer.defaultProps = {
+    filter: {},
+};
 
 export default Footer;
