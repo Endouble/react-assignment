@@ -8,6 +8,7 @@ export const colors = {
     red: '#fd1b55',
     darkPurple: '#481457',
     gray: '#f1f4e7',
+    darkGray: '#0c1a56',
 };
 
 export const sizes = {

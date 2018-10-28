@@ -5,20 +5,13 @@ import PropTypes from 'prop-types';
 import { sizes, colors } from '../../styles/vars';
 import { boldBorders } from '../../styles/mixins';
 
-import Button from '../Button';
 import Input from '../Form/Input';
 
-const Footer = ({ filter, updateFilter }) => {
-    console.log('filter ----> debug');
-    console.log(filter);
-    return (
-        <StyledFooter>
-            <Input updateFilter={updateFilter} filter={filter} />
-            <Button isPlain={false} />
-            {filter.d}
-        </StyledFooter>
-    );
-};
+const Footer = ({ filter, updateFilter }) => (
+    <StyledFooter>
+        <Input updateFilter={updateFilter} filter={filter} />
+    </StyledFooter>
+);
 
 /*
     Footer Styles

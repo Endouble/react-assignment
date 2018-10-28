@@ -2,17 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-
-const Card = ({ name, imageUrl, types, number, artist }) => (
-    <StyledCard>
-        <p className="pokeCard__name">{number && `${number} - `} {name}</p>
-        <img className="pokeCard__img" alt={name} src={imageUrl} />
-        <footer className="pokeCard__foot">
-            <p>Types: {types.map(t => t)}</p>
-            <p>Artist: {artist}</p>
-        </footer>
-    </StyledCard>
-);
+const Card = (props) => {
+    const setCurrentCard = () => {
+        props.clickHandler(props);
+    };
+    const { name, imageUrl, types, number, artist } = props;
+    return (
+        <StyledCard onClick={setCurrentCard}>
+            <p className="pokeCard__name">{number && `${number} - `} {name}</p>
+            <img className="pokeCard__img" alt={name} src={imageUrl} />
+            <footer className="pokeCard__foot">
+                <p>Types: {types.map(t => t)}</p>
+                <p>Artist: {artist}</p>
+            </footer>
+        </StyledCard>
+    );
+};
 
 /*
     Card Styles
@@ -20,6 +25,7 @@ const Card = ({ name, imageUrl, types, number, artist }) => (
 const StyledCard = styled.article`
     padding: 10px;
     text-align: center;
+    cursor: pointer;
 
     .pokeCard__name {
         margin: 5px;
@@ -49,6 +55,7 @@ const StyledCard = styled.article`
         background: #000850;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        min-height: 200px;
     }
 `;
 
@@ -61,6 +68,7 @@ Card.propTypes = {
     artist: PropTypes.string,
     imageUrl: PropTypes.string,
     types: PropTypes.arrayOf(PropTypes.string),
+    clickHandler: PropTypes.func,
 };
 Card.defaultProps = {
     name: '',
@@ -68,6 +76,7 @@ Card.defaultProps = {
     artist: '',
     imageUrl: '',
     types: [],
+    clickHandler: () => null,
 };
 
 export default Card;

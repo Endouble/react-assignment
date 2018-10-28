@@ -30,7 +30,7 @@ const StyledButton = styled.div`
         border: ${props => (props.isPlain ? '4px solid' : 'none')};
         background: ${props => props.backColor || colors.gray};
 
-        &:hover {
+        &:hover, &:active {
             left: ${props => (!props.isPlain && '8px' : '0')};
             top: ${props => (!props.isPlain && '8px' : '0')};
             ${props => (!props.isPlain && boxShadow(0))};

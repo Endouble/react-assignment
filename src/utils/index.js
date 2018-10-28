@@ -7,4 +7,6 @@ export const childrenWithProps = (childrens, props) => React.Children.map(childr
     }));
 
 
-export const utol = () => null;
+export const handlerCurrying = (callback, arg = null) => () => {
+    callback(arg);
+};

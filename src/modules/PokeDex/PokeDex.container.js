@@ -1,9 +1,12 @@
 /* eslint-disable class-methods-use-this */
+/* global document */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import PokeDex from './PokeDex.component';
+import Modal from '../Modal';
+import Card from '../Card';
 
 import { CardsContext, FilterContext } from '../../pages/Home/Home.component';
 
@@ -12,7 +15,13 @@ import getPokemons from '../../api/pokemon';
 class PokeDexData extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            currentCard: {},
+            isModalOpen: false,
+        };
         this.filteredCards = this.filteredCards.bind(this);
+        this.setCurrentCard = this.setCurrentCard.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     }
 
     componentDidMount() {
@@ -24,20 +33,45 @@ class PokeDexData extends React.Component {
             });
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        const { isModalOpen } = this.state;
+        if (isModalOpen !== prevState.isModalOpen) {
+            const body = document.querySelector('body');
+            body.classList.toggle('body--frozen');
+        }
+    }
+
+    setCurrentCard(currentCard) {
+        this.setState({
+            currentCard,
+            isModalOpen: true,
+        });
+    }
+
+    hideModal() {
+        this.setState({ isModalOpen: false });
+    }
+
     filteredCards(filter, cards) {
         const updatedCards = filter.value !== '' ? cards.filter(c => c.name.toLowerCase().includes(filter.value)) : cards;
-        return <PokeDex cards={updatedCards} />;
+        return <PokeDex clickHandler={this.setCurrentCard} cards={updatedCards} />;
     }
 
     render() {
+        const { isModalOpen, currentCard } = this.state;
         return (
-            <FilterContext.Consumer>
-                {filter => (
-                    <CardsContext.Consumer>
-                        {cards => this.filteredCards(filter, cards)}
-                    </CardsContext.Consumer>
-                )}
-            </FilterContext.Consumer>
+            <div>
+                <FilterContext.Consumer>
+                    {filter => (
+                        <CardsContext.Consumer>
+                            {cards => this.filteredCards(filter, cards)}
+                        </CardsContext.Consumer>
+                    )}
+                </FilterContext.Consumer>
+                <Modal isOpen={isModalOpen} hideModal={this.hideModal}>
+                    <Card {...currentCard} />
+                </Modal>
+            </div>
         );
     }
 }

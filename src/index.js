@@ -17,6 +17,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto';
         box-sizing: border-box;
     }
+    .body--frozen {
+        overflow: hidden;
+    }
+
+    #root {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 `;
 
 const NormalizedApp = () => (
