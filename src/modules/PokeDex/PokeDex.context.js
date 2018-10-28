@@ -23,7 +23,7 @@ class PokeDexContext extends React.Component {
 
     filteredCards(filter, cards) {
         const updatedCards = filter.value !== '' ? cards.filter(c => c[filter.filterBy].toLowerCase().includes(filter.value)) : cards;
-        return <PokeDex clickHandler={this.setCurrentCard} cards={updatedCards} />;
+        return <PokeDex clickHandler={this.props.setCurrentCard} cards={updatedCards} />;
     }
 
     render() {
@@ -41,10 +41,12 @@ class PokeDexContext extends React.Component {
 
 PokeDexContext.propTypes = {
     setCards: PropTypes.func,
+    setCurrentCard: PropTypes.func,
 };
 
 PokeDexContext.defaultProps = {
     setCards: () => null,
+    setCurrentCard: () => null,
 };
 
 export default PokeDexContext;

@@ -15,7 +15,7 @@ const CardBio = (props) => {
     );
     return (
         <StyledCardBio>
-            <Card {...props} bioInfo={bioInfo} className="pokeBio" />
+            <Card {...props} bioInfo={bioInfo} className="pokeBio" clickHandler={null} />
         </StyledCardBio>
     );
 };
