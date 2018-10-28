@@ -2,26 +2,42 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import PokeDex from './PokeDex.component';
-import { CardsContext } from '../../pages/Home/Home.component';
+
+import { CardsContext, FilterContext } from '../../pages/Home/Home.component';
 
 import getPokemons from '../../api/pokemon';
 
 class PokeDexData extends React.Component {
+    constructor(props) {
+        super(props);
+        this.filteredCards = this.filteredCards.bind(this);
+    }
+
     componentDidMount() {
         getPokemons()
             .then((data) => {
-                if (data && data.length) {
+                if (data && data.cards) {
                     this.props.setCards(data.cards);
                 }
             });
     }
 
+    filteredCards(filter, cards) {
+        const updatedCards = filter.value !== '' ? cards.filter(c => c.name.toLowerCase().includes(filter.value)) : cards;
+        return <PokeDex cards={updatedCards} />;
+    }
+
     render() {
         return (
-            <CardsContext.Consumer>
-                {cards => (<PokeDex cards={cards} />)}
-            </CardsContext.Consumer>
+            <FilterContext.Consumer>
+                {filter => (
+                    <CardsContext.Consumer>
+                        {cards => this.filteredCards(filter, cards)}
+                    </CardsContext.Consumer>
+                )}
+            </FilterContext.Consumer>
         );
     }
 }

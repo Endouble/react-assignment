@@ -9,7 +9,7 @@ import { colors, sizes } from '../../styles/vars';
 const PokeDex = ({ cards }) => (
     <StyledPokeDex>
         <ul className="pokeDex__list">
-            {cards.map(c => <li key={c.id}><Card {...c} /></li>)}
+            {cards.length ? cards.map(c => <li key={c.id}><Card {...c} /></li>) : <li className="pokeDex__list--no">No results</li>}
         </ul>
     </StyledPokeDex>
 );
@@ -22,6 +22,7 @@ const StyledPokeDex = styled.div`
     padding: 0 30px 80px;
 
     .pokeDex__list {
+        min-height: calc( 100vh - 240px );
         padding: 0 20px;
         display: flex;
         margin: 0;
@@ -37,6 +38,12 @@ const StyledPokeDex = styled.div`
                 width: 25%;
             }
         }
+    }
+
+    li.pokeDex__list--no {
+        color: white;
+        font-size: 25px;
+        margin-top: 15px;
     }
 `;
 

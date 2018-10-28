@@ -21,15 +21,21 @@ class ContextProvider extends React.Component {
             },
         };
         this.setCards = this.setCards.bind(this);
+        this.setFilter = this.setFilter.bind(this);
     }
     setCards(cards) {
         this.setState({
             cards,
         });
     }
+    setFilter(filter) {
+        this.setState({
+            filter,
+        });
+    }
 
     render() {
-        const children = childrenWithProps(this.props.children, { setCards: this.setCards });
+        const children = childrenWithProps(this.props.children, { setCards: this.setCards, setFilter: this.setFilter });
         return (
             <CardsContext.Provider value={this.state.cards}>
                 <FilterContext.Provider value={this.state.filter}>
