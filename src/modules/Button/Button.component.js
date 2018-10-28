@@ -15,7 +15,6 @@ const Button = props => (
                 {props.copy}
             </button>
         }
-
     </StyledButton>
 );
 

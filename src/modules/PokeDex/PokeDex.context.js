@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PokeDex from './PokeDex.component';
-import { CardsContext, FilterContext } from '../../pages/Home/Home.component';
+import { CardsContext, FilterContext } from '../../pages/Home/Home.container';
 
 import getPokemons from '../../api/pokemon';
 
@@ -39,6 +39,9 @@ class PokeDexContext extends React.Component {
     }
 }
 
+/*
+    PokeDexContext propTypes
+*/
 PokeDexContext.propTypes = {
     setCards: PropTypes.func,
     setCurrentCard: PropTypes.func,

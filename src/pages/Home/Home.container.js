@@ -10,7 +10,7 @@ import PokeDex from '../../modules/PokeDex';
 export const CardsContext = React.createContext([]);
 export const FilterContext = React.createContext();
 
-class ContextProvider extends React.Component {
+class HomeContextProvider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,20 +46,20 @@ class ContextProvider extends React.Component {
     }
 }
 
-ContextProvider.propTypes = {
+HomeContextProvider.propTypes = {
     children: PropTypes.node,
 };
 
-ContextProvider.defaultProps = {
+HomeContextProvider.defaultProps = {
     children: null,
 };
 
 const Home = () => (
-    <ContextProvider>
+    <HomeContextProvider>
         <Header />
         <PokeDex />
         <Footer />
-    </ContextProvider>
+    </HomeContextProvider>
 );
 
 export default Home;

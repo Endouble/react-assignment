@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Button from '../Button';
@@ -44,17 +43,6 @@ const StyledHeader = styled.header`
             margin-right: 15px;
         }
     }
-
 `;
-
-/*
-    Header propTypes
-*/
-Header.propTypes = {
-    // children: PropTypes.node,
-};
-Header.defaultProps = {
-    // children: null,
-};
 
 export default Header;

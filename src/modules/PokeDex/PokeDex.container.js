@@ -50,6 +50,9 @@ class PokeDexData extends React.Component {
     }
 }
 
+/*
+    PokeDexData propTypes
+*/
 PokeDexData.propTypes = {
     setCards: PropTypes.func,
 };
