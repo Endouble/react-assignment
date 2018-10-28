@@ -4,15 +4,15 @@ import styled from 'styled-components';
 
 import { formElement } from '../../styles/mixins';
 
-class Input extends React.Component {
+class Select extends React.Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
-        const { value } = event.target;
-        const { filterBy } = this.props.filter;
+        const { value } = this.props.filter;
+        const filterBy = event.target.value;
         this.props.updateFilter({
             value,
             filterBy,
@@ -20,33 +20,38 @@ class Input extends React.Component {
     }
 
     render() {
-        const { filter } = this.props;
-        return <StyledInput placeholder={`filter by: ${filter.filterBy}`} onChange={this.handleChange} />;
+        return (
+            <StyledSelect onChange={this.handleChange}>
+                <option value="name">name</option>
+                <option value="set">set</option>
+                <option value="artist">artist</option>
+            </StyledSelect>
+        );
     }
 }
 
 /*
-    Input Styles
+    Select Styles
 */
-const StyledInput = styled.input`
+const StyledSelect = styled.select`
     ${formElement()};
 `;
 
 /*
-    Input propTypes
+    Select propTypes
 */
 
-Input.propTypes = {
+Select.propTypes = {
     updateFilter: PropTypes.func,
     filter: PropTypes.shape({
-        filterBy: PropTypes.string,
+        value: PropTypes.string,
     }),
 };
 
-Input.defaultProps = {
+Select.defaultProps = {
     updateFilter: null,
     filter: {},
 };
 
 
-export default Input;
+export default Select;

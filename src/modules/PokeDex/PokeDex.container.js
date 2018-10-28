@@ -52,7 +52,9 @@ class PokeDexData extends React.Component {
     }
 
     filteredCards(filter, cards) {
-        const updatedCards = filter.value !== '' ? cards.filter(c => c.name.toLowerCase().includes(filter.value)) : cards;
+        console.log('filter ----> debug');
+        console.log(filter);
+        const updatedCards = filter.value !== '' ? cards.filter(c => c[filter.filterBy].toLowerCase().includes(filter.value)) : cards;
         return <PokeDex clickHandler={this.setCurrentCard} cards={updatedCards} />;
     }
 

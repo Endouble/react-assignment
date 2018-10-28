@@ -10,7 +10,7 @@ const Card = (props) => {
         ev.preventDefault();
         return false;
     };
-    const { name, imageUrl, types, number, artist, bioInfo, className } = props;
+    const { name, imageUrl, set, number, artist, bioInfo, className } = props;
     const footStyles = `pokeCard__foot ${className && className}`;
     return (
         <StyledCard onClick={setCurrentCard}>
@@ -18,7 +18,7 @@ const Card = (props) => {
                 <p className="pokeCard__name">{number && `${number} - `} {name}</p>
                 <img className="pokeCard__img" alt={name} src={imageUrl} />
                 <footer className={footStyles}>
-                    <p>Types: {types.map(t => t)}</p>
+                    <p>Set: {set}</p>
                     <p>Artist: {artist}</p>
                     {bioInfo && bioInfo}
                 </footer>
@@ -80,7 +80,7 @@ Card.propTypes = {
     number: PropTypes.string,
     artist: PropTypes.string,
     imageUrl: PropTypes.string,
-    types: PropTypes.arrayOf(PropTypes.string),
+    set: PropTypes.string,
     clickHandler: PropTypes.func,
     bioInfo: PropTypes.node,
     className: PropTypes.string,
@@ -90,7 +90,7 @@ Card.defaultProps = {
     number: '',
     artist: '',
     imageUrl: '',
-    types: [],
+    set: '',
     clickHandler: () => null,
     bioInfo: null,
     className: '',

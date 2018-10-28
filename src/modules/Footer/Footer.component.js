@@ -6,10 +6,12 @@ import { sizes, colors } from '../../styles/vars';
 import { boldBorders } from '../../styles/mixins';
 
 import Input from '../Form/Input';
+import Select from '../Form/Select';
 
 const Footer = ({ filter, updateFilter }) => (
     <StyledFooter>
         <Input updateFilter={updateFilter} filter={filter} />
+        <Select updateFilter={updateFilter} filter={filter} />
     </StyledFooter>
 );
 

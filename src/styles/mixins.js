@@ -4,9 +4,13 @@ export const boxShadow = (val, color = colors.darkPurple) => `
     box-shadow: ${val}px ${val}px 0px ${color}
 `;
 
-export const box = () => `
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.09);
+export const formElement = () => `
+    box-shadow: 0px -5px 0px ${colors.darkPurple};
+    color: ${colors.darkPurple};
+    margin-right: 15px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
 `;
 
 
