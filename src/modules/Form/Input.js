@@ -35,7 +35,6 @@ const StyledInput = styled.input`
 /*
     Input propTypes
 */
-
 Input.propTypes = {
     updateFilter: PropTypes.func,
     filter: PropTypes.shape({

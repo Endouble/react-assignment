@@ -8,23 +8,10 @@ import { Normalize } from 'styled-normalize';
 import Home from './pages/Home';
 import registerServiceWorker from './registerServiceWorker';
 
-const GlobalStyle = createGlobalStyle`
-    ul, ol {
-        list-style: none;
-        padding: 0;
-    }
-    * {
-        font-family: 'Roboto';
-        box-sizing: border-box;
-    }
-    .body--frozen {
-        overflow: hidden;
-    }
+import { globalStyles } from './styles/mixins';
 
-    #root {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+const GlobalStyle = createGlobalStyle`
+    ${globalStyles}
 `;
 
 const NormalizedApp = () => (

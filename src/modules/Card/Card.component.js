@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Card = (props) => {
-    const setCurrentCard = () => {
-        props.clickHandler(props);
-    };
     const noLink = (ev) => {
         ev.preventDefault();
-        return false;
+        if (props.clickHandler) {
+            props.clickHandler(props);
+        }
     };
     const { name, imageUrl, set, number, artist, bioInfo, className } = props;
     const footStyles = `pokeCard__foot ${className && className}`;
     return (
-        <StyledCard onClick={setCurrentCard}>
+        <StyledCard>
             <a className="pokeCard__item" href="/" onClick={noLink}>
                 <p className="pokeCard__name">{number && `${number} - `} {name}</p>
                 <img className="pokeCard__img" alt={name} src={imageUrl} />

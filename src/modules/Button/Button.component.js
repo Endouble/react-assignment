@@ -15,7 +15,6 @@ const Button = props => (
                 {props.copy}
             </button>
         }
-
     </StyledButton>
 );
 
@@ -30,7 +29,6 @@ const StyledButton = styled.div`
         top: 0;
         border-radius: 50%;
         position: relative;
-        cursor: pointer;
         transition: all 250ms ease;
         ${props => (!props.isPlain && boxShadow(8))};
         border: ${props => (props.isPlain ? '4px solid' : 'none')};

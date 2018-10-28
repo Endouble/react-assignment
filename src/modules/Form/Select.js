@@ -40,7 +40,6 @@ const StyledSelect = styled.select`
 /*
     Select propTypes
 */
-
 Select.propTypes = {
     updateFilter: PropTypes.func,
     filter: PropTypes.shape({

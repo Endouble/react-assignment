@@ -41,7 +41,7 @@ class PokeDexData extends React.Component {
         const { isModalOpen, currentCard } = this.state;
         return (
             <div>
-                <PokeDexContext setCards={this.props.setCards} />
+                <PokeDexContext setCurrentCard={this.setCurrentCard} setCards={this.props.setCards} />
                 <Modal isOpen={isModalOpen} hideModal={this.hideModal}>
                     <CardBio {...currentCard} />
                 </Modal>
@@ -50,6 +50,9 @@ class PokeDexData extends React.Component {
     }
 }
 
+/*
+    PokeDexData propTypes
+*/
 PokeDexData.propTypes = {
     setCards: PropTypes.func,
 };

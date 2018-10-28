@@ -32,6 +32,9 @@ const StyledFooter = styled.footer`
     padding: 10px;
 `;
 
+/*
+    Footer propTypes
+*/
 Footer.propTypes = {
     filter: PropTypes.shape({}),
     updateFilter: PropTypes.func,

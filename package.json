@@ -7,6 +7,8 @@
     },
     "scripts": {
         "start": "node scripts/start.js",
+        "preserver": "yarn && yarn build",
+        "server": "node server/index.js",
         "build": "node scripts/build.js",
         "lint": "node scripts/lint.js",
         "test": "node scripts/test.js",
@@ -66,6 +68,7 @@
     },
     "dependencies": {
         "axios": "^0.18.0",
+        "express": "^4.16.4",
         "react": "^16.4.2",
         "react-dom": "^16.4.2",
         "styled-components": "^4.0.2"
