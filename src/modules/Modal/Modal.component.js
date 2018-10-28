@@ -55,7 +55,6 @@ const StyledModal = styled.div`
         }
 
         @media (min-width: ${sizes.tablet}) {
-
             margin: 30px auto 0;
             max-width: 40%;
             padding-bottom: 100px;

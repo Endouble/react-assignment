@@ -6,14 +6,16 @@ const Card = (props) => {
     const setCurrentCard = () => {
         props.clickHandler(props);
     };
-    const { name, imageUrl, types, number, artist } = props;
+    const { name, imageUrl, types, number, artist, bioInfo, className } = props;
+    const footStyles = `pokeCard__foot ${className && className}`;
     return (
         <StyledCard onClick={setCurrentCard}>
             <p className="pokeCard__name">{number && `${number} - `} {name}</p>
             <img className="pokeCard__img" alt={name} src={imageUrl} />
-            <footer className="pokeCard__foot">
+            <footer className={footStyles}>
                 <p>Types: {types.map(t => t)}</p>
                 <p>Artist: {artist}</p>
+                {bioInfo && bioInfo}
             </footer>
         </StyledCard>
     );
@@ -69,6 +71,8 @@ Card.propTypes = {
     imageUrl: PropTypes.string,
     types: PropTypes.arrayOf(PropTypes.string),
     clickHandler: PropTypes.func,
+    bioInfo: PropTypes.node,
+    className: PropTypes.string,
 };
 Card.defaultProps = {
     name: '',
@@ -77,6 +81,8 @@ Card.defaultProps = {
     imageUrl: '',
     types: [],
     clickHandler: () => null,
+    bioInfo: null,
+    className: '',
 };
 
 export default Card;

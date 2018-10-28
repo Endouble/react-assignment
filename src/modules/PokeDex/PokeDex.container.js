@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 /* global document */
 
 import React from 'react';
@@ -6,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import PokeDex from './PokeDex.component';
 import Modal from '../Modal';
-import Card from '../Card';
+import CardBio from '../Card/CardBio.component';
 
 import { CardsContext, FilterContext } from '../../pages/Home/Home.component';
 
@@ -69,7 +68,7 @@ class PokeDexData extends React.Component {
                     )}
                 </FilterContext.Consumer>
                 <Modal isOpen={isModalOpen} hideModal={this.hideModal}>
-                    <Card {...currentCard} />
+                    <CardBio {...currentCard} />
                 </Modal>
             </div>
         );
