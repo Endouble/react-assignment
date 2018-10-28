@@ -7,8 +7,8 @@
     },
     "scripts": {
         "dev": "node scripts/start.js",
-        "prestart": "yarn && yarn build",
-        "start": "node server/index.js",
+        "pretart": "yarn && yarn build",
+        "start": "yarn && yarn build && node server/index.js",
         "build": "node scripts/build.js",
         "lint": "node scripts/lint.js",
         "test": "node scripts/test.js",
