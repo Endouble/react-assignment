@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import Button from './';
+import Button from '../Button';
 
-import { boxShadow } from '../../styles/mixins';
+import { boxShadow, rotateAnim } from '../../styles/mixins';
 import { colors } from '../../styles/vars';
 
-const Flash = () => (
-    <StyledFlash>
+
+const Flash = ({ isLoading }) => (
+    <StyledFlash isLoading={isLoading}>
         <Button isPlain backColor={colors.blue} />
     </StyledFlash>
 );
@@ -35,8 +37,21 @@ const StyledFlash = styled.div`
         border-radius: 50%;
         border: 10px solid;
         border-color: transparent ${colors.blue} ${colors.blue} transparent;
-        transform: rotateZ(45deg);
+        transform: ${props => !props.isLoading && 'rotateZ(45deg)'};
+        animation: ${props => (props.isLoading ? rotateAnim : 'none')};
+
     }
 `;
+
+/*
+    Flash propTypes
+*/
+Flash.propTypes = {
+    isLoading: PropTypes.bool,
+};
+
+Flash.defaultProps = {
+    isLoading: false,
+};
 
 export default Flash;

@@ -41,7 +41,11 @@ class PokeDexData extends React.Component {
         const { isModalOpen, currentCard } = this.state;
         return (
             <div>
-                <PokeDexContext setCurrentCard={this.setCurrentCard} setCards={this.props.setCards} />
+                <PokeDexContext
+                    setCurrentCard={this.setCurrentCard}
+                    setCards={this.props.setCards}
+                    toggleIsLoading={this.props.toggleIsLoading}
+                />
                 <Modal isOpen={isModalOpen} hideModal={this.hideModal}>
                     <CardBio {...currentCard} />
                 </Modal>
@@ -55,10 +59,12 @@ class PokeDexData extends React.Component {
 */
 PokeDexData.propTypes = {
     setCards: PropTypes.func,
+    toggleIsLoading: PropTypes.func,
 };
 
 PokeDexData.defaultProps = {
     setCards: () => null,
+    toggleIsLoading: () => null,
 };
 
 export default PokeDexData;
