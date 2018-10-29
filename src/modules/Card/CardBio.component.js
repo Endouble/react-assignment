@@ -23,7 +23,9 @@ const CardBio = (props) => {
 /*
     CardBio Styles
 */
-const StyledCardBio = styled.article`
+const StyledCardBio = styled.div`
+    padding-bottom: 100px;
+
     .pokeBio {
         font-size: 16px;
         line-height: 1.5;

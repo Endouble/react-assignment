@@ -68,6 +68,14 @@ const StyledCard = styled.article`
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         min-height: 200px;
+        margin-top: 0;
+        transition: margin 0.25s ease;
+    }
+
+    &:hover, &:focus, &:active {
+        .pokeCard__img {
+            margin-top: -5px;
+        }
     }
 `;
 
