@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Button from '../Button';
-import Flash from '../Button/Flash.component';
+import Flash from '../Flash';
 
 import { colors } from '../../styles/vars';
 import { boldBorders } from '../../styles/mixins';

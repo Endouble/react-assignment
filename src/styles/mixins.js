@@ -1,4 +1,7 @@
+import { keyframes, css } from 'styled-components';
+
 import { colors } from './vars';
+
 
 export const boxShadow = (val, color = colors.darkPurple) => `
     box-shadow: ${val}px ${val}px 0px ${color}
@@ -11,6 +14,19 @@ export const formElement = () => `
     border-radius: 10px;
     border: none;
     padding: 10px;
+`;
+
+const rotate = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+`;
+export const rotateAnim = () => css`
+     ${rotate} 1s ease infinite;
 `;
 
 

@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Footer from './Footer.component';
-import { FilterContext } from '../../pages/Home/Home.container';
+
+import { FilterContext } from '../../context';
 
 const FooterData = ({ setFilter }) => (
     <FilterContext.Consumer>
-        {filter => (<Footer filter={filter} updateFilter={setFilter} />)}
+        {filter => <Footer filter={filter} updateFilter={setFilter} />}
     </FilterContext.Consumer>
 );
 

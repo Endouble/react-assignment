@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PokeDex from './PokeDex.component';
-import { CardsContext, FilterContext } from '../../pages/Home/Home.container';
+import { CardsContext, FilterContext } from '../../context';
 
 import getPokemons from '../../api/pokemon';
 
@@ -13,10 +13,13 @@ class PokeDexContext extends React.Component {
     }
 
     componentDidMount() {
+        const { toggleIsLoading, setCards } = this.props;
+        toggleIsLoading(true);
         getPokemons()
             .then((data) => {
                 if (data && data.cards) {
-                    this.props.setCards(data.cards);
+                    setCards(data.cards);
+                    toggleIsLoading(false);
                 }
             });
     }
@@ -45,11 +48,13 @@ class PokeDexContext extends React.Component {
 PokeDexContext.propTypes = {
     setCards: PropTypes.func,
     setCurrentCard: PropTypes.func,
+    toggleIsLoading: PropTypes.func,
 };
 
 PokeDexContext.defaultProps = {
     setCards: () => null,
     setCurrentCard: () => null,
+    toggleIsLoading: () => null,
 };
 
 export default PokeDexContext;
