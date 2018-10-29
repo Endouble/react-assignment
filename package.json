@@ -8,6 +8,7 @@
     "scripts": {
         "dev": "node scripts/dev.js",
         "start": "node server/index.js",
+        "start:secure": "IS_SECURE=true node server/index.js",
         "build": "node scripts/build.js",
         "lint": "node scripts/lint.js",
         "test": "node scripts/test.js",
