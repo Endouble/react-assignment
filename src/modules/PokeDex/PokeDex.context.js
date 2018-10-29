@@ -25,7 +25,11 @@ class PokeDexContext extends React.Component {
     }
 
     filteredCards(filter, cards) {
-        const updatedCards = filter.value !== '' ? cards.filter(c => c[filter.filterBy].toLowerCase().includes(filter.value)) : cards;
+        const updatedCards = filter.value !== '' ? cards
+            .filter(card =>
+                card[filter.filterBy].toLowerCase()
+                    .includes(filter.value.toLowerCase())) :
+            cards;
         return <PokeDex clickHandler={this.props.setCurrentCard} cards={updatedCards} />;
     }
 

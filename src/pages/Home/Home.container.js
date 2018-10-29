@@ -48,7 +48,7 @@ class Home extends React.Component {
                     <IsLoadingContext.Provider value={this.state.isLoading}>
                         <Header />
                         <PokeDex {...childrenProps} />
-                        <Footer />
+                        <Footer setFilter={this.setFilter} />
                     </IsLoadingContext.Provider>
                 </FilterContext.Provider>
             </CardsContext.Provider>

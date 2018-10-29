@@ -29,6 +29,7 @@ class Input extends React.Component {
     Input Styles
 */
 const StyledInput = styled.input`
+    max-width: 60%;
     ${formElement()};
 `;
 
