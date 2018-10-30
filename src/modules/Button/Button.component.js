@@ -7,14 +7,7 @@ import { boxShadow } from '../../styles/mixins';
 
 const Button = props => (
     <StyledButton {...props}>
-        {props.isPlain ?
-            <div className="pokeButton">
-                {props.copy}
-            </div> :
-            <button className="pokeButton" type="button">
-                {props.copy}
-            </button>
-        }
+        {props.isPlain ? <div className="pokeButton" /> : <button className="pokeButton" type="button" />}
     </StyledButton>
 );
 
@@ -71,7 +64,6 @@ const StyledButton = styled.div`
     Button propTypes
 */
 Button.propTypes = {
-    copy: PropTypes.string,
     className: PropTypes.string,
     backColor: PropTypes.string,
     isPlain: PropTypes.bool,
@@ -79,7 +71,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-    copy: '',
     className: '',
     backColor: '',
     isPlain: true,
