@@ -14,7 +14,7 @@ const Card = (props) => {
     return (
         <StyledCard>
             <a className="pokeCard__item" href="/" onClick={noLink}>
-                <p className="pokeCard__name">{number && `${number} - `} {name}</p>
+                <h3 className="pokeCard__name">{number && `${number} - `} {name}</h3>
                 <img className="pokeCard__img" alt={name} src={imageUrl} />
                 <footer className={footStyles}>
                     <p>Set: {set}</p>
@@ -68,6 +68,14 @@ const StyledCard = styled.article`
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         min-height: 200px;
+        margin-top: 0;
+        transition: margin 0.25s ease;
+    }
+
+    &:hover, &:focus, &:active {
+        .pokeCard__img {
+            margin-top: -5px;
+        }
     }
 `;
 

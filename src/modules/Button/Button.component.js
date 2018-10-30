@@ -7,14 +7,7 @@ import { boxShadow } from '../../styles/mixins';
 
 const Button = props => (
     <StyledButton {...props}>
-        {props.isPlain ?
-            <div className="pokeButton">
-                {props.copy}
-            </div> :
-            <button className="pokeButton" type="button">
-                {props.copy}
-            </button>
-        }
+        {props.isPlain ? <div className="pokeButton" /> : <button className="pokeButton" type="button" />}
     </StyledButton>
 );
 
@@ -23,21 +16,21 @@ const Button = props => (
 */
 const StyledButton = styled.div`
     .pokeButton {
-        width: ${props => props.sizeIndex * 10}px;
-        height: ${props => props.sizeIndex * 10}px;
+        width: ${({ sizeIndex }) => sizeIndex * 10}px;
+        height: ${({ sizeIndex }) => sizeIndex * 10}px;
         left: 0;
         top: 0;
         border-radius: 50%;
         position: relative;
         transition: all 250ms ease;
-        ${props => (!props.isPlain && boxShadow(8))};
-        border: ${props => (props.isPlain ? '4px solid' : 'none')};
-        background: ${props => props.backColor || colors.gray};
+        ${({ isPlain }) => (!isPlain && boxShadow(8))};
+        border: ${({ isPlain }) => (isPlain ? '4px solid' : 'none')};
+        background: ${({ backColor }) => backColor || colors.gray};
 
         &:hover, &:active {
-            left: ${props => (!props.isPlain && '8px' : '0')};
-            top: ${props => (!props.isPlain && '8px' : '0')};
-            ${props => (!props.isPlain && boxShadow(0))};
+            left: ${({ isPlain }) => (!isPlain && '8px' : '0')};
+            top: ${({ isPlain }) => (!isPlain && '8px' : '0')};
+            ${({ isPlain }) => (!isPlain && boxShadow(0))};
 
         }
 
@@ -71,7 +64,6 @@ const StyledButton = styled.div`
     Button propTypes
 */
 Button.propTypes = {
-    copy: PropTypes.string,
     className: PropTypes.string,
     backColor: PropTypes.string,
     isPlain: PropTypes.bool,
@@ -79,7 +71,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-    copy: '',
     className: '',
     backColor: '',
     isPlain: true,

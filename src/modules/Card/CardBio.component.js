@@ -23,13 +23,26 @@ const CardBio = (props) => {
 /*
     CardBio Styles
 */
-const StyledCardBio = styled.article`
+const StyledCardBio = styled.div`
+    padding-bottom: 30px;
+
     .pokeBio {
         font-size: 16px;
         line-height: 1.5;
         background: none;
         text-align: center;
     }
+
+    .pokeCard__name {
+        text-align: center;
+    }
+
+    .pokeCard__img, .pokeCard__img:hover {
+        width: 70%;
+        margin: 0 auto;
+        transition: none;
+    }
+
 `;
 
 /*

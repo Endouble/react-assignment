@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 
 import { boxShadow, rotateAnim } from '../../styles/mixins';
-import { colors } from '../../styles/vars';
+import { colors, sizes } from '../../styles/vars';
 
 
 const Flash = ({ isLoading }) => (
@@ -21,9 +21,13 @@ const StyledFlash = styled.div`
     ${boxShadow(5)}
     background: white;
     border-radius: 50%;
-    padding: 30px;
+    padding: 10px;
     display: inline-block;
     position: relative;
+
+    @media (min-width: ${sizes.mobile}) {
+        padding: 30px;
+    }
 
     &:after {
         content: '';
@@ -37,8 +41,8 @@ const StyledFlash = styled.div`
         border-radius: 50%;
         border: 10px solid;
         border-color: transparent ${colors.blue} ${colors.blue} transparent;
-        transform: ${props => !props.isLoading && 'rotateZ(45deg)'};
-        animation: ${props => (props.isLoading ? rotateAnim : 'none')};
+        transform: ${({ isLoading }) => !isLoading && 'rotateZ(45deg)'};
+        animation: ${({ isLoading }) => (isLoading ? rotateAnim : 'none')};
 
     }
 `;

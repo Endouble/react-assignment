@@ -9,10 +9,18 @@ import getPokemons from '../../api/pokemon';
 class PokeDexContext extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            hasError: false,
+        };
         this.filteredCards = this.filteredCards.bind(this);
+        this.dataRequest = this.dataRequest.bind(this);
     }
 
     componentDidMount() {
+        this.dataRequest();
+    }
+
+    dataRequest() {
         const { toggleIsLoading, setCards } = this.props;
         toggleIsLoading(true);
         getPokemons()
@@ -21,20 +29,35 @@ class PokeDexContext extends React.Component {
                     setCards(data.cards);
                     toggleIsLoading(false);
                 }
+            })
+            .catch(() => {
+                this.setState({
+                    hasError: true,
+                });
+                toggleIsLoading(false);
             });
     }
 
     filteredCards(filter, cards) {
-        const updatedCards = filter.value !== '' ? cards.filter(c => c[filter.filterBy].toLowerCase().includes(filter.value)) : cards;
+        const updatedCards = filter.value !== '' ? cards
+            .filter(card =>
+                card[filter.filterBy].toLowerCase()
+                    .includes(filter.value.toLowerCase())) :
+            cards;
         return <PokeDex clickHandler={this.props.setCurrentCard} cards={updatedCards} />;
     }
 
     render() {
+        const { hasError } = this.state;
+
         return (
             <FilterContext.Consumer>
                 {filter => (
                     <CardsContext.Consumer>
-                        {cards => this.filteredCards(filter, cards)}
+                        {cards => (hasError ?
+                            <PokeDex hasError={hasError} errorHandler={this.dataRequest} /> :
+                            this.filteredCards(filter, cards))
+                        }
                     </CardsContext.Consumer>
                 )}
             </FilterContext.Consumer>
