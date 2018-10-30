@@ -32,6 +32,12 @@ const StyledCardBio = styled.div`
         background: none;
         text-align: center;
     }
+
+    .pokeCard__img, .pokeCard__img:hover {
+        margin: 0;
+        transition: none;
+    }
+
 `;
 
 /*

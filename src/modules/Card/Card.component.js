@@ -14,7 +14,7 @@ const Card = (props) => {
     return (
         <StyledCard>
             <a className="pokeCard__item" href="/" onClick={noLink}>
-                <p className="pokeCard__name">{number && `${number} - `} {name}</p>
+                <h3 className="pokeCard__name">{number && `${number} - `} {name}</h3>
                 <img className="pokeCard__img" alt={name} src={imageUrl} />
                 <footer className={footStyles}>
                     <p>Set: {set}</p>
