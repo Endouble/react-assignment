@@ -22,7 +22,7 @@ const Modal = ({ isOpen, children, hideModal }) => (
 */
 const StyledModal = styled.div`
     background: ${colors.darkGray};
-    display: ${props => (props.isOpen ? 'block' : 'none')};
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
     position: fixed;
     top: 0;
     left: 0;

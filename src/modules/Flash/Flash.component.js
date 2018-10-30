@@ -41,8 +41,8 @@ const StyledFlash = styled.div`
         border-radius: 50%;
         border: 10px solid;
         border-color: transparent ${colors.blue} ${colors.blue} transparent;
-        transform: ${props => !props.isLoading && 'rotateZ(45deg)'};
-        animation: ${props => (props.isLoading ? rotateAnim : 'none')};
+        transform: ${({ isLoading }) => !isLoading && 'rotateZ(45deg)'};
+        animation: ${({ isLoading }) => (isLoading ? rotateAnim : 'none')};
 
     }
 `;
