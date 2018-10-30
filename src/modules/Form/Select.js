@@ -13,7 +13,7 @@ class Select extends React.Component {
     handleChange(event) {
         const { value } = this.props.filter;
         const filterBy = event.target.value;
-        this.props.updateFilter({
+        this.props.handleChange({
             value,
             filterBy,
         });
@@ -41,14 +41,14 @@ const StyledSelect = styled.select`
     Select propTypes
 */
 Select.propTypes = {
-    updateFilter: PropTypes.func,
+    handleChange: PropTypes.func,
     filter: PropTypes.shape({
         value: PropTypes.string,
     }),
 };
 
 Select.defaultProps = {
-    updateFilter: null,
+    handleChange: null,
     filter: {},
 };
 

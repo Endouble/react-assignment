@@ -47,7 +47,7 @@ class PokeDexData extends React.Component {
                     toggleIsLoading={this.props.toggleIsLoading}
                 />
                 <Modal isOpen={isModalOpen} hideModal={this.hideModal}>
-                    <CardBio {...currentCard} />
+                    {currentCard.name && <CardBio {...currentCard} />}
                 </Modal>
             </div>
         );

@@ -10,8 +10,8 @@ import Select from '../Form/Select';
 
 const Footer = ({ filter, updateFilter }) => (
     <StyledFooter>
-        <Input updateFilter={updateFilter} filter={filter} />
-        <Select updateFilter={updateFilter} filter={filter} />
+        <Input handleChange={updateFilter} filter={filter} />
+        <Select handleChange={updateFilter} filter={filter} />
     </StyledFooter>
 );
 

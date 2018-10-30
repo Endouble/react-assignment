@@ -10,15 +10,15 @@ const Card = (props) => {
         }
     };
     const { name, imageUrl, set, number, artist, bioInfo, className } = props;
-    const footStyles = `pokeCard__foot ${className && className}`;
+    const footStyles = `pokeCard__item ${className && className}`;
     return (
         <StyledCard>
-            <a className="pokeCard__item" href="/" onClick={noLink}>
+            <a className={footStyles} href="/" onClick={noLink}>
                 <h3 className="pokeCard__name">{number && `${number} - `} {name}</h3>
                 <img className="pokeCard__img" alt={name} src={imageUrl} />
-                <footer className={footStyles}>
-                    <p>Set: {set}</p>
-                    <p>Artist: {artist}</p>
+                <footer className="pokeCard__foot">
+                    {set && <p>Set: {set}</p>}
+                    {artist && <p>Artist: {artist}</p>}
                     {bioInfo && bioInfo}
                 </footer>
             </a>
@@ -37,6 +37,12 @@ const StyledCard = styled.article`
     .pokeCard__item {
         text-decoration: none;
         color: inherit;
+
+        &:hover, &:focus, &:active {
+            .pokeCard__img {
+                margin-top: -5px;
+            }
+        }
     }
 
     .pokeCard__name {
@@ -71,32 +77,24 @@ const StyledCard = styled.article`
         margin-top: 0;
         transition: margin 0.25s ease;
     }
-
-    &:hover, &:focus, &:active {
-        .pokeCard__img {
-            margin-top: -5px;
-        }
-    }
 `;
 
 /*
     Card propTypes
 */
 Card.propTypes = {
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
     number: PropTypes.string,
     artist: PropTypes.string,
-    imageUrl: PropTypes.string,
     set: PropTypes.string,
     clickHandler: PropTypes.func,
     bioInfo: PropTypes.node,
     className: PropTypes.string,
 };
 Card.defaultProps = {
-    name: '',
     number: '',
     artist: '',
-    imageUrl: '',
     set: '',
     clickHandler: () => null,
     bioInfo: null,
