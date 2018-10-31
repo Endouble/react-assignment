@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<ContextProvider
+  value={Array []}
+>
+  <ContextProvider
+    value={
+      Object {
+        "filterBy": "name",
+        "value": "",
+      }
+    }
+  >
+    <ContextProvider
+      value={false}
+    >
+      <Header />
+      <PokeDexData
+        setCards={[Function]}
+        setFilter={[Function]}
+        toggleIsLoading={[Function]}
+      />
+      <FooterData
+        setFilter={[Function]}
+      />
+    </ContextProvider>
+  </ContextProvider>
+</ContextProvider>
+`;
