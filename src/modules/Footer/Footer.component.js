@@ -8,10 +8,10 @@ import { boldBorders } from '../../styles/mixins';
 import Input from '../Form/Input';
 import Select from '../Form/Select';
 
-const Footer = ({ filter, updateFilter }) => (
+const Footer = ({ filter, updateFilter, options }) => (
     <StyledFooter>
         <Input handleChange={updateFilter} filter={filter} />
-        <Select handleChange={updateFilter} filter={filter} />
+        <Select handleChange={updateFilter} filter={filter} options={options} />
     </StyledFooter>
 );
 
@@ -38,11 +38,13 @@ const StyledFooter = styled.footer`
 Footer.propTypes = {
     filter: PropTypes.shape({}),
     updateFilter: PropTypes.func,
+    options: PropTypes.arrayOf(PropTypes.string),
 };
 
 Footer.defaultProps = {
     filter: {},
     updateFilter: null,
+    options: [],
 };
 
 export default Footer;

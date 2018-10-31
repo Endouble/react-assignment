@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 import { formElement } from '../../styles/mixins';
 
-import { availableFilters } from '../../context';
-
 class Select extends React.Component {
     constructor(props) {
         super(props);
@@ -22,9 +20,10 @@ class Select extends React.Component {
     }
 
     render() {
+        const { options } = this.props;
         return (
             <StyledSelect onChange={this.handleChange}>
-                {availableFilters.map(filter => <option key={`${filter}-opt`} value={filter}>{filter}</option>)}
+                {options.map(option => <option key={`${option}-opt`} value={option}>{option}</option>)}
             </StyledSelect>
         );
     }
@@ -45,11 +44,13 @@ Select.propTypes = {
     filter: PropTypes.shape({
         value: PropTypes.string,
     }),
+    options: PropTypes.arrayOf(PropTypes.string),
 };
 
 Select.defaultProps = {
     handleChange: null,
     filter: {},
+    options: [],
 };
 
 
