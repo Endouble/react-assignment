@@ -24,7 +24,7 @@ class Select extends React.Component {
     render() {
         return (
             <StyledSelect onChange={this.handleChange}>
-                {availableFilters.map(filter => <option value={filter}>{filter}</option>)}
+                {availableFilters.map(filter => <option key={`${filter}-opt`} value={filter}>{filter}</option>)}
             </StyledSelect>
         );
     }
