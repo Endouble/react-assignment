@@ -5,6 +5,13 @@ export const defaultFilter = {
     value: '',
     filterBy: 'name',
 };
+
+export const availableFilters = [
+    'name',
+    'set',
+    'artist',
+];
+
 export const defaultIsLoading = false;
 
 export const CardsContext = React.createContext(defaultCards);

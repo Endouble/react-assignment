@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { formElement } from '../../styles/mixins';
 
+import { availableFilters } from '../../context';
+
 class Select extends React.Component {
     constructor(props) {
         super(props);
@@ -22,9 +24,7 @@ class Select extends React.Component {
     render() {
         return (
             <StyledSelect onChange={this.handleChange}>
-                <option value="name">name</option>
-                <option value="set">set</option>
-                <option value="artist">artist</option>
+                {availableFilters.map(filter => <option value={filter}>{filter}</option>)}
             </StyledSelect>
         );
     }
