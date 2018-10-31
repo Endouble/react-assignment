@@ -3,24 +3,5 @@
 exports[`Select renders correctly 1`] = `
 <styled.select
   onChange={[Function]}
->
-  <option
-    key="name-opt"
-    value="name"
-  >
-    name
-  </option>
-  <option
-    key="set-opt"
-    value="set"
-  >
-    set
-  </option>
-  <option
-    key="artist-opt"
-    value="artist"
-  >
-    artist
-  </option>
-</styled.select>
+/>
 `;
