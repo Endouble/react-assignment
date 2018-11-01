@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<styled.header>
+  <div
+    className="pokeHeader__flash"
+  >
+    <FlashData />
+  </div>
+  <div
+    className="pokeHeader__buttons"
+  >
+    <Button
+      backColor="#fd1b55"
+      className=""
+      isPlain={true}
+      sizeIndex={4}
+    />
+    <Button
+      backColor="#f7ee60"
+      className=""
+      isPlain={true}
+      sizeIndex={4}
+    />
+    <Button
+      backColor="#30f454"
+      className=""
+      isPlain={true}
+      sizeIndex={4}
+    />
+  </div>
+</styled.header>
+`;
