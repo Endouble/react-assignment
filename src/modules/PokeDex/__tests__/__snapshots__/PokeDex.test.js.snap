@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeDex renders correctly 1`] = `
+<div>
+  <PokeDexContext
+    setCards={[Function]}
+    setCurrentCard={[Function]}
+    toggleIsLoading={[Function]}
+  />
+  <Modal
+    hideModal={[Function]}
+    isOpen={false}
+  />
+</div>
+`;

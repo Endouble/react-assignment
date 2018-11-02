@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<styled.div
+  backColor=""
+  className=""
+  isPlain={true}
+  sizeIndex={5}
+>
+  <div
+    className="pokeButton"
+  />
+</styled.div>
+`;

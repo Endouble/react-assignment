@@ -13,7 +13,7 @@ class Input extends React.Component {
     handleChange(event) {
         const { value } = event.target;
         const { filterBy } = this.props.filter;
-        this.props.updateFilter({
+        this.props.handleChange({
             value,
             filterBy,
         });
@@ -37,14 +37,14 @@ const StyledInput = styled.input`
     Input propTypes
 */
 Input.propTypes = {
-    updateFilter: PropTypes.func,
+    handleChange: PropTypes.func,
     filter: PropTypes.shape({
         filterBy: PropTypes.string,
     }),
 };
 
 Input.defaultProps = {
-    updateFilter: null,
+    handleChange: null,
     filter: {},
 };
 

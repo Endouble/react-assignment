@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly 1`] = `
+<styled.article>
+  <a
+    className="pokeCard__item "
+    href="/"
+    onClick={[Function]}
+  >
+    <h3
+      className="pokeCard__name"
+    >
+       
+      testing card
+    </h3>
+    <img
+      alt="testing card"
+      className="pokeCard__img"
+      src="testingUrl"
+    />
+    <footer
+      className="pokeCard__foot"
+    />
+  </a>
+</styled.article>
+`;

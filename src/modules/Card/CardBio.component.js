@@ -8,9 +8,9 @@ const CardBio = (props) => {
     const { hp, attacks, weaknesses } = props;
     const bioInfo = (
         <div>
-            <p>HP: {hp}</p>
-            <p>Attacks: {attacks.map(a => ` - ${a.name}`)} </p>
-            <p>Weaknesses: {weaknesses.map(w => w.type)} </p>
+            {hp && <p>HP: {hp}</p>}
+            {attacks.length && <p>Attacks: {attacks.map(attack => ` - ${attack.name}`)} </p>}
+            {weaknesses.length && <p>Weaknesses: {weaknesses.map(weak => weak.type)} </p>}
         </div>
     );
     return (
@@ -27,19 +27,30 @@ const StyledCardBio = styled.div`
     padding-bottom: 30px;
 
     .pokeBio {
-        font-size: 16px;
-        line-height: 1.5;
-        background: none;
-        text-align: center;
+
+        .pokeCard__foot {
+            font-size: 16px;
+            line-height: 1.5;
+            background: none;
+            text-align: center;
+        }
+
+        &:hover, &:focus, &:active {
+            .pokeCard__img {
+                margin-top: 0;
+            }
+        }
+
     }
 
     .pokeCard__name {
         text-align: center;
     }
 
-    .pokeCard__img, .pokeCard__img:hover {
+    .pokeCard__img {
         width: 70%;
         margin: 0 auto;
+        margin-top: 0;
         transition: none;
     }
 
