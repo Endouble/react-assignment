@@ -73,6 +73,15 @@ The only fix to support IE11 is the use of `includes` method from lodash importe
 ## KeyBoard Navigation
 Navigation can be done by using the tab for each interactive Component such as `Cards` and `Buttons`, will trigger the action by Enter. `Modal` can be close by pressing down the ESC key.
 
+## Deploy
+App is located at a Heroku free services, so the App is build and served from here:
+
+https://pokeuble.herokuapp.com/
+
+Once the App is in the `master` branch from GitHub a build can be done.
+
+> Keep in mind after some time without requests the Heroku services will fall asleep, so for the first time the App is requested could looks a bit slower but is because the Heroku instance is rising up again.
+
 ## Mantainers
 
 <table>
