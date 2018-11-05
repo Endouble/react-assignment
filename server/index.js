@@ -10,8 +10,6 @@ const { IS_SECURE } = process.env;
 
 app.use(express.static(path.resolve(__dirname, '../build')));
 
-// views is directory for all template files
-
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
