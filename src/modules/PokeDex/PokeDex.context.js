@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import includes from 'lodash.includes';
+
 
 import PokeDex from './PokeDex.component';
 import { CardsContext, FilterContext } from '../../context';
@@ -40,9 +42,7 @@ class PokeDexContext extends React.Component {
 
     filteredCards(filter, cards) {
         const updatedCards = filter.value !== '' ? cards
-            .filter(card =>
-                card[filter.filterBy].toLowerCase()
-                    .includes(filter.value.toLowerCase())) :
+            .filter(card => includes(card[filter.filterBy].toLowerCase(), filter.value.toLowerCase())) :
             cards;
         return <PokeDex clickHandler={this.props.setCurrentCard} cards={updatedCards} />;
     }
