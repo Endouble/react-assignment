@@ -1,30 +1,29 @@
-<img src="https://workingatendouble.com/content/uploads/2016/09/logo_endouble_default_coated.jpg" width="400">
+# Endouble React Assignment
 
-# React assignment
+## Proyect Backend Scaffolding
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and ejected to have full control over its configuration.
+The backend configuration is at a root level, where there are you will find the server and the services folder.
 
-To complete the assignment, fork this repo and send us a PR. To help us assess the assignment, please commit often and use clear and concise commit messages.
+In the Node Express Server I used concurrently to run the React (on port 3000) app and the server (on port 5000). The –kill-others-on-fail flag will kill other processes if one exits with a non zero status code.
 
-## The assignment
+The services folder uses 'isomorphic-fetch' to make the call the the API.
 
-Create an application that:
+## Proyect Frontend Scaffolding
 
-- retrieves data from an API (refer to https://github.com/toddmotto/public-apis/ for public APIs)
-- shows a grid of items (thumbnails, cards, etc.)
-- has a form that allows filtering the data set
-- shows item details (large image or other information available from the API's response) in a modal when an item is clicked
+I respected the create-react-app basic folder organization, but i added a "pages" folder, where I put the views, css and assets. Inside the "table" folder I also have a "components" folder.
 
-## Requirements
+Finally, inside the "client" folder, you will find the coverage report inside the "coverage" folder.
 
-- Test coverage is sufficient
-- Linter and tests pass
-- Works in IE11 and up
-- Eslint rules extend [eslint-config-endouble](https://www.npmjs.com/package/@endouble.com/eslint-config-endouble)
-- Uses web fonts (eg. Google Fonts)
-- Runs on HTTPS
-- Third-party package usage kept to a minimum
-- No state managers (MobX, Redux, ...)
-- UI is accessible by keyboard
-- Code is documented
-- Items in the grid show up to four items per row and gracefully degrade to a vertical list on narrow screens
+## Other stuff
+
+### .gitignore
+
+I extended the gitignore file at a root level so I make sure only the important things will be commited.
+
+### react-modal
+
+To show the API response detail, I'm using this package.
+
+### Roboto font
+
+I'm calling google fonts to import Roboto as an application font-family.

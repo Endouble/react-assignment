@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterCard data={results} /> renders correctly 1`] = `
+<div
+  className="character__details"
+>
+  <img
+    alt="Toxic Rick"
+    className="character__details--image"
+    src="https://rickandmortyapi.com/api/character/avatar/361.jpeg"
+    title="Toxic Rick"
+  />
+  <h3
+    className="character__title"
+  >
+    Toxic Rick
+  </h3>
+  <button
+    className="modal__button"
+    onClick={[Function]}
+  >
+    View details
+  </button>
+</div>
+`;

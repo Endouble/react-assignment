@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeView /> renders correctly 1`] = `
+<div
+  className="header"
+>
+  <h1
+    className="header__title"
+  >
+    Rick and Morty Character Information
+  </h1>
+  <div>
+    <img
+      alt="Rick and Morty"
+      className="header__image"
+      src="header.jpg"
+    />
+  </div>
+  <a
+    className="header__link-information"
+    href="https://rickandmortyapi.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    https://rickandmortyapi.com
+  </a>
+</div>
+`;
