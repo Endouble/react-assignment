@@ -13,7 +13,7 @@
         "tbd": false,
         "rocket": {
             "rocket_id": "testRocket",
-            "rocket_name": "Rocket 1",
+            "rocket_name": "Endouble Rocket",
             "rocket_type": "Rocket T",
             "first_stage": {
                 "cores": [
