@@ -4,8 +4,8 @@ import mapPinIcon from '../assets/mapPin.png';
 import rocketIcon from '../assets/rocket.png';
 import launchedRocket from '../assets/launchedRocket.png';
 
-function LaunchesCard({ launch }) {
-    const { links, mission_name: missionName, launch_year: launchYear, launch_site: launchSite, rocket } = launch;
+function LaunchesCard({ mission }) {
+    const { links, mission_name: missionName, launch_year: launchYear, launch_site: launchSite, rocket } = mission;
     return (
         <div className="mission" key={missionName}>
             <img src={links.mission_patch_small} alt="House 1" className="mission__img" />
@@ -37,7 +37,7 @@ function LaunchesCard({ launch }) {
 }
 
 LaunchesCard.propTypes = {
-    launch: PropTypes.shape({
+    mission: PropTypes.shape({
         launch_site: PropTypes.object.isRequired,
         launch_year: PropTypes.string.isRequired,
         links: PropTypes.object.isRequired,

@@ -1,46 +1,36 @@
-import React, { PureComponent } from 'react';
-import { getPastLaunchesRequest } from '../requests';
-import MissionCard from './MissionCard';
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/missionsGrid.css';
+import MissionCard from './MissionCard';
 
-export default class LaunchesGrid extends PureComponent {
-    componentIsmounted = false
-
-    state = {
-        launches: null,
-    }
-
-    componentDidMount() {
-        this.componentIsmounted = true;
-        this.getLaunches();
-    }
-
-    componentWillUnmount() {
-        this.componentIsmounted = false;
-        this.getLaunches();
-    }
-
-    getLaunches = () => {
-        getPastLaunchesRequest().then(({ data }) => {
-            if (!this.componentIsmounted) return;
-            this.setState({ launches: data });
-        });
-    }
-
-    render() {
-        const { launches } = this.state;
-        if (!launches) {
-            return <h1>Loading...</h1>;
-        }
-        if (launches.length < 1) {
-            return <h1>No Mission Found</h1>;
-        }
-        return (
-            <section className="missions">
-                {launches.map(launch => (
-                    <MissionCard launch={launch} />
+function MissionsGrid({ missions, filters }) {
+    const { filterByMissionLaunchSite, filterByMissionRocket, filterByMissionLauchYear } = filters;
+    return (
+        <section className="missions">
+            {missions
+                .filter(mission => (filterByMissionLaunchSite
+                    ? mission.launch_site.site_name === filterByMissionLaunchSite
+                    : mission))
+                .filter(mission => (filterByMissionRocket
+                    ? mission.rocket.rocket_name === filterByMissionRocket
+                    : mission))
+                .filter(mission => (filterByMissionLauchYear
+                    ? mission.launch_year === filterByMissionLauchYear
+                    : mission))
+                .map(mission => (
+                    <MissionCard mission={mission} key={mission.flight_number} />
                 ))}
-            </section>
-        );
-    }
+        </section>
+    );
 }
+
+MissionsGrid.propTypes = {
+    missions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    filters: PropTypes.shape({
+        filterByMissionLaunchSite: PropTypes.string,
+        filterByMissionRocket: PropTypes.string,
+        filterByMissionLauchYear: PropTypes.string,
+    }).isRequired,
+};
+
+export default memo(MissionsGrid);
