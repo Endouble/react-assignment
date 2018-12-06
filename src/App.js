@@ -30,6 +30,11 @@ class App extends PureComponent {
         });
     }
 
+    onFilter = (value, { target }) => {
+        const name = target.getAttribute('name');
+        this.setState({ [name]: value });
+    }
+
     render() {
         const {
             missions,
@@ -45,7 +50,15 @@ class App extends PureComponent {
         }
         return (
             <div className="App">
-                <MissionsFilter missions={missions} />
+                <MissionsFilter
+                    missions={missions}
+                    onFilter={this.onFilter}
+                    filters={{
+                        filterByMissionLaunchSite,
+                        filterByMissionRocket,
+                        filterByMissionLauchYear,
+                    }}
+                />
                 <MissionsGrid
                     missions={missions}
                     filters={{
