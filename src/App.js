@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import { getPastLaunchesRequest } from './requests';
 import MissionsGrid from './components/MissionsGrid';
 import MissionsFilter from './components/MissionsFilter';
+import Modal from './components/Modal';
+import MissionModalContent from './components/MissionModalContent';
 
 class App extends PureComponent {
     componentIsMounted = false
@@ -11,6 +13,7 @@ class App extends PureComponent {
         filterByMissionLaunchSite: null,
         filterByMissionRocket: null,
         filterByMissionLauchYear: null,
+        modalContent: null,
     }
 
     componentDidMount() {
@@ -35,12 +38,22 @@ class App extends PureComponent {
         this.setState({ [name]: value });
     }
 
+    onOpenModal = (details) => {
+        this.setState(
+            {
+                modalContent: details,
+            },
+            () => this.modalCloseButton.focus(),
+        );
+    }
+
     render() {
         const {
             missions,
             filterByMissionLaunchSite,
             filterByMissionRocket,
             filterByMissionLauchYear,
+            modalContent,
         } = this.state;
         if (!missions) {
             return <h1>Loading...</h1>;
@@ -66,7 +79,27 @@ class App extends PureComponent {
                         filterByMissionRocket,
                         filterByMissionLauchYear,
                     }}
+                    onOpenModal={this.onOpenModal}
+                    openModalButtonRef={(n) => {
+                        this.openModalButtonRef = n;
+                    }}
                 />
+                {modalContent && (
+                    <Modal
+                        ariaLabel="SpaceX Mission Details"
+                        onClose={() => {
+                            this.setState({ modalContent: null });
+                        }}
+                        closeButtonRef={(n) => {
+                            this.modalCloseButton = n;
+                        }}
+                        openButtonRef={(n) => {
+                            this.openButtton = n;
+                        }}
+                    >
+                        <MissionModalContent {...modalContent} />
+                    </Modal>
+                )}
             </div>
         );
     }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../styles/missionsGrid.css';
 import MissionCard from './MissionCard';
 
-function MissionsGrid({ missions, filters }) {
+function MissionsGrid({ missions, filters, onOpenModal, openModalButtonRef }) {
     const { filterByMissionLaunchSite, filterByMissionRocket, filterByMissionLauchYear } = filters;
     return (
         <section className="missions">
@@ -18,7 +18,13 @@ function MissionsGrid({ missions, filters }) {
                     ? mission.launch_year === filterByMissionLauchYear
                     : mission))
                 .map(mission => (
-                    <MissionCard mission={mission} key={mission.flight_number} />
+                    <MissionCard
+                        mission={mission}
+                        key={mission.flight_number}
+                        onOpenModal={onOpenModal}
+                        details="missionDetails"
+                        openButtonRef={openModalButtonRef}
+                    />
                 ))}
         </section>
     );
@@ -31,6 +37,8 @@ MissionsGrid.propTypes = {
         filterByMissionRocket: PropTypes.string,
         filterByMissionLauchYear: PropTypes.string,
     }).isRequired,
+    onOpenModal: PropTypes.func.isRequired,
+    openModalButtonRef: PropTypes.func.isRequired,
 };
 
 export default memo(MissionsGrid);

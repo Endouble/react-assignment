@@ -4,11 +4,17 @@ import mapPinIcon from '../assets/mapPin.png';
 import rocketIcon from '../assets/rocket.png';
 import launchedRocket from '../assets/launchedRocket.png';
 
-function LaunchesCard({ mission }) {
-    const { links, mission_name: missionName, launch_year: launchYear, launch_site: launchSite, rocket } = mission;
+function MissionCard({ mission, onOpenModal, openButtonRef }) {
+    const {
+        mission_name: missionName,
+        launch_year: launchYear,
+        launch_site: launchSite,
+        links,
+        rocket,
+    } = mission;
     return (
         <div className="mission" key={missionName}>
-            <img src={links.mission_patch_small} alt="House 1" className="mission__img" />
+            <img src={links.mission_patch_small} alt="Mission Patch" className="mission__img" />
 
             <h5 className="mission__name">{missionName}</h5>
 
@@ -29,14 +35,19 @@ function LaunchesCard({ mission }) {
                 </div>
             </div>
 
-            <button type="button" className="btn mission__btn">
-                Detalhes
+            <button
+                type="button"
+                className="btn mission__btn"
+                ref={openButtonRef}
+                onClick={() => onOpenModal(mission)}
+            >
+                Details
             </button>
         </div>
     );
 }
 
-LaunchesCard.propTypes = {
+MissionCard.propTypes = {
     mission: PropTypes.shape({
         launch_site: PropTypes.object.isRequired,
         launch_year: PropTypes.string.isRequired,
@@ -44,5 +55,7 @@ LaunchesCard.propTypes = {
         mission_name: PropTypes.string.isRequired,
         rocket: PropTypes.object.isRequired,
     }).isRequired,
+    onOpenModal: PropTypes.func.isRequired,
+    openButtonRef: PropTypes.func.isRequired,
 };
-export default LaunchesCard;
+export default MissionCard;
