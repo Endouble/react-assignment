@@ -23,7 +23,7 @@ describe('Missions Grid Test', () => {
 
     test('fetch missions and display them with mission name, rocket name, launch site and launch year', async () => {
         axiosMock.get.mockResolvedValueOnce({ data: missionsMock });
-        const { container, getByText } = setupComponent();
+        const { getByText } = setupComponent();
 
         await wait();
 
@@ -40,7 +40,6 @@ describe('Missions Grid Test', () => {
         getByText(rocket.rocket_name);
         getByText(launchSite.site_name);
         getByText(launchYear);
-        expect(container.firstChild).toMatchSnapshot();
     });
 
     test('Display "No Mission Found" message when there is no mission', async () => {
