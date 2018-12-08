@@ -14,7 +14,7 @@ function MissionCard({ mission, onOpenModal, openButtonRef }) {
         rocket,
     } = mission;
     return (
-        <div className="mission" key={missionName}>
+        <li className="mission" key={missionName}>
             <img src={links.mission_patch_small} alt="Mission Patch" className="mission__img" />
 
             <h5 className="mission__name">{missionName}</h5>
@@ -44,7 +44,7 @@ function MissionCard({ mission, onOpenModal, openButtonRef }) {
             >
                 Details
             </button>
-        </div>
+        </li>
     );
 }
 

@@ -20,7 +20,16 @@ class Modal extends React.Component {
 
     onEscape = ({ keyCode }) => {
         const { onClose } = this.props;
-        if (keyCode === 27) onClose();
+        if (keyCode === 27) {
+            onClose();
+        }
+    }
+
+    onClickAway = (e) => {
+        const { modalRef } = this;
+        const { onClose } = this.props;
+        if (modalRef && modalRef.contains(e.target)) return;
+        onClose();
     }
 
     addScrollLock = () => document.querySelector('html').classList.add('u-lock-scroll')
@@ -28,17 +37,15 @@ class Modal extends React.Component {
     removeScrollLock = () => document.querySelector('html').classList.remove('u-lock-scroll')
 
     render() {
-        const { onClose, children, role, ariaLabel, closeButtonRef } = this.props;
+        const { onClose, children, ariaLabel, closeButtonRef } = this.props;
         return ReactDOM.createPortal(
             <aside
-                role={role}
-                aria-label={ariaLabel}
-                aria-modal="true"
+                onClick={this.onClickAway}
+                onKeyPress={onClose}
+                role="button"
                 tabIndex="-1"
-                // onKeyDown={this.onEscape}
-                // onKeyPress={() => {}}
-                // onClick={onClickAway}
-                // onKeyDown={() => {}}
+                aria-label={ariaLabel}
+                onKeyDown={this.onEscape}
                 style={{
                     position: 'absolute',
                     top: '0',
@@ -53,6 +60,9 @@ class Modal extends React.Component {
                 }}
             >
                 <div
+                    ref={(n) => {
+                        this.modalRef = n;
+                    }}
                     style={{
                         padding: 20,
                         background: '#fff',
@@ -89,13 +99,8 @@ class Modal extends React.Component {
 Modal.propTypes = {
     onClose: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
-    role: PropTypes.string,
     ariaLabel: PropTypes.string.isRequired,
     closeButtonRef: PropTypes.func.isRequired,
-};
-
-Modal.defaultProps = {
-    role: 'dialog',
 };
 
 export default Modal;

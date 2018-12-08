@@ -10,7 +10,7 @@ export default function MissionModalContent({
     details,
 }) {
     return (
-        <section className="mission__modal">
+        <section className="mission__modal" role="dialog">
             <div className="mission__modal_img">
                 <img src={links.mission_patch} alt="Mission Patch" />
             </div>

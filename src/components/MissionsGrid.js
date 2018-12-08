@@ -6,7 +6,7 @@ import MissionCard from './MissionCard';
 function MissionsGrid({ missions, filters, onOpenModal, openModalButtonRef }) {
     const { filterByMissionLaunchSite, filterByMissionRocket, filterByMissionLauchYear } = filters;
     return (
-        <section className="missions">
+        <ul className="missions">
             {missions
                 .filter(mission => (filterByMissionLaunchSite
                     ? mission.launch_site.site_name === filterByMissionLaunchSite
@@ -26,7 +26,7 @@ function MissionsGrid({ missions, filters, onOpenModal, openModalButtonRef }) {
                         openButtonRef={openModalButtonRef}
                     />
                 ))}
-        </section>
+        </ul>
     );
 }
 
