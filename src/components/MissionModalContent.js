@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-export default function MissionModalContent({
+function MissionModalContent({
     links,
     mission_name: missionName,
     launch_site: launchSite,
@@ -55,3 +55,5 @@ MissionModalContent.propTypes = {
     launch_date_local: PropTypes.string.isRequired,
     details: PropTypes.string.isRequired,
 };
+
+export default memo(MissionModalContent);

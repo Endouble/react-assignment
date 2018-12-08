@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import mapPinIcon from '../assets/mapPin.png';
 import rocketIcon from '../assets/rocket.png';
@@ -60,4 +60,4 @@ MissionCard.propTypes = {
     onOpenModal: PropTypes.func.isRequired,
     openButtonRef: PropTypes.func.isRequired,
 };
-export default MissionCard;
+export default memo(MissionCard);

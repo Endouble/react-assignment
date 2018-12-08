@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import '../styles/missionModal.css';
 
 const modalRoot = document.getElementById('modal-root');
 
-class Modal extends React.Component {
+class Modal extends PureComponent {
     el = document.createElement('div')
 
     componentDidMount() {
