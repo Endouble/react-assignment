@@ -5,27 +5,27 @@ import MissionCard from './MissionCard';
 
 function MissionsGrid({ missions, filters, onOpenModal, openModalButtonRef }) {
     const { filterByMissionLaunchSite, filterByMissionRocket, filterByMissionLauchYear } = filters;
+
+    const filteredMissions = missions
+        .filter(mission => (filterByMissionLaunchSite
+            ? mission.launch_site.site_name === filterByMissionLaunchSite
+            : mission))
+        .filter(mission => (filterByMissionRocket ? mission.rocket.rocket_name === filterByMissionRocket : mission))
+        .filter(mission => (filterByMissionLauchYear ? mission.launch_year === filterByMissionLauchYear : mission));
+    if (filteredMissions.length === 0) {
+        return <h4 className="info_message">No Mission Found</h4>;
+    }
     return (
         <ul className="missions">
-            {missions
-                .filter(mission => (filterByMissionLaunchSite
-                    ? mission.launch_site.site_name === filterByMissionLaunchSite
-                    : mission))
-                .filter(mission => (filterByMissionRocket
-                    ? mission.rocket.rocket_name === filterByMissionRocket
-                    : mission))
-                .filter(mission => (filterByMissionLauchYear
-                    ? mission.launch_year === filterByMissionLauchYear
-                    : mission))
-                .map(mission => (
-                    <MissionCard
-                        mission={mission}
-                        key={mission.flight_number}
-                        onOpenModal={onOpenModal}
-                        details="missionDetails"
-                        openButtonRef={openModalButtonRef}
-                    />
-                ))}
+            {filteredMissions.map(mission => (
+                <MissionCard
+                    mission={mission}
+                    key={mission.flight_number}
+                    onOpenModal={onOpenModal}
+                    details="missionDetails"
+                    openButtonRef={openModalButtonRef}
+                />
+            ))}
         </ul>
     );
 }

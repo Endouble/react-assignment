@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './styles/app.css';
 import { getPastLaunchesRequest } from './requests';
 import MissionsGrid from './components/MissionsGrid';
 import MissionsFilter from './components/MissionsFilter';
@@ -59,10 +60,7 @@ class App extends PureComponent {
             lastMissionSeen,
         } = this.state;
         if (!missions) {
-            return <h1>Loading...</h1>;
-        }
-        if (missions.length === 0) {
-            return <h1>No Mission Found</h1>;
+            return <h4 className="info_message">Loading...</h4>;
         }
         return (
             <div className="App">
