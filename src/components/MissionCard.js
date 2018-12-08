@@ -9,6 +9,7 @@ function MissionCard({ mission, onOpenModal, openButtonRef }) {
         mission_name: missionName,
         launch_year: launchYear,
         launch_site: launchSite,
+        flight_number: flightNumber,
         links,
         rocket,
     } = mission;
@@ -38,7 +39,7 @@ function MissionCard({ mission, onOpenModal, openButtonRef }) {
             <button
                 type="button"
                 className="btn mission__btn"
-                ref={openButtonRef}
+                ref={openButtonRef.bind(this, flightNumber)}
                 onClick={() => onOpenModal(mission)}
             >
                 Details
@@ -54,6 +55,7 @@ MissionCard.propTypes = {
         links: PropTypes.object.isRequired,
         mission_name: PropTypes.string.isRequired,
         rocket: PropTypes.object.isRequired,
+        flight_number: PropTypes.number.isRequired,
     }).isRequired,
     onOpenModal: PropTypes.func.isRequired,
     openButtonRef: PropTypes.func.isRequired,

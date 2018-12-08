@@ -7,6 +7,7 @@ export default function MissionModalContent({
     launch_site: launchSite,
     rocket,
     launch_date_local: launchDateLocal,
+    details,
 }) {
     return (
         <section className="mission__modal">
@@ -18,6 +19,7 @@ export default function MissionModalContent({
                     <h3>{missionName}</h3>
                 </div>
                 <div>
+                    <p>{details}</p>
                     <dl className="mission__modal_details-item">
                         <dt>Launch Site</dt>
                         <dd>{launchSite.site_name_long}</dd>
@@ -51,4 +53,5 @@ MissionModalContent.propTypes = {
         rocket_type: PropTypes.string.isRequired,
     }).isRequired,
     launch_date_local: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
 };

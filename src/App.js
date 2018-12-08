@@ -14,6 +14,7 @@ class App extends PureComponent {
         filterByMissionRocket: null,
         filterByMissionLauchYear: null,
         modalContent: null,
+        lastMissionSeen: null,
     }
 
     componentDidMount() {
@@ -41,6 +42,7 @@ class App extends PureComponent {
     onOpenModal = (details) => {
         this.setState(
             {
+                lastMissionSeen: details.flight_number,
                 modalContent: details,
             },
             () => this.modalCloseButton.focus(),
@@ -54,6 +56,7 @@ class App extends PureComponent {
             filterByMissionRocket,
             filterByMissionLauchYear,
             modalContent,
+            lastMissionSeen,
         } = this.state;
         if (!missions) {
             return <h1>Loading...</h1>;
@@ -80,8 +83,8 @@ class App extends PureComponent {
                         filterByMissionLauchYear,
                     }}
                     onOpenModal={this.onOpenModal}
-                    openModalButtonRef={(n) => {
-                        this.openModalButtonRef = n;
+                    openModalButtonRef={(flightNumber, button) => {
+                        this[`opened-mission-${flightNumber}`] = button;
                     }}
                 />
                 {modalContent && (
@@ -89,12 +92,10 @@ class App extends PureComponent {
                         ariaLabel="SpaceX Mission Details"
                         onClose={() => {
                             this.setState({ modalContent: null });
+                            this[`opened-mission-${lastMissionSeen}`].focus();
                         }}
                         closeButtonRef={(n) => {
                             this.modalCloseButton = n;
-                        }}
-                        openButtonRef={(n) => {
-                            this.openButtton = n;
                         }}
                     >
                         <MissionModalContent {...modalContent} />
