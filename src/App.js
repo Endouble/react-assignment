@@ -65,7 +65,7 @@ class App extends PureComponent {
         }
         return (
             <div className="App">
-                <Header />
+                <Header title="SpaceX Missions" />
                 <MissionsFilter
                     missions={missions}
                     onFilter={this.onFilter}
