@@ -128,7 +128,7 @@ function MissionsFilter({ missions, onFilter, filters }) {
                             title={
                                 filters && filters.filterByMissionLauchYear
                                     ? filters.filterByMissionLauchYear
-                                    : 'Launch Year'
+                                    : 'Launch Years'
                             }
                             active={filters && filters.filterByMissionLauchYear}
                         >
