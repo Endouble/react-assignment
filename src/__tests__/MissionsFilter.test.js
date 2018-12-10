@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, getByTestId } from 'react-testing-library';
+import { render, fireEvent } from 'react-testing-library';
 import MissionsFilter from '../components/MissionsFilter';
 import MockMissions from './missionsMock.json';
 

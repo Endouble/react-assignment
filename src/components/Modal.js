@@ -40,41 +40,19 @@ class Modal extends PureComponent {
         const { onClose, children, ariaLabel, closeButtonRef } = this.props;
         return ReactDOM.createPortal(
             <aside
+                className="modal-wrapper"
                 onClick={this.onClickAway}
                 onKeyPress={onClose}
                 role="button"
                 tabIndex="-1"
                 aria-label={ariaLabel}
                 onKeyDown={this.onEscape}
-                style={{
-                    position: 'absolute',
-                    top: '0',
-                    bottom: '0',
-                    left: '0',
-                    right: '0',
-                    display: 'grid',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(0,0,0,0.3)',
-                    zIndex: 1000,
-                }}
             >
                 <div
                     ref={(n) => {
                         this.modalRef = n;
                     }}
-                    style={{
-                        padding: 20,
-                        background: '#fff',
-                        borderRadius: '2px',
-                        display: 'inline-block',
-                        minHeight: '300px',
-                        margin: '1rem',
-                        position: 'relative',
-                        minWidth: '300px',
-                        boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
-                        justifySelf: 'center',
-                    }}
+                    className="modal-content"
                 >
                     {children}
                     <button
