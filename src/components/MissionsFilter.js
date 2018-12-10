@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { getValuesByProperty } from '../utils/utils';
+import { getValuesByProperty, toKebabCase } from '../utils/utils';
 import '../styles/missionsFilter.css';
 
 function RenderListItem({ name, onFilter, value, children }) {
     return (
-        <li>
+        <li data-testid={`filter-item-${value ? toKebabCase(value) : 'all'}`}>
             <div
                 tabIndex={0}
                 aria-haspopup="true"
