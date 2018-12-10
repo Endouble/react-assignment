@@ -5,6 +5,7 @@ import MissionsGrid from './components/MissionsGrid';
 import MissionsFilter from './components/MissionsFilter';
 import Modal from './components/Modal';
 import MissionModalContent from './components/MissionModalContent';
+import Header from './components/Header';
 
 class App extends PureComponent {
     componentIsMounted = false
@@ -64,6 +65,7 @@ class App extends PureComponent {
         }
         return (
             <div className="App">
+                <Header />
                 <MissionsFilter
                     missions={missions}
                     onFilter={this.onFilter}
