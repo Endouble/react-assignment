@@ -14,3 +14,17 @@ export function getValuesByProperty(objs, property) {
     }, []);
     return values;
 }
+
+/**
+ * Helper function to covert string to kebab case (eg. Kwajslein Atoll to kwajslein-atoll)
+ * @function toKebabCase
+ * @param {string} string
+ * @returns {string}
+ */
+export function toKebabCase(string) {
+    if (!string) throw new Error('string is required');
+    return string
+        .split(' ')
+        .join('-')
+        .toLowerCase();
+}
