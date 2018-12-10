@@ -20,18 +20,13 @@ code sandbox: https://codesandbox.io/s/github/BrunoAl/react-assignment
 -   Even though this project is pretty small, Cypress is inclured for E2E testing.
 
 ### Documentation
+-   The code is documented with JSDoc.
 
-    JSDoc is used to document some functionalities.
 
-### The App
-
-    The spaceX API was the one of choice and dropdown is used to filtering the dataset.
-
+## The assignment
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and ejected to have full control over its configuration.
 
 To complete the assignment, fork this repo and send us a PR. To help us assess the assignment, please commit often and use clear and concise commit messages.
-
-## The assignment
 
 Create an application that:
 
