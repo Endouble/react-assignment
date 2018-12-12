@@ -3,13 +3,15 @@ import axios from 'axios';
 import Aux from '../../HOC/Aux/Aux';
 import Modal from '../../components/UI/Modal/Modal';
 import Brewery from '../../components/Brewery/Brewery';
+import Details from '../../components/Brewery/Details/Details';
+import Spinner from '../../components/UI/Spinner/Spinner';
 import './Breweries.css';
 
 class Blog extends Component {
     state = {
         breweries: [],
-        selectedPostId: null,
-        showDetails : true,
+        selectedPostDetails : null,
+        showDetails : false,
         error: false
     }
 
@@ -27,7 +29,11 @@ class Blog extends Component {
 
     postSelectedHandler = (id) => {
         let selectedBrewery = this.state.breweries.filter(brewery => brewery.id  === id);
-        this.setState({selectedPost: selectedBrewery[0]});
+
+        this.setState ({selectedPostDetails : <Details
+                detail={ selectedBrewery[0] }
+                closeHandler={this.detailCloseHandler} /> });
+        this.setState( { showDetails: true } );
     }
 
     detailHandler = () => {
@@ -39,7 +45,7 @@ class Blog extends Component {
     }
 
     render () {
-        let breweries = <p style={{textAlign: 'center'}}>Something went wrong!</p>;
+        let breweries = <Spinner />;
         if (!this.state.error) {
             breweries = this.state.breweries.map(post => {
                 return <Brewery 
@@ -53,7 +59,7 @@ class Blog extends Component {
         return (
             <Aux>
                 <Modal show={this.state.showDetails} modalClosed={this.detailCloseHandler}>
-                    details
+                    { this.state.selectedPostDetails }
                 </Modal>
                 <section className="Breweries">
                     {breweries}
