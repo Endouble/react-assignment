@@ -1,4 +1,4 @@
-.Post {
+.Card {
     width: 23%;
     padding: 16px;
     text-align: center;
@@ -9,25 +9,25 @@
     cursor: pointer;
 }
 
-.Post:hover,
-.Post:active {
+.Card:hover,
+.Card:active {
     background-color: #C0DDF5;
 }
 
 @media (max-width: 1200px) {
-    .Post {
+    .Card {
         width: 31%;
     }
 }
 
 @media (max-width: 900px) {
-    .Post {
+    .Card {
         width: 48%;
     }
 }
 
 @media (max-width: 600px) {
-    .Post {
+    .Card {
         width: 100%
     }
 }
