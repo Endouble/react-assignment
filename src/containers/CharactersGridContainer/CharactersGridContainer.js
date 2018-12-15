@@ -16,10 +16,10 @@ class CharactersGridContainer extends Component {
     }
   }
 
-  getStarWarCharacters = () => {
+  getStarWarsCharacters = (url) => {
     this.setState({ isLoading: true });
 
-    fetch(API_URL)
+    fetch(url)
       .then(response => response.json())
       .then((data) => {
         this.setState({
@@ -30,23 +30,23 @@ class CharactersGridContainer extends Component {
         return data;
       })
       .catch(
-        this.setState({
-          isLoading: false,
-          onError: true
-        })
+        err => 
+          this.setState({
+            isLoading: false,
+            onError: true
+          })
       )
-    // this.setState({ characters: [{name: 'R2D2', info: 'Very good Robot'}] });
   }
 
   componentDidMount() {
-    this.getStarWarCharacters();
+    this.getStarWarsCharacters(API_URL);
   }
 
   render() {
     const { onError, data, isLoading} = this.state;
     return <Container>
 
-      <CharactersGrid characters={data?data.results:[]}/>
+      <CharactersGrid data={data} />
 
       {isLoading?
         <p>Loading...</p>
