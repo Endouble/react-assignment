@@ -32,6 +32,6 @@ class CharactersGridContainer extends Component {
       
     </Container>
   }
-}
+};
 
 export default CharactersGridContainer;
