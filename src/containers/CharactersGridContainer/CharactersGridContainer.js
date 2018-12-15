@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import CharactersGrid from './../../components/CharactersGrid';
-import { Container } from 'semantic-ui-react';
+import { Container, Dimmer, Loader } from 'semantic-ui-react';
 
 const API_URL = 'https://swapi.co/api/people/';
 
@@ -50,7 +50,9 @@ class CharactersGridContainer extends Component {
       <CharactersGrid data={data} moreCallback={this.getStarWarsCharacters}/>
 
       {isLoading?
-        <p>Loading...</p>
+        <Dimmer active>
+          <Loader> Loading </Loader>
+        </Dimmer>
         :null
       }
       {onError?
