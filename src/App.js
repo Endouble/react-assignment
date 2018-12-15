@@ -3,13 +3,20 @@ import React, { Component } from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 
-import AppHeader from  './components/Header/Header';
+import { Grid } from 'semantic-ui-react';
+import AppHeader from  './components/AppHeader';
+import CharactersGrid from './components/CharactersGrid';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <AppHeader />
+        <Grid>
+          <Grid.Row>
+            <AppHeader />
+          </Grid.Row>
+
+        </Grid>
       </div>
     );
   }
