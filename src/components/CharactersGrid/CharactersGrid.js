@@ -5,7 +5,7 @@ import { Grid } from 'semantic-ui-react';
 import CharacterGrid from './../Grid';
 import Filters from './../Filters';
 
-const CharactersGrid = () => {
+const CharactersGrid = (props) => {
    return <Grid>
      <Grid.Row>
       <Filters />

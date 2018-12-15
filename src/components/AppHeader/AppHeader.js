@@ -7,7 +7,7 @@ const headerStyle = {
   padding: '15px'
 }
 
-const AppHeader = () => {
+const AppHeader = (props) => {
   return <header style={headerStyle}>
     <Header as='h1' inverted>
       <Header.Content>
