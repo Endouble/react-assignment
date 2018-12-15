@@ -3,7 +3,7 @@ import React from 'react';
 import { Card } from 'semantic-ui-react';
 
 const CharacterCard = (props) => {
-  return <Card fluid>
+  return <Card fluid link>
     <Card.Content>
       <Card.Header>
         { props.character.name }
