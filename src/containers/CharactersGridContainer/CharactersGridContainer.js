@@ -9,13 +9,17 @@ class CharactersGridContainer extends Component {
     this.state = {
       characters: [],
       isLoading: false,
-      onError: true
+      onError: false
     }
   }
 
   render() {
     const { onError, characters, isLoading} = this.state;
     return <React.Fragment>
+      {isLoading?
+        <p>Loading...</p>
+        :null
+      }
       <CharactersGrid />
       {onError?
         <p> An error ocurred, please try again later... </p>
