@@ -20,11 +20,15 @@ class CharactersGridContainer extends Component {
         <p>Loading...</p>
         :null
       }
-      <CharactersGrid />
       {onError?
         <p> An error ocurred, please try again later... </p>
         :null
       }
+      {characters.length > 0?
+        <CharactersGrid />
+        :<p>No characters to view yet...</p>
+      }
+      
     </React.Fragment>
   }
 }
