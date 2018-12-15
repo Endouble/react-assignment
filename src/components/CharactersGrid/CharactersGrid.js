@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Grid, Button } from 'semantic-ui-react';
 
@@ -51,6 +52,18 @@ const CharactersGrid = (props) => {
       }
     </Grid>
 
+};
+
+CharactersGrid.propTypes = {
+  data: PropTypes.shape({
+    next: PropTypes.string,
+    previous: PropTypes.string,
+    results: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired
+    }))
+  }),
+  moreCallback: PropTypes.func.isRequired,
+  showCharacterCallback: PropTypes.func.isRequired
 };
 
 export default CharactersGrid;
