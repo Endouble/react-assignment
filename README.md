@@ -16,8 +16,8 @@ code sandbox: https://codesandbox.io/s/github/BrunoAl/react-assignment
 
 ### Testing
 
--   react-testing-library was used as a replacement for enzyme, this decision was made because this library encourages good practices and avoids testing implementation details, so as long the functionalities aren't change refactorying the code doesn't break the tests, more here (https://github.com/kentcdodds/react-testing-library)
--   Even though this project is pretty small, Cypress is inclured for E2E testing.
+-   react-testing-library was used as a replacement for enzyme, this decision was made because this library encourages good practices and avoids testing implementation details, so as long as the functionalities don't change, refactoring the code doesn't break the tests, more here (https://github.com/kentcdodds/react-testing-library)
+-   Even though this project is pretty small and it's totally an overkill, Cypress was included for E2E testing.
 
 ### Documentation
 -   The code is documented with JSDoc.
