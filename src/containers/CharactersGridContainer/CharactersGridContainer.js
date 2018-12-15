@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import CharactersGrid from './../../components/CharactersGrid'
+import CharactersGrid from './../../components/CharactersGrid';
+import { Container } from 'semantic-ui-react';
 
 class CharactersGridContainer extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class CharactersGridContainer extends Component {
 
   render() {
     const { onError, characters, isLoading} = this.state;
-    return <React.Fragment>
+    return <Container>
       {isLoading?
         <p>Loading...</p>
         :null
@@ -29,7 +30,7 @@ class CharactersGridContainer extends Component {
         :<p>No characters to view yet...</p>
       }
       
-    </React.Fragment>
+    </Container>
   }
 }
 

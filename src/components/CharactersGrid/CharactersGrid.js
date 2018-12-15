@@ -2,9 +2,9 @@ import React from 'react';
 
 const CharactersGrid = () => {
   
-   return <div>
+   return <React.Fragment>
 
-  </div>
+  </React.Fragment>
 }
 
 export default CharactersGrid;
