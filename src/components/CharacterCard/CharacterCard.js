@@ -3,7 +3,9 @@ import React from 'react';
 import { Card } from 'semantic-ui-react';
 
 const CharacterCard = (props) => {
-  return <Card fluid link>
+  const showCharacterDetails = () => props.showCharacterModal(props.character);
+
+  return <Card fluid>
     <Card.Content>
       <Card.Header>
         { props.character.name }
@@ -13,7 +15,7 @@ const CharacterCard = (props) => {
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <p> View More </p>
+      <a onClick={showCharacterDetails}> View More </a>
     </Card.Content>
   </Card>
 };

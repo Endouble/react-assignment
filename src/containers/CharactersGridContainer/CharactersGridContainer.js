@@ -14,7 +14,8 @@ class CharactersGridContainer extends Component {
     this.state = {
       data: null,
       isLoading: false,
-      onError: false
+      onError: false,
+      selectedCharacter: null
     }
   }
 
@@ -45,11 +46,24 @@ class CharactersGridContainer extends Component {
     this.getStarWarsCharacters(API_URL);
   }
 
+  showCharacterModal = (character) => {
+    this.setState({ selectedCharacter: character });
+  }
+
+  closeCharacterModal = () => {
+    this.setState({ selectedCharacter: null });
+  }
+
   render() {
-    const { onError, data, isLoading} = this.state;
+    const { onError, data, isLoading, selectedCharacter} = this.state;
     return <Container>
 
-      <CharactersGrid data={data} moreCallback={this.getStarWarsCharacters}/>
+      <CharactersGrid data={data} moreCallback={this.getStarWarsCharacters} showCharacterCallback={this.showCharacterModal} />
+      
+      {selectedCharacter?
+        <CharacterModal character={selectedCharacter} onCloseCallback={this.closeCharacterModal} />
+        :null
+      }
 
       {isLoading?
         <Dimmer active>

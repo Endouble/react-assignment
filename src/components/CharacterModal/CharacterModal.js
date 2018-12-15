@@ -3,7 +3,7 @@ import React from 'react';
 import { Modal } from 'semantic-ui-react';
 
 const CharacterModal = (props) => {
-  return <Modal open closeIcon>
+  return <Modal open closeIcon onClose={props.onCloseCallback}>
     <Modal.Header>
       {props.character.name}
     </Modal.Header>

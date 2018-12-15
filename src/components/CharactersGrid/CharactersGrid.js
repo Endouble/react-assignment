@@ -20,9 +20,9 @@ const CharactersGrid = (props) => {
           <Grid columns={4} stackable>
             <Grid.Row>
                 {
-                  props.data.results.map(character => 
-                    <Grid.Column stretched>
-                      <CharactersCard character={character}>/</CharactersCard>
+                  props.data.results.map((character, index) => 
+                    <Grid.Column key={index} stretched>
+                      <CharactersCard character={character} showCharacterModal={props.showCharacterCallback} />
                     </Grid.Column>
                   )
                 }
