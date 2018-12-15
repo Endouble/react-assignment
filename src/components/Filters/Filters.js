@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Button, Form } from 'semantic-ui-react'
 
@@ -20,5 +21,9 @@ const Filters = (props) => {
     <Button type='submit' primary>Search</Button>
   </Form>
 };
+
+Filters.propTypes = {
+  filterCallback: PropTypes.func.isRequired
+}
 
 export default Filters;
