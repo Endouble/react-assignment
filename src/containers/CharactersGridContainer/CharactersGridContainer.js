@@ -17,6 +17,7 @@ class CharactersGridContainer extends Component {
   }
 
   getStarWarsCharacters = (url) => {
+    window.scrollTo(0,0);
     this.setState({ isLoading: true });
 
     fetch(url)
@@ -46,7 +47,7 @@ class CharactersGridContainer extends Component {
     const { onError, data, isLoading} = this.state;
     return <Container>
 
-      <CharactersGrid data={data} />
+      <CharactersGrid data={data} moreCallback={this.getStarWarsCharacters}/>
 
       {isLoading?
         <p>Loading...</p>

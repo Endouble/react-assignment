@@ -6,6 +6,9 @@ import Filters from './../Filters';
 import CharactersCard from './../CharacterCard';
 
 const CharactersGrid = (props) => {
+  const loadNextCharacters = () => props.moreCallback(props.data.next);
+  const loadPrevCharacters = () => props.moreCallback(props.data.previous);
+
    return <Grid>
       <Grid.Row>
         <Grid.Column>
@@ -19,16 +22,25 @@ const CharactersGrid = (props) => {
                 {
                   props.data.results.map(character => 
                     <Grid.Column stretched>
-                      <CharactersCard character={character} >/</CharactersCard>
+                      <CharactersCard character={character}>/</CharactersCard>
                     </Grid.Column>
                   )
                 }
             </Grid.Row>
-            { props.data.next?
+            { props.data.next || props.data.previous?
               <Grid.Row>
-                <Button primary>
-                  Load more characters
-                </Button>
+                {props.data.previous?
+                  <Button secondary onClick={loadPrevCharacters}>
+                    Previous
+                  </Button>
+                  :null
+                }
+                {props.data.next?
+                  <Button primary onClick={loadNextCharacters}>
+                    Next
+                  </Button>
+                  :null
+                }
               </Grid.Row>
               :null
             }
