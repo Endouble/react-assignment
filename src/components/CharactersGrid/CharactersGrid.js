@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Grid } from 'semantic-ui-react';
 
-import ItemsGrid from './../ItemsGrid';
 import Filters from './../Filters';
 import CharactersCard from './../CharacterCard';
 
@@ -15,15 +14,18 @@ const CharactersGrid = (props) => {
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column>
-          <ItemsGrid>
-            {
-              props.characters.map(character => 
-                <CharactersCard character={character} >/</CharactersCard>
-              )
-            }
-          </ItemsGrid>
-        </Grid.Column>
+        <Grid columns={4} stackable>
+
+          <Grid.Row>
+              {
+                props.characters.map(character => 
+                  <Grid.Column stretched>
+                    <CharactersCard character={character} >/</CharactersCard>
+                  </Grid.Column>
+                )
+              }
+          </Grid.Row>
+        </Grid>
       </Grid.Row>
     </Grid>
 
