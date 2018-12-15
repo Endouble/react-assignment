@@ -28,4 +28,29 @@ describe('Character Card Test', () => {
   test('Component should render without crashing', () => {
     expect(getCharacterCard()).toBeDefined();
   });
+
+  test('Component should render correctly', () => {
+    expect(getCharacterCard()).toMatchSnapshot();
+  });
+
+  test('Component should render name', () => {
+    const wrapper = mount(<CharacterCard {...props} />);
+    const characterCard = wrapper.find('Card');
+    const expected = expect.stringMatching(/^.*Luke Skywalker/);
+    expect(characterCard.find('CardHeader').text()).toEqual(expected);
+  });
+
+  test('Component should render View More link', () => {
+    const wrapper = mount(<CharacterCard {...props} />);
+    const characterCard = wrapper.find('Card');
+    const expected = expect.stringMatching(/^.*View More/);
+    expect(characterCard.find('CardContent[extra=true]').text()).toEqual(expected);
+  });
+
+  test('Component should call showCharacterModal func on Click over View More link ', () => {
+    const wrapper = getCharacterCard();
+    const card = wrapper.find('Card CardContent[extra=true] a');
+    card.simulate('click', { preventDefault: jest.fn() });
+    expect(props.showCharacterModal).toHaveBeenCalled();
+  });
 })
