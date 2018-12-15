@@ -4,11 +4,11 @@ import { Grid } from 'semantic-ui-react';
 const ItemsGrid = (props) => {
 
   return <div>
-    {props.items.length > 1?
+    {props.children.length > 0?
       <Grid stackable={true}>
         <Grid.Row>
           <Grid.Column>
-            <p> Character Card </p>
+            {props.children}
           </Grid.Column>
         </Grid.Row>
       </Grid>
