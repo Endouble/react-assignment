@@ -19,4 +19,6 @@ const CharacterModal = (props) => {
   </Modal>
 };
 
+
+
 export default CharacterModal;

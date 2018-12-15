@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container, Dimmer, Loader } from 'semantic-ui-react';
+import { Container, Dimmer, Loader, Message } from 'semantic-ui-react';
 
 import CharactersGrid from './../../components/CharactersGrid';
 import CharacterModal from './../../components/CharacterModal';
@@ -61,7 +61,6 @@ class CharactersGridContainer extends Component {
   render() {
     const { onError, data, isLoading, selectedCharacter} = this.state;
     return <Container>
-
       <CharactersGrid
         data={data} 
         moreCallback={this.getStarWarsCharacters} 
@@ -81,7 +80,9 @@ class CharactersGridContainer extends Component {
       }
 
       {onError?
-        <p> An error ocurred, please try again later... </p>
+        <Message>
+          <p> An error ocurred, please try again later... </p>
+        </Message>
         :null
       }
       

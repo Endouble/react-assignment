@@ -15,6 +15,7 @@ const CharactersGrid = (props) => {
           <Filters filterCallback={props.filterCallback}/>
         </Grid.Column>
       </Grid.Row>
+      
       { props.data?
         <Grid.Row>
           <Grid columns={4} stackable>
