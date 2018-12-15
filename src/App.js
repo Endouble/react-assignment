@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 import { Grid } from 'semantic-ui-react';
 import AppHeader from  './components/AppHeader';
-import CharactersGrid from './components/CharactersGrid';
+import CharactersGridContainer from './containers/CharactersGridContainer';
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column columns={1}>
-              <CharactersGrid />
+              <CharactersGridContainer />
             </Grid.Column>
           </Grid.Row>
         </Grid>
