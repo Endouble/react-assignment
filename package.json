@@ -100,6 +100,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "@endouble.com/eslint-config-endouble": "^2.0.0"
+    "@endouble.com/eslint-config-endouble": "^2.0.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1"
   }
 }
