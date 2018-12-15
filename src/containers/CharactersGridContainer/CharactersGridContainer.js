@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import CharactersGrid from './../../components/CharactersGrid';
 import { Container, Dimmer, Loader } from 'semantic-ui-react';
+
+import CharactersGrid from './../../components/CharactersGrid';
+import CharacterModal from './../../components/CharacterModal';
 
 const API_URL = 'https://swapi.co/api/people/';
 
@@ -20,7 +22,7 @@ class CharactersGridContainer extends Component {
     window.scrollTo(0,0);
     this.setState({ isLoading: true });
 
-    fetch(url)
+    window.fetch(url)
       .then(response => response.json())
       .then((data) => {
         this.setState({
@@ -55,6 +57,7 @@ class CharactersGridContainer extends Component {
         </Dimmer>
         :null
       }
+
       {onError?
         <p> An error ocurred, please try again later... </p>
         :null
