@@ -1,10 +1,20 @@
 import React from 'react';
 
-const CharactersGrid = () => {
-  
-   return <React.Fragment>
+import { Grid } from 'semantic-ui-react';
 
-  </React.Fragment>
+import CharacterGrid from './../Grid';
+import Filters from './../Filters';
+
+const CharactersGrid = () => {
+   return <Grid>
+     <Grid.Row>
+      <Filters />
+     </Grid.Row>
+     
+     <Grid.Row>
+      <CharacterGrid />
+     </Grid.Row>
+  </Grid>
 };
 
 export default CharactersGrid;
