@@ -13,9 +13,15 @@ class App extends Component {
       <div className="App">
         <Grid>
           <Grid.Row>
-            <AppHeader />
+            <Grid.Column columns={1}>
+              <AppHeader />
+            </Grid.Column>
           </Grid.Row>
-
+          <Grid.Row>
+            <Grid.Column columns={1}>
+              <CharactersGrid />
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
       </div>
     );
