@@ -19,7 +19,7 @@ const CharactersGrid = (props) => {
           <ItemsGrid>
             {
               props.characters.map(character => 
-                <CharactersCard name={character.name} >/</CharactersCard>
+                <CharactersCard character={character} >/</CharactersCard>
               )
             }
           </ItemsGrid>

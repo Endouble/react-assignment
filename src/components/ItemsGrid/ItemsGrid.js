@@ -5,12 +5,10 @@ const ItemsGrid = (props) => {
 
   return <div>
     {props.children.length > 0?
-      <Grid stackable={true}>
-        <Grid.Row>
-          <Grid.Column>
+      <Grid stackable columns={4}>
+          <Grid.Column  stretched>
             {props.children}
           </Grid.Column>
-        </Grid.Row>
       </Grid>
       :<p>No items to view yet...</p>
     }

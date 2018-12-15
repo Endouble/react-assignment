@@ -1,11 +1,21 @@
 import React from 'react';
 
+import { Card } from 'semantic-ui-react';
+
 const CharacterCard = (props) => {
-    return <React.Fragment>
-        { props.name }
-        
-        <p> View More </p>
-    </React.Fragment>
+  return <Card fluid>
+    <Card.Content>
+      <Card.Header>
+        { props.character.name }
+      </Card.Header>
+      <Card.Description>
+        { props.character.info }
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <p> View More </p>
+    </Card.Content>
+  </Card>
 };
 
 export default CharacterCard;

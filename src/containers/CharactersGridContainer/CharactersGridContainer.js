@@ -8,7 +8,7 @@ class CharactersGridContainer extends Component {
     super(props);
 
     this.state = {
-      characters: [{name: 'R2D2'}],
+      characters: [{name: 'R2D2', info: 'Very good Robot'}],
       isLoading: false,
       onError: false
     }
