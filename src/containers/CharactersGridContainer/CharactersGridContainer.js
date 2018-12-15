@@ -42,8 +42,8 @@ class CharactersGridContainer extends Component {
       )
   }
 
-  componentDidMount() {
-    this.getStarWarsCharacters(API_URL);
+  filterCharacters = (filter) => {
+    this.getStarWarsCharacters(`${API_URL}?search=${filter.name}`)
   }
 
   showCharacterModal = (character) => {
@@ -54,11 +54,19 @@ class CharactersGridContainer extends Component {
     this.setState({ selectedCharacter: null });
   }
 
+  componentDidMount() {
+    this.getStarWarsCharacters(API_URL);
+  }
+
   render() {
     const { onError, data, isLoading, selectedCharacter} = this.state;
     return <Container>
 
-      <CharactersGrid data={data} moreCallback={this.getStarWarsCharacters} showCharacterCallback={this.showCharacterModal} />
+      <CharactersGrid
+        data={data} 
+        moreCallback={this.getStarWarsCharacters} 
+        showCharacterCallback={this.showCharacterModal} 
+        filterCallback={this.filterCharacters}/>
       
       {selectedCharacter?
         <CharacterModal character={selectedCharacter} onCloseCallback={this.closeCharacterModal} />

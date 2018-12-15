@@ -12,7 +12,7 @@ const CharactersGrid = (props) => {
    return <Grid>
       <Grid.Row>
         <Grid.Column>
-          <Filters />
+          <Filters filterCallback={props.filterCallback}/>
         </Grid.Column>
       </Grid.Row>
       { props.data?
