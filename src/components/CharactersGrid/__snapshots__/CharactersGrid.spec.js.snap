@@ -66,6 +66,11 @@ ShallowWrapper {
                     <GridRow>
                               <GridColumn
                                         stretched={true}
+                                        style={
+                                                  Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                        }
                               >
                                         <CharacterCard
                                                   character={
@@ -83,6 +88,11 @@ ShallowWrapper {
                               </GridColumn>
                               <GridColumn
                                         stretched={true}
+                                        style={
+                                                  Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                        }
                               >
                                         <CharacterCard
                                                   character={
@@ -103,22 +113,26 @@ ShallowWrapper {
                     <GridRow
                               id="actions"
                     >
-                              <Button
-                                        as="button"
-                                        id="prev"
-                                        onClick={[Function]}
-                                        secondary={true}
-                              >
-                                        Previous
-                              </Button>
-                              <Button
-                                        as="button"
-                                        id="next"
-                                        onClick={[Function]}
-                                        primary={true}
-                              >
-                                        Next
-                              </Button>
+                              <GridColumn>
+                                        <Button
+                                                  as="button"
+                                                  id="prev"
+                                                  onClick={[Function]}
+                                                  secondary={true}
+                                        >
+                                                  Previous
+                                        </Button>
+                              </GridColumn>
+                              <GridColumn>
+                                        <Button
+                                                  as="button"
+                                                  id="next"
+                                                  onClick={[Function]}
+                                                  primary={true}
+                                        >
+                                                  Next
+                                        </Button>
+                              </GridColumn>
                     </GridRow>
           </Grid>
 </GridRow>,
@@ -185,6 +199,11 @@ ShallowWrapper {
             <GridRow>
                         <GridColumn
                                     stretched={true}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                    }
                         >
                                     <CharacterCard
                                                 character={
@@ -202,6 +221,11 @@ ShallowWrapper {
                         </GridColumn>
                         <GridColumn
                                     stretched={true}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                    }
                         >
                                     <CharacterCard
                                                 character={
@@ -222,22 +246,26 @@ ShallowWrapper {
             <GridRow
                         id="actions"
             >
-                        <Button
-                                    as="button"
-                                    id="prev"
-                                    onClick={[Function]}
-                                    secondary={true}
-                        >
-                                    Previous
-                        </Button>
-                        <Button
-                                    as="button"
-                                    id="next"
-                                    onClick={[Function]}
-                                    primary={true}
-                        >
-                                    Next
-                        </Button>
+                        <GridColumn>
+                                    <Button
+                                                as="button"
+                                                id="prev"
+                                                onClick={[Function]}
+                                                secondary={true}
+                                    >
+                                                Previous
+                                    </Button>
+                        </GridColumn>
+                        <GridColumn>
+                                    <Button
+                                                as="button"
+                                                id="next"
+                                                onClick={[Function]}
+                                                primary={true}
+                                    >
+                                                Next
+                                    </Button>
+                        </GridColumn>
             </GridRow>
 </Grid>,
           "id": "results-row",
@@ -252,6 +280,11 @@ ShallowWrapper {
               <GridRow>
                 <GridColumn
                                 stretched={true}
+                                style={
+                                                Object {
+                                                                "marginBottom": "15px",
+                                                              }
+                                }
                 >
                                 <CharacterCard
                                                 character={
@@ -269,6 +302,11 @@ ShallowWrapper {
                 </GridColumn>
                 <GridColumn
                                 stretched={true}
+                                style={
+                                                Object {
+                                                                "marginBottom": "15px",
+                                                              }
+                                }
                 >
                                 <CharacterCard
                                                 character={
@@ -289,22 +327,26 @@ ShallowWrapper {
               <GridRow
                 id="actions"
 >
-                <Button
-                                as="button"
-                                id="prev"
-                                onClick={[Function]}
-                                secondary={true}
-                >
-                                Previous
-                </Button>
-                <Button
-                                as="button"
-                                id="next"
-                                onClick={[Function]}
-                                primary={true}
-                >
-                                Next
-                </Button>
+                <GridColumn>
+                                <Button
+                                                as="button"
+                                                id="prev"
+                                                onClick={[Function]}
+                                                secondary={true}
+                                >
+                                                Previous
+                                </Button>
+                </GridColumn>
+                <GridColumn>
+                                <Button
+                                                as="button"
+                                                id="next"
+                                                onClick={[Function]}
+                                                primary={true}
+                                >
+                                                Next
+                                </Button>
+                </GridColumn>
 </GridRow>,
             ],
             "columns": 4,
@@ -320,6 +362,11 @@ ShallowWrapper {
                 "children": Array [
                   <GridColumn
                     stretched={true}
+                    style={
+                                        Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                    }
 >
                     <CharacterCard
                                         character={
@@ -337,6 +384,11 @@ ShallowWrapper {
 </GridColumn>,
                   <GridColumn
                     stretched={true}
+                    style={
+                                        Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                    }
 >
                     <CharacterCard
                                         character={
@@ -375,6 +427,9 @@ ShallowWrapper {
                       showCharacterModal={[Function]}
 />,
                     "stretched": true,
+                    "style": Object {
+                      "marginBottom": "15px",
+                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -417,6 +472,9 @@ ShallowWrapper {
                       showCharacterModal={[Function]}
 />,
                     "stretched": true,
+                    "style": Object {
+                      "marginBottom": "15px",
+                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -458,22 +516,26 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": Array [
-                  <Button
-                    as="button"
-                    id="prev"
-                    onClick={[Function]}
-                    secondary={true}
->
-                    Previous
-</Button>,
-                  <Button
-                    as="button"
-                    id="next"
-                    onClick={[Function]}
-                    primary={true}
->
-                    Next
-</Button>,
+                  <GridColumn>
+                    <Button
+                                        as="button"
+                                        id="prev"
+                                        onClick={[Function]}
+                                        secondary={true}
+                    >
+                                        Previous
+                    </Button>
+</GridColumn>,
+                  <GridColumn>
+                    <Button
+                                        as="button"
+                                        id="next"
+                                        onClick={[Function]}
+                                        primary={true}
+                    >
+                                        Next
+                    </Button>
+</GridColumn>,
                 ],
                 "id": "actions",
               },
@@ -482,31 +544,65 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "function",
                   "props": Object {
-                    "as": "button",
-                    "children": "Previous",
-                    "id": "prev",
-                    "onClick": [Function],
-                    "secondary": true,
+                    "children": <Button
+                      as="button"
+                      id="prev"
+                      onClick={[Function]}
+                      secondary={true}
+>
+                      Previous
+</Button>,
                   },
                   "ref": null,
-                  "rendered": "Previous",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "button",
+                      "children": "Previous",
+                      "id": "prev",
+                      "onClick": [Function],
+                      "secondary": true,
+                    },
+                    "ref": null,
+                    "rendered": "Previous",
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "function",
                   "props": Object {
-                    "as": "button",
-                    "children": "Next",
-                    "id": "next",
-                    "onClick": [Function],
-                    "primary": true,
+                    "children": <Button
+                      as="button"
+                      id="next"
+                      onClick={[Function]}
+                      primary={true}
+>
+                      Next
+</Button>,
                   },
                   "ref": null,
-                  "rendered": "Next",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "button",
+                      "children": "Next",
+                      "id": "next",
+                      "onClick": [Function],
+                      "primary": true,
+                    },
+                    "ref": null,
+                    "rendered": "Next",
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
               ],
@@ -547,6 +643,11 @@ ShallowWrapper {
                         <GridRow>
                                     <GridColumn
                                                 stretched={true}
+                                                style={
+                                                            Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                                }
                                     >
                                                 <CharacterCard
                                                             character={
@@ -564,6 +665,11 @@ ShallowWrapper {
                                     </GridColumn>
                                     <GridColumn
                                                 stretched={true}
+                                                style={
+                                                            Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                                }
                                     >
                                                 <CharacterCard
                                                             character={
@@ -584,22 +690,26 @@ ShallowWrapper {
                         <GridRow
                                     id="actions"
                         >
-                                    <Button
-                                                as="button"
-                                                id="prev"
-                                                onClick={[Function]}
-                                                secondary={true}
-                                    >
-                                                Previous
-                                    </Button>
-                                    <Button
-                                                as="button"
-                                                id="next"
-                                                onClick={[Function]}
-                                                primary={true}
-                                    >
-                                                Next
-                                    </Button>
+                                    <GridColumn>
+                                                <Button
+                                                            as="button"
+                                                            id="prev"
+                                                            onClick={[Function]}
+                                                            secondary={true}
+                                                >
+                                                            Previous
+                                                </Button>
+                                    </GridColumn>
+                                    <GridColumn>
+                                                <Button
+                                                            as="button"
+                                                            id="next"
+                                                            onClick={[Function]}
+                                                            primary={true}
+                                                >
+                                                            Next
+                                                </Button>
+                                    </GridColumn>
                         </GridRow>
             </Grid>
 </GridRow>,
@@ -666,6 +776,11 @@ ShallowWrapper {
               <GridRow>
                             <GridColumn
                                           stretched={true}
+                                          style={
+                                                        Object {
+                                                                      "marginBottom": "15px",
+                                                                    }
+                                          }
                             >
                                           <CharacterCard
                                                         character={
@@ -683,6 +798,11 @@ ShallowWrapper {
                             </GridColumn>
                             <GridColumn
                                           stretched={true}
+                                          style={
+                                                        Object {
+                                                                      "marginBottom": "15px",
+                                                                    }
+                                          }
                             >
                                           <CharacterCard
                                                         character={
@@ -703,22 +823,26 @@ ShallowWrapper {
               <GridRow
                             id="actions"
               >
-                            <Button
-                                          as="button"
-                                          id="prev"
-                                          onClick={[Function]}
-                                          secondary={true}
-                            >
-                                          Previous
-                            </Button>
-                            <Button
-                                          as="button"
-                                          id="next"
-                                          onClick={[Function]}
-                                          primary={true}
-                            >
-                                          Next
-                            </Button>
+                            <GridColumn>
+                                          <Button
+                                                        as="button"
+                                                        id="prev"
+                                                        onClick={[Function]}
+                                                        secondary={true}
+                                          >
+                                                        Previous
+                                          </Button>
+                            </GridColumn>
+                            <GridColumn>
+                                          <Button
+                                                        as="button"
+                                                        id="next"
+                                                        onClick={[Function]}
+                                                        primary={true}
+                                          >
+                                                        Next
+                                          </Button>
+                            </GridColumn>
               </GridRow>
 </Grid>,
             "id": "results-row",
@@ -733,6 +857,11 @@ ShallowWrapper {
                 <GridRow>
                   <GridColumn
                                     stretched={true}
+                                    style={
+                                                      Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                    }
                   >
                                     <CharacterCard
                                                       character={
@@ -750,6 +879,11 @@ ShallowWrapper {
                   </GridColumn>
                   <GridColumn
                                     stretched={true}
+                                    style={
+                                                      Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                    }
                   >
                                     <CharacterCard
                                                       character={
@@ -770,22 +904,26 @@ ShallowWrapper {
                 <GridRow
                   id="actions"
 >
-                  <Button
-                                    as="button"
-                                    id="prev"
-                                    onClick={[Function]}
-                                    secondary={true}
-                  >
-                                    Previous
-                  </Button>
-                  <Button
-                                    as="button"
-                                    id="next"
-                                    onClick={[Function]}
-                                    primary={true}
-                  >
-                                    Next
-                  </Button>
+                  <GridColumn>
+                                    <Button
+                                                      as="button"
+                                                      id="prev"
+                                                      onClick={[Function]}
+                                                      secondary={true}
+                                    >
+                                                      Previous
+                                    </Button>
+                  </GridColumn>
+                  <GridColumn>
+                                    <Button
+                                                      as="button"
+                                                      id="next"
+                                                      onClick={[Function]}
+                                                      primary={true}
+                                    >
+                                                      Next
+                                    </Button>
+                  </GridColumn>
 </GridRow>,
               ],
               "columns": 4,
@@ -801,6 +939,11 @@ ShallowWrapper {
                   "children": Array [
                     <GridColumn
                       stretched={true}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "15px",
+                                                                }
+                      }
 >
                       <CharacterCard
                                             character={
@@ -818,6 +961,11 @@ ShallowWrapper {
 </GridColumn>,
                     <GridColumn
                       stretched={true}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "15px",
+                                                                }
+                      }
 >
                       <CharacterCard
                                             character={
@@ -856,6 +1004,9 @@ ShallowWrapper {
                         showCharacterModal={[Function]}
 />,
                       "stretched": true,
+                      "style": Object {
+                        "marginBottom": "15px",
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -898,6 +1049,9 @@ ShallowWrapper {
                         showCharacterModal={[Function]}
 />,
                       "stretched": true,
+                      "style": Object {
+                        "marginBottom": "15px",
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -939,22 +1093,26 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": Array [
-                    <Button
-                      as="button"
-                      id="prev"
-                      onClick={[Function]}
-                      secondary={true}
->
-                      Previous
-</Button>,
-                    <Button
-                      as="button"
-                      id="next"
-                      onClick={[Function]}
-                      primary={true}
->
-                      Next
-</Button>,
+                    <GridColumn>
+                      <Button
+                                            as="button"
+                                            id="prev"
+                                            onClick={[Function]}
+                                            secondary={true}
+                      >
+                                            Previous
+                      </Button>
+</GridColumn>,
+                    <GridColumn>
+                      <Button
+                                            as="button"
+                                            id="next"
+                                            onClick={[Function]}
+                                            primary={true}
+                      >
+                                            Next
+                      </Button>
+</GridColumn>,
                   ],
                   "id": "actions",
                 },
@@ -963,31 +1121,65 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {
-                      "as": "button",
-                      "children": "Previous",
-                      "id": "prev",
-                      "onClick": [Function],
-                      "secondary": true,
+                      "children": <Button
+                        as="button"
+                        id="prev"
+                        onClick={[Function]}
+                        secondary={true}
+>
+                        Previous
+</Button>,
                     },
                     "ref": null,
-                    "rendered": "Previous",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "button",
+                        "children": "Previous",
+                        "id": "prev",
+                        "onClick": [Function],
+                        "secondary": true,
+                      },
+                      "ref": null,
+                      "rendered": "Previous",
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {
-                      "as": "button",
-                      "children": "Next",
-                      "id": "next",
-                      "onClick": [Function],
-                      "primary": true,
+                      "children": <Button
+                        as="button"
+                        id="next"
+                        onClick={[Function]}
+                        primary={true}
+>
+                        Next
+</Button>,
                     },
                     "ref": null,
-                    "rendered": "Next",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "button",
+                        "children": "Next",
+                        "id": "next",
+                        "onClick": [Function],
+                        "primary": true,
+                      },
+                      "ref": null,
+                      "rendered": "Next",
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
                 ],
@@ -1088,6 +1280,11 @@ ShallowWrapper {
                     <GridRow>
                               <GridColumn
                                         stretched={true}
+                                        style={
+                                                  Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                        }
                               >
                                         <CharacterCard
                                                   character={
@@ -1105,6 +1302,11 @@ ShallowWrapper {
                               </GridColumn>
                               <GridColumn
                                         stretched={true}
+                                        style={
+                                                  Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                        }
                               >
                                         <CharacterCard
                                                   character={
@@ -1125,14 +1327,17 @@ ShallowWrapper {
                     <GridRow
                               id="actions"
                     >
-                              <Button
-                                        as="button"
-                                        id="prev"
-                                        onClick={[Function]}
-                                        secondary={true}
-                              >
-                                        Previous
-                              </Button>
+                              <GridColumn>
+                                        <Button
+                                                  as="button"
+                                                  id="prev"
+                                                  onClick={[Function]}
+                                                  secondary={true}
+                                        >
+                                                  Previous
+                                        </Button>
+                              </GridColumn>
+                              <GridColumn />
                     </GridRow>
           </Grid>
 </GridRow>,
@@ -1199,6 +1404,11 @@ ShallowWrapper {
             <GridRow>
                         <GridColumn
                                     stretched={true}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                    }
                         >
                                     <CharacterCard
                                                 character={
@@ -1216,6 +1426,11 @@ ShallowWrapper {
                         </GridColumn>
                         <GridColumn
                                     stretched={true}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                    }
                         >
                                     <CharacterCard
                                                 character={
@@ -1236,14 +1451,17 @@ ShallowWrapper {
             <GridRow
                         id="actions"
             >
-                        <Button
-                                    as="button"
-                                    id="prev"
-                                    onClick={[Function]}
-                                    secondary={true}
-                        >
-                                    Previous
-                        </Button>
+                        <GridColumn>
+                                    <Button
+                                                as="button"
+                                                id="prev"
+                                                onClick={[Function]}
+                                                secondary={true}
+                                    >
+                                                Previous
+                                    </Button>
+                        </GridColumn>
+                        <GridColumn />
             </GridRow>
 </Grid>,
           "id": "results-row",
@@ -1258,6 +1476,11 @@ ShallowWrapper {
               <GridRow>
                 <GridColumn
                                 stretched={true}
+                                style={
+                                                Object {
+                                                                "marginBottom": "15px",
+                                                              }
+                                }
                 >
                                 <CharacterCard
                                                 character={
@@ -1275,6 +1498,11 @@ ShallowWrapper {
                 </GridColumn>
                 <GridColumn
                                 stretched={true}
+                                style={
+                                                Object {
+                                                                "marginBottom": "15px",
+                                                              }
+                                }
                 >
                                 <CharacterCard
                                                 character={
@@ -1295,14 +1523,17 @@ ShallowWrapper {
               <GridRow
                 id="actions"
 >
-                <Button
-                                as="button"
-                                id="prev"
-                                onClick={[Function]}
-                                secondary={true}
-                >
-                                Previous
-                </Button>
+                <GridColumn>
+                                <Button
+                                                as="button"
+                                                id="prev"
+                                                onClick={[Function]}
+                                                secondary={true}
+                                >
+                                                Previous
+                                </Button>
+                </GridColumn>
+                <GridColumn />
 </GridRow>,
             ],
             "columns": 4,
@@ -1318,6 +1549,11 @@ ShallowWrapper {
                 "children": Array [
                   <GridColumn
                     stretched={true}
+                    style={
+                                        Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                    }
 >
                     <CharacterCard
                                         character={
@@ -1335,6 +1571,11 @@ ShallowWrapper {
 </GridColumn>,
                   <GridColumn
                     stretched={true}
+                    style={
+                                        Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                    }
 >
                     <CharacterCard
                                         character={
@@ -1373,6 +1614,9 @@ ShallowWrapper {
                       showCharacterModal={[Function]}
 />,
                     "stretched": true,
+                    "style": Object {
+                      "marginBottom": "15px",
+                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1415,6 +1659,9 @@ ShallowWrapper {
                       showCharacterModal={[Function]}
 />,
                     "stretched": true,
+                    "style": Object {
+                      "marginBottom": "15px",
+                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1456,15 +1703,17 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": Array [
-                  <Button
-                    as="button"
-                    id="prev"
-                    onClick={[Function]}
-                    secondary={true}
->
-                    Previous
-</Button>,
-                  null,
+                  <GridColumn>
+                    <Button
+                                        as="button"
+                                        id="prev"
+                                        onClick={[Function]}
+                                        secondary={true}
+                    >
+                                        Previous
+                    </Button>
+</GridColumn>,
+                  <GridColumn />,
                 ],
                 "id": "actions",
               },
@@ -1473,19 +1722,46 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "function",
                   "props": Object {
-                    "as": "button",
-                    "children": "Previous",
-                    "id": "prev",
-                    "onClick": [Function],
-                    "secondary": true,
+                    "children": <Button
+                      as="button"
+                      id="prev"
+                      onClick={[Function]}
+                      secondary={true}
+>
+                      Previous
+</Button>,
                   },
                   "ref": null,
-                  "rendered": "Previous",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "button",
+                      "children": "Previous",
+                      "id": "prev",
+                      "onClick": [Function],
+                      "secondary": true,
+                    },
+                    "ref": null,
+                    "rendered": "Previous",
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
               ],
               "type": [Function],
             },
@@ -1524,6 +1800,11 @@ ShallowWrapper {
                         <GridRow>
                                     <GridColumn
                                                 stretched={true}
+                                                style={
+                                                            Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                                }
                                     >
                                                 <CharacterCard
                                                             character={
@@ -1541,6 +1822,11 @@ ShallowWrapper {
                                     </GridColumn>
                                     <GridColumn
                                                 stretched={true}
+                                                style={
+                                                            Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                                }
                                     >
                                                 <CharacterCard
                                                             character={
@@ -1561,14 +1847,17 @@ ShallowWrapper {
                         <GridRow
                                     id="actions"
                         >
-                                    <Button
-                                                as="button"
-                                                id="prev"
-                                                onClick={[Function]}
-                                                secondary={true}
-                                    >
-                                                Previous
-                                    </Button>
+                                    <GridColumn>
+                                                <Button
+                                                            as="button"
+                                                            id="prev"
+                                                            onClick={[Function]}
+                                                            secondary={true}
+                                                >
+                                                            Previous
+                                                </Button>
+                                    </GridColumn>
+                                    <GridColumn />
                         </GridRow>
             </Grid>
 </GridRow>,
@@ -1635,6 +1924,11 @@ ShallowWrapper {
               <GridRow>
                             <GridColumn
                                           stretched={true}
+                                          style={
+                                                        Object {
+                                                                      "marginBottom": "15px",
+                                                                    }
+                                          }
                             >
                                           <CharacterCard
                                                         character={
@@ -1652,6 +1946,11 @@ ShallowWrapper {
                             </GridColumn>
                             <GridColumn
                                           stretched={true}
+                                          style={
+                                                        Object {
+                                                                      "marginBottom": "15px",
+                                                                    }
+                                          }
                             >
                                           <CharacterCard
                                                         character={
@@ -1672,14 +1971,17 @@ ShallowWrapper {
               <GridRow
                             id="actions"
               >
-                            <Button
-                                          as="button"
-                                          id="prev"
-                                          onClick={[Function]}
-                                          secondary={true}
-                            >
-                                          Previous
-                            </Button>
+                            <GridColumn>
+                                          <Button
+                                                        as="button"
+                                                        id="prev"
+                                                        onClick={[Function]}
+                                                        secondary={true}
+                                          >
+                                                        Previous
+                                          </Button>
+                            </GridColumn>
+                            <GridColumn />
               </GridRow>
 </Grid>,
             "id": "results-row",
@@ -1694,6 +1996,11 @@ ShallowWrapper {
                 <GridRow>
                   <GridColumn
                                     stretched={true}
+                                    style={
+                                                      Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                    }
                   >
                                     <CharacterCard
                                                       character={
@@ -1711,6 +2018,11 @@ ShallowWrapper {
                   </GridColumn>
                   <GridColumn
                                     stretched={true}
+                                    style={
+                                                      Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                    }
                   >
                                     <CharacterCard
                                                       character={
@@ -1731,14 +2043,17 @@ ShallowWrapper {
                 <GridRow
                   id="actions"
 >
-                  <Button
-                                    as="button"
-                                    id="prev"
-                                    onClick={[Function]}
-                                    secondary={true}
-                  >
-                                    Previous
-                  </Button>
+                  <GridColumn>
+                                    <Button
+                                                      as="button"
+                                                      id="prev"
+                                                      onClick={[Function]}
+                                                      secondary={true}
+                                    >
+                                                      Previous
+                                    </Button>
+                  </GridColumn>
+                  <GridColumn />
 </GridRow>,
               ],
               "columns": 4,
@@ -1754,6 +2069,11 @@ ShallowWrapper {
                   "children": Array [
                     <GridColumn
                       stretched={true}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "15px",
+                                                                }
+                      }
 >
                       <CharacterCard
                                             character={
@@ -1771,6 +2091,11 @@ ShallowWrapper {
 </GridColumn>,
                     <GridColumn
                       stretched={true}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "15px",
+                                                                }
+                      }
 >
                       <CharacterCard
                                             character={
@@ -1809,6 +2134,9 @@ ShallowWrapper {
                         showCharacterModal={[Function]}
 />,
                       "stretched": true,
+                      "style": Object {
+                        "marginBottom": "15px",
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -1851,6 +2179,9 @@ ShallowWrapper {
                         showCharacterModal={[Function]}
 />,
                       "stretched": true,
+                      "style": Object {
+                        "marginBottom": "15px",
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -1892,15 +2223,17 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": Array [
-                    <Button
-                      as="button"
-                      id="prev"
-                      onClick={[Function]}
-                      secondary={true}
->
-                      Previous
-</Button>,
-                    null,
+                    <GridColumn>
+                      <Button
+                                            as="button"
+                                            id="prev"
+                                            onClick={[Function]}
+                                            secondary={true}
+                      >
+                                            Previous
+                      </Button>
+</GridColumn>,
+                    <GridColumn />,
                   ],
                   "id": "actions",
                 },
@@ -1909,19 +2242,46 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {
-                      "as": "button",
-                      "children": "Previous",
-                      "id": "prev",
-                      "onClick": [Function],
-                      "secondary": true,
+                      "children": <Button
+                        as="button"
+                        id="prev"
+                        onClick={[Function]}
+                        secondary={true}
+>
+                        Previous
+</Button>,
                     },
                     "ref": null,
-                    "rendered": "Previous",
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "button",
+                        "children": "Previous",
+                        "id": "prev",
+                        "onClick": [Function],
+                        "secondary": true,
+                      },
+                      "ref": null,
+                      "rendered": "Previous",
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
-                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                 ],
                 "type": [Function],
               },
@@ -2020,6 +2380,11 @@ ShallowWrapper {
                     <GridRow>
                               <GridColumn
                                         stretched={true}
+                                        style={
+                                                  Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                        }
                               >
                                         <CharacterCard
                                                   character={
@@ -2037,6 +2402,11 @@ ShallowWrapper {
                               </GridColumn>
                               <GridColumn
                                         stretched={true}
+                                        style={
+                                                  Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                        }
                               >
                                         <CharacterCard
                                                   character={
@@ -2057,14 +2427,17 @@ ShallowWrapper {
                     <GridRow
                               id="actions"
                     >
-                              <Button
-                                        as="button"
-                                        id="next"
-                                        onClick={[Function]}
-                                        primary={true}
-                              >
-                                        Next
-                              </Button>
+                              <GridColumn />
+                              <GridColumn>
+                                        <Button
+                                                  as="button"
+                                                  id="next"
+                                                  onClick={[Function]}
+                                                  primary={true}
+                                        >
+                                                  Next
+                                        </Button>
+                              </GridColumn>
                     </GridRow>
           </Grid>
 </GridRow>,
@@ -2131,6 +2504,11 @@ ShallowWrapper {
             <GridRow>
                         <GridColumn
                                     stretched={true}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                    }
                         >
                                     <CharacterCard
                                                 character={
@@ -2148,6 +2526,11 @@ ShallowWrapper {
                         </GridColumn>
                         <GridColumn
                                     stretched={true}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                                    }
                         >
                                     <CharacterCard
                                                 character={
@@ -2168,14 +2551,17 @@ ShallowWrapper {
             <GridRow
                         id="actions"
             >
-                        <Button
-                                    as="button"
-                                    id="next"
-                                    onClick={[Function]}
-                                    primary={true}
-                        >
-                                    Next
-                        </Button>
+                        <GridColumn />
+                        <GridColumn>
+                                    <Button
+                                                as="button"
+                                                id="next"
+                                                onClick={[Function]}
+                                                primary={true}
+                                    >
+                                                Next
+                                    </Button>
+                        </GridColumn>
             </GridRow>
 </Grid>,
           "id": "results-row",
@@ -2190,6 +2576,11 @@ ShallowWrapper {
               <GridRow>
                 <GridColumn
                                 stretched={true}
+                                style={
+                                                Object {
+                                                                "marginBottom": "15px",
+                                                              }
+                                }
                 >
                                 <CharacterCard
                                                 character={
@@ -2207,6 +2598,11 @@ ShallowWrapper {
                 </GridColumn>
                 <GridColumn
                                 stretched={true}
+                                style={
+                                                Object {
+                                                                "marginBottom": "15px",
+                                                              }
+                                }
                 >
                                 <CharacterCard
                                                 character={
@@ -2227,14 +2623,17 @@ ShallowWrapper {
               <GridRow
                 id="actions"
 >
-                <Button
-                                as="button"
-                                id="next"
-                                onClick={[Function]}
-                                primary={true}
-                >
-                                Next
-                </Button>
+                <GridColumn />
+                <GridColumn>
+                                <Button
+                                                as="button"
+                                                id="next"
+                                                onClick={[Function]}
+                                                primary={true}
+                                >
+                                                Next
+                                </Button>
+                </GridColumn>
 </GridRow>,
             ],
             "columns": 4,
@@ -2250,6 +2649,11 @@ ShallowWrapper {
                 "children": Array [
                   <GridColumn
                     stretched={true}
+                    style={
+                                        Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                    }
 >
                     <CharacterCard
                                         character={
@@ -2267,6 +2671,11 @@ ShallowWrapper {
 </GridColumn>,
                   <GridColumn
                     stretched={true}
+                    style={
+                                        Object {
+                                                            "marginBottom": "15px",
+                                                          }
+                    }
 >
                     <CharacterCard
                                         character={
@@ -2305,6 +2714,9 @@ ShallowWrapper {
                       showCharacterModal={[Function]}
 />,
                     "stretched": true,
+                    "style": Object {
+                      "marginBottom": "15px",
+                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2347,6 +2759,9 @@ ShallowWrapper {
                       showCharacterModal={[Function]}
 />,
                     "stretched": true,
+                    "style": Object {
+                      "marginBottom": "15px",
+                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2388,34 +2803,63 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": Array [
-                  null,
-                  <Button
-                    as="button"
-                    id="next"
-                    onClick={[Function]}
-                    primary={true}
->
-                    Next
-</Button>,
+                  <GridColumn />,
+                  <GridColumn>
+                    <Button
+                                        as="button"
+                                        id="next"
+                                        onClick={[Function]}
+                                        primary={true}
+                    >
+                                        Next
+                    </Button>
+</GridColumn>,
                 ],
                 "id": "actions",
               },
               "ref": null,
               "rendered": Array [
-                null,
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "function",
                   "props": Object {
-                    "as": "button",
-                    "children": "Next",
-                    "id": "next",
-                    "onClick": [Function],
-                    "primary": true,
+                    "children": null,
                   },
                   "ref": null,
-                  "rendered": "Next",
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <Button
+                      as="button"
+                      id="next"
+                      onClick={[Function]}
+                      primary={true}
+>
+                      Next
+</Button>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "button",
+                      "children": "Next",
+                      "id": "next",
+                      "onClick": [Function],
+                      "primary": true,
+                    },
+                    "ref": null,
+                    "rendered": "Next",
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
               ],
@@ -2456,6 +2900,11 @@ ShallowWrapper {
                         <GridRow>
                                     <GridColumn
                                                 stretched={true}
+                                                style={
+                                                            Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                                }
                                     >
                                                 <CharacterCard
                                                             character={
@@ -2473,6 +2922,11 @@ ShallowWrapper {
                                     </GridColumn>
                                     <GridColumn
                                                 stretched={true}
+                                                style={
+                                                            Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                                }
                                     >
                                                 <CharacterCard
                                                             character={
@@ -2493,14 +2947,17 @@ ShallowWrapper {
                         <GridRow
                                     id="actions"
                         >
-                                    <Button
-                                                as="button"
-                                                id="next"
-                                                onClick={[Function]}
-                                                primary={true}
-                                    >
-                                                Next
-                                    </Button>
+                                    <GridColumn />
+                                    <GridColumn>
+                                                <Button
+                                                            as="button"
+                                                            id="next"
+                                                            onClick={[Function]}
+                                                            primary={true}
+                                                >
+                                                            Next
+                                                </Button>
+                                    </GridColumn>
                         </GridRow>
             </Grid>
 </GridRow>,
@@ -2567,6 +3024,11 @@ ShallowWrapper {
               <GridRow>
                             <GridColumn
                                           stretched={true}
+                                          style={
+                                                        Object {
+                                                                      "marginBottom": "15px",
+                                                                    }
+                                          }
                             >
                                           <CharacterCard
                                                         character={
@@ -2584,6 +3046,11 @@ ShallowWrapper {
                             </GridColumn>
                             <GridColumn
                                           stretched={true}
+                                          style={
+                                                        Object {
+                                                                      "marginBottom": "15px",
+                                                                    }
+                                          }
                             >
                                           <CharacterCard
                                                         character={
@@ -2604,14 +3071,17 @@ ShallowWrapper {
               <GridRow
                             id="actions"
               >
-                            <Button
-                                          as="button"
-                                          id="next"
-                                          onClick={[Function]}
-                                          primary={true}
-                            >
-                                          Next
-                            </Button>
+                            <GridColumn />
+                            <GridColumn>
+                                          <Button
+                                                        as="button"
+                                                        id="next"
+                                                        onClick={[Function]}
+                                                        primary={true}
+                                          >
+                                                        Next
+                                          </Button>
+                            </GridColumn>
               </GridRow>
 </Grid>,
             "id": "results-row",
@@ -2626,6 +3096,11 @@ ShallowWrapper {
                 <GridRow>
                   <GridColumn
                                     stretched={true}
+                                    style={
+                                                      Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                    }
                   >
                                     <CharacterCard
                                                       character={
@@ -2643,6 +3118,11 @@ ShallowWrapper {
                   </GridColumn>
                   <GridColumn
                                     stretched={true}
+                                    style={
+                                                      Object {
+                                                                        "marginBottom": "15px",
+                                                                      }
+                                    }
                   >
                                     <CharacterCard
                                                       character={
@@ -2663,14 +3143,17 @@ ShallowWrapper {
                 <GridRow
                   id="actions"
 >
-                  <Button
-                                    as="button"
-                                    id="next"
-                                    onClick={[Function]}
-                                    primary={true}
-                  >
-                                    Next
-                  </Button>
+                  <GridColumn />
+                  <GridColumn>
+                                    <Button
+                                                      as="button"
+                                                      id="next"
+                                                      onClick={[Function]}
+                                                      primary={true}
+                                    >
+                                                      Next
+                                    </Button>
+                  </GridColumn>
 </GridRow>,
               ],
               "columns": 4,
@@ -2686,6 +3169,11 @@ ShallowWrapper {
                   "children": Array [
                     <GridColumn
                       stretched={true}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "15px",
+                                                                }
+                      }
 >
                       <CharacterCard
                                             character={
@@ -2703,6 +3191,11 @@ ShallowWrapper {
 </GridColumn>,
                     <GridColumn
                       stretched={true}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "15px",
+                                                                }
+                      }
 >
                       <CharacterCard
                                             character={
@@ -2741,6 +3234,9 @@ ShallowWrapper {
                         showCharacterModal={[Function]}
 />,
                       "stretched": true,
+                      "style": Object {
+                        "marginBottom": "15px",
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -2783,6 +3279,9 @@ ShallowWrapper {
                         showCharacterModal={[Function]}
 />,
                       "stretched": true,
+                      "style": Object {
+                        "marginBottom": "15px",
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -2824,34 +3323,63 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": Array [
-                    null,
-                    <Button
-                      as="button"
-                      id="next"
-                      onClick={[Function]}
-                      primary={true}
->
-                      Next
-</Button>,
+                    <GridColumn />,
+                    <GridColumn>
+                      <Button
+                                            as="button"
+                                            id="next"
+                                            onClick={[Function]}
+                                            primary={true}
+                      >
+                                            Next
+                      </Button>
+</GridColumn>,
                   ],
                   "id": "actions",
                 },
                 "ref": null,
                 "rendered": Array [
-                  null,
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {
-                      "as": "button",
-                      "children": "Next",
-                      "id": "next",
-                      "onClick": [Function],
-                      "primary": true,
+                      "children": null,
                     },
                     "ref": null,
-                    "rendered": "Next",
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <Button
+                        as="button"
+                        id="next"
+                        onClick={[Function]}
+                        primary={true}
+>
+                        Next
+</Button>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "button",
+                        "children": "Next",
+                        "id": "next",
+                        "onClick": [Function],
+                        "primary": true,
+                      },
+                      "ref": null,
+                      "rendered": "Next",
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
                 ],

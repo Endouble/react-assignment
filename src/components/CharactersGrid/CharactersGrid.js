@@ -6,6 +6,10 @@ import { Grid, Button, Divider } from 'semantic-ui-react';
 import Filters from './../Filters';
 import CharactersCard from './../CharacterCard';
 
+const columnStyle = {
+  marginBottom: '15px'
+}
+
 const CharactersGrid = (props) => {
   const loadNextCharacters = () => props.moreCallback(props.data.next);
   const loadPrevCharacters = () => props.moreCallback(props.data.previous);
@@ -23,7 +27,7 @@ const CharactersGrid = (props) => {
             <Grid.Row>
                 {
                   props.data.results.map((character, index) => 
-                    <Grid.Column key={index} stretched>
+                    <Grid.Column key={index} style={columnStyle} stretched>
                       <CharactersCard character={character} showCharacterModal={props.showCharacterCallback} />
                     </Grid.Column>
                   )
@@ -32,18 +36,23 @@ const CharactersGrid = (props) => {
             <Divider />
             { props.data.next || props.data.previous?
               <Grid.Row id="actions">
+                <Grid.Column>
                 {props.data.previous?
-                  <Button id="prev" secondary onClick={loadPrevCharacters}>
-                    Previous
-                  </Button>
+                    <Button id="prev" secondary onClick={loadPrevCharacters}>
+                      Previous
+                    </Button>
                   :null
                 }
+                </Grid.Column>
+                <Grid.Column>
                 {props.data.next?
-                  <Button id="next" primary onClick={loadNextCharacters}>
-                    Next
-                  </Button>
+                    <Button id="next" primary onClick={loadNextCharacters}>
+                      Next
+                    </Button>
+                  
                   :null
                 }
+                </Grid.Column>
               </Grid.Row>
               :null
             }
