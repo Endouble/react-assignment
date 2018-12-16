@@ -1,6 +1,7 @@
 {
   "name": "react-assignment",
   "version": "0.1.0",
+  "homepage": "https://fabrimyr.github.io/react-assignment/",
   "private": true,
   "engines": {
     "node": ">=8"
@@ -55,7 +56,9 @@
     "build": "node scripts/build.js",
     "lint": "node scripts/lint.js",
     "test": "node scripts/test.js --env=jsdom",
-    "lint-endouble": "eslint src/components/*.js"
+    "lint-endouble": "eslint src/components/*.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -105,6 +108,7 @@
   "devDependencies": {
     "@endouble.com/eslint-config-endouble": "^2.0.0",
     "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1"
+    "enzyme-adapter-react-16": "^1.7.1",
+    "gh-pages": "^2.0.1"
   }
 }
