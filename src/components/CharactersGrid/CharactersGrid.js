@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Grid, Button } from 'semantic-ui-react';
+import { Grid, Button, Divider } from 'semantic-ui-react';
 
 import Filters from './../Filters';
 import CharactersCard from './../CharacterCard';
@@ -16,7 +16,7 @@ const CharactersGrid = (props) => {
           <Filters filterCallback={props.filterCallback}/>
         </Grid.Column>
       </Grid.Row>
-      
+      <Divider />
       { props.data?
         <Grid.Row id="results-row">
           <Grid columns={4} stackable>
@@ -29,6 +29,7 @@ const CharactersGrid = (props) => {
                   )
                 }
             </Grid.Row>
+            <Divider />
             { props.data.next || props.data.previous?
               <Grid.Row id="actions">
                 {props.data.previous?
