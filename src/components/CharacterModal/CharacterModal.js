@@ -9,11 +9,11 @@ const CharacterModal = (props) => {
     </Modal.Header>
     <Modal.Content>
       <Modal.Description>
-        <p>Gender: {props.character.gender}</p>
-        <p>Eye color: {props.character.eye_color}</p>
-        <p>Height: {props.character.height}</p>
-        <p>Mass: {props.character.mass}</p>
-        <p>Skin color: {props.character.skin_color}</p>
+        <p id="gender">Gender: {props.character.gender}</p>
+        <p id="eyes">Eye color: {props.character.eye_color}</p>
+        <p id="height">Height: {props.character.height}</p>
+        <p id="mass">Mass: {props.character.mass}</p>
+        <p id="skin">Skin color: {props.character.skin_color}</p>
       </Modal.Description>
     </Modal.Content>
   </Modal>
