@@ -9,7 +9,7 @@ describe('Character Card Test', () => {
 
   const getCharacterCard = () => {
     if (!shallowCharacterCard) {
-      shallowCharacterCard = shallow(<CharacterCard {...props} />)
+      shallowCharacterCard = shallow(<CharacterCard {...props} />);
     }
     return shallowCharacterCard;
   };
