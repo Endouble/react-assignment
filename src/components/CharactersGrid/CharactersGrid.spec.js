@@ -110,4 +110,29 @@ describe('Characters Grid Test', () => {
   test('Component should render correctly without ndext results', () => {
     expect(getShallowCharactersGrid(dataWONextMock)).toMatchSnapshot();
   });
+
+  test('Component should render character cards when there are results', () => {
+    const charactersGrid = getShallowCharactersGrid(dataCompleteMock);
+    expect(charactersGrid.find('CharacterCard')).toHaveLength(dataCompleteMock.data.results.length);
+  });
+
+  test('Component should render 0 character cards when there are no results', () => {
+    const charactersGrid = getShallowCharactersGrid(dataWOResultMock);
+    expect(charactersGrid.find('CharacterCard')).toHaveLength(0);
+  });
+
+  test('Component should render prev and next buttons when complete', () => {
+    const charactersGrid = getShallowCharactersGrid(dataCompleteMock);
+    expect(charactersGrid.find('#results-row #actions')).toHaveLength(1);
+  });
+
+  test('Component should not render actions buttons row when no results', () => {
+    const charactersGrid = getShallowCharactersGrid(dataWOResultMock);
+    expect(charactersGrid.find('#results-row #actions')).toHaveLength(0);
+  });
+
+  test('Component should render Filters component', () => {
+    const charactersGrid = getShallowCharactersGrid(dataCompleteMock);
+    expect(charactersGrid.find('Filters')).toHaveLength(1);
+  });
 });

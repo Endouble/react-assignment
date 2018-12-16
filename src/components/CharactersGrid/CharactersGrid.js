@@ -11,14 +11,14 @@ const CharactersGrid = (props) => {
   const loadPrevCharacters = () => props.moreCallback(props.data.previous);
 
    return <Grid>
-      <Grid.Row>
+      <Grid.Row id="filters-row">
         <Grid.Column>
           <Filters filterCallback={props.filterCallback}/>
         </Grid.Column>
       </Grid.Row>
       
       { props.data?
-        <Grid.Row>
+        <Grid.Row id="results-row">
           <Grid columns={4} stackable>
             <Grid.Row>
                 {
@@ -30,15 +30,15 @@ const CharactersGrid = (props) => {
                 }
             </Grid.Row>
             { props.data.next || props.data.previous?
-              <Grid.Row>
+              <Grid.Row id="actions">
                 {props.data.previous?
-                  <Button secondary onClick={loadPrevCharacters}>
+                  <Button id="prev" secondary onClick={loadPrevCharacters}>
                     Previous
                   </Button>
                   :null
                 }
                 {props.data.next?
-                  <Button primary onClick={loadNextCharacters}>
+                  <Button id="next" primary onClick={loadNextCharacters}>
                     Next
                   </Button>
                   :null
