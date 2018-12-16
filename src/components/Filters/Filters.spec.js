@@ -8,14 +8,14 @@ describe('Filters Test', () => {
 
   const props = {
     filterCallback: jest.fn()
-  }
+  };
 
   const getShallowFilter = () => {
     if (!shallowFilters) {
       shallowFilters = shallow(<Filters {...props} />);
     }
     return shallowFilters;
-  }
+  };
 
   beforeEach(() => {
     shallowFilters = undefined;
