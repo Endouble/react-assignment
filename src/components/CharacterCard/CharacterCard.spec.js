@@ -53,4 +53,11 @@ describe('Character Card Test', () => {
     card.simulate('click', { preventDefault: jest.fn() });
     expect(props.showCharacterModal).toHaveBeenCalled();
   });
+
+  test('Component should call showCharacterModal func on key press over card ', () => {
+    const wrapper = getCharacterCard();
+    const card = wrapper.find('Card');
+    card.simulate('keypress', { preventDefault: jest.fn(), key: 'Enter' });
+    expect(props.showCharacterModal).toHaveBeenCalled();
+  });
 })
