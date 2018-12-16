@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import CharactersGrid from './CharactersGrid';
 
@@ -129,6 +129,20 @@ describe('Characters Grid Test', () => {
   test('Component should not render actions buttons row when no results', () => {
     const charactersGrid = getShallowCharactersGrid(dataWOResultMock);
     expect(charactersGrid.find('#results-row #actions')).toHaveLength(0);
+  });
+
+  test('Component should call moreCallback on click over button prev', () => {
+    const filter = mount(<CharactersGrid {...dataCompleteMock} />);
+    const prevButton = filter.find('button#prev');
+    prevButton.simulate('click', { preventDefault: jest.fn() });
+    expect(dataCompleteMock.moreCallback).toHaveBeenCalled();
+  });
+
+  test('Component should call moreCallback on click over button next', () => {
+    const filter = mount(<CharactersGrid {...dataCompleteMock} />);
+    const nextButton = filter.find('button#next');
+    nextButton.simulate('click', { preventDefault: jest.fn() });
+    expect(dataCompleteMock.moreCallback).toHaveBeenCalled();
   });
 
   test('Component should render Filters component', () => {
