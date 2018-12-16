@@ -51,7 +51,33 @@ ShallowWrapper {
 >
           <GridColumn>
                     <Filters
+                              data={
+                                        Object {
+                                                  "next": "nextURL",
+                                                  "previous": "prevURL",
+                                                  "results": Array [
+                                                    Object {
+                                                      "eye_color": "blue",
+                                                      "gender": "male",
+                                                      "height": "172",
+                                                      "mass": "77",
+                                                      "name": "Luke Skywalker",
+                                                      "skin_color": "fair",
+                                                    },
+                                                    Object {
+                                                      "eye_color": "red",
+                                                      "gender": "n/a",
+                                                      "height": "96",
+                                                      "mass": "32",
+                                                      "name": "R2-D2",
+                                                      "skin_color": "white,blue",
+                                                    },
+                                                  ],
+                                                }
+                              }
                               filterCallback={[Function]}
+                              moreCallback={[Function]}
+                              showCharacterCallback={[Function]}
                     />
           </GridColumn>
 </GridRow>,
@@ -147,7 +173,33 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn>
             <Filters
+                        data={
+                                    Object {
+                                                "next": "nextURL",
+                                                "previous": "prevURL",
+                                                "results": Array [
+                                                  Object {
+                                                    "eye_color": "blue",
+                                                    "gender": "male",
+                                                    "height": "172",
+                                                    "mass": "77",
+                                                    "name": "Luke Skywalker",
+                                                    "skin_color": "fair",
+                                                  },
+                                                  Object {
+                                                    "eye_color": "red",
+                                                    "gender": "n/a",
+                                                    "height": "96",
+                                                    "mass": "32",
+                                                    "name": "R2-D2",
+                                                    "skin_color": "white,blue",
+                                                  },
+                                                ],
+                                              }
+                        }
                         filterCallback={[Function]}
+                        moreCallback={[Function]}
+                        showCharacterCallback={[Function]}
             />
 </GridColumn>,
           "id": "filters-row",
@@ -159,7 +211,33 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Filters
+              data={
+                            Object {
+                                          "next": "nextURL",
+                                          "previous": "prevURL",
+                                          "results": Array [
+                                            Object {
+                                              "eye_color": "blue",
+                                              "gender": "male",
+                                              "height": "172",
+                                              "mass": "77",
+                                              "name": "Luke Skywalker",
+                                              "skin_color": "fair",
+                                            },
+                                            Object {
+                                              "eye_color": "red",
+                                              "gender": "n/a",
+                                              "height": "96",
+                                              "mass": "32",
+                                              "name": "R2-D2",
+                                              "skin_color": "white,blue",
+                                            },
+                                          ],
+                                        }
+              }
               filterCallback={[Function]}
+              moreCallback={[Function]}
+              showCharacterCallback={[Function]}
 />,
           },
           "ref": null,
@@ -168,7 +246,31 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "data": Object {
+                "next": "nextURL",
+                "previous": "prevURL",
+                "results": Array [
+                  Object {
+                    "eye_color": "blue",
+                    "gender": "male",
+                    "height": "172",
+                    "mass": "77",
+                    "name": "Luke Skywalker",
+                    "skin_color": "fair",
+                  },
+                  Object {
+                    "eye_color": "red",
+                    "gender": "n/a",
+                    "height": "96",
+                    "mass": "32",
+                    "name": "R2-D2",
+                    "skin_color": "white,blue",
+                  },
+                ],
+              },
               "filterCallback": [Function],
+              "moreCallback": [Function],
+              "showCharacterCallback": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -410,7 +512,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "0",
+                  "key": "Luke Skywalker",
                   "nodeType": "function",
                   "props": Object {
                     "children": <CharacterCard
@@ -455,7 +557,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "1",
+                  "key": "R2-D2",
                   "nodeType": "function",
                   "props": Object {
                     "children": <CharacterCard
@@ -628,7 +730,33 @@ ShallowWrapper {
 >
             <GridColumn>
                         <Filters
+                                    data={
+                                                Object {
+                                                            "next": "nextURL",
+                                                            "previous": "prevURL",
+                                                            "results": Array [
+                                                              Object {
+                                                                "eye_color": "blue",
+                                                                "gender": "male",
+                                                                "height": "172",
+                                                                "mass": "77",
+                                                                "name": "Luke Skywalker",
+                                                                "skin_color": "fair",
+                                                              },
+                                                              Object {
+                                                                "eye_color": "red",
+                                                                "gender": "n/a",
+                                                                "height": "96",
+                                                                "mass": "32",
+                                                                "name": "R2-D2",
+                                                                "skin_color": "white,blue",
+                                                              },
+                                                            ],
+                                                          }
+                                    }
                                     filterCallback={[Function]}
+                                    moreCallback={[Function]}
+                                    showCharacterCallback={[Function]}
                         />
             </GridColumn>
 </GridRow>,
@@ -724,7 +852,33 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn>
               <Filters
+                            data={
+                                          Object {
+                                                        "next": "nextURL",
+                                                        "previous": "prevURL",
+                                                        "results": Array [
+                                                          Object {
+                                                            "eye_color": "blue",
+                                                            "gender": "male",
+                                                            "height": "172",
+                                                            "mass": "77",
+                                                            "name": "Luke Skywalker",
+                                                            "skin_color": "fair",
+                                                          },
+                                                          Object {
+                                                            "eye_color": "red",
+                                                            "gender": "n/a",
+                                                            "height": "96",
+                                                            "mass": "32",
+                                                            "name": "R2-D2",
+                                                            "skin_color": "white,blue",
+                                                          },
+                                                        ],
+                                                      }
+                            }
                             filterCallback={[Function]}
+                            moreCallback={[Function]}
+                            showCharacterCallback={[Function]}
               />
 </GridColumn>,
             "id": "filters-row",
@@ -736,7 +890,33 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <Filters
+                data={
+                                Object {
+                                                "next": "nextURL",
+                                                "previous": "prevURL",
+                                                "results": Array [
+                                                  Object {
+                                                    "eye_color": "blue",
+                                                    "gender": "male",
+                                                    "height": "172",
+                                                    "mass": "77",
+                                                    "name": "Luke Skywalker",
+                                                    "skin_color": "fair",
+                                                  },
+                                                  Object {
+                                                    "eye_color": "red",
+                                                    "gender": "n/a",
+                                                    "height": "96",
+                                                    "mass": "32",
+                                                    "name": "R2-D2",
+                                                    "skin_color": "white,blue",
+                                                  },
+                                                ],
+                                              }
+                }
                 filterCallback={[Function]}
+                moreCallback={[Function]}
+                showCharacterCallback={[Function]}
 />,
             },
             "ref": null,
@@ -745,7 +925,31 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "data": Object {
+                  "next": "nextURL",
+                  "previous": "prevURL",
+                  "results": Array [
+                    Object {
+                      "eye_color": "blue",
+                      "gender": "male",
+                      "height": "172",
+                      "mass": "77",
+                      "name": "Luke Skywalker",
+                      "skin_color": "fair",
+                    },
+                    Object {
+                      "eye_color": "red",
+                      "gender": "n/a",
+                      "height": "96",
+                      "mass": "32",
+                      "name": "R2-D2",
+                      "skin_color": "white,blue",
+                    },
+                  ],
+                },
                 "filterCallback": [Function],
+                "moreCallback": [Function],
+                "showCharacterCallback": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -987,7 +1191,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "0",
+                    "key": "Luke Skywalker",
                     "nodeType": "function",
                     "props": Object {
                       "children": <CharacterCard
@@ -1032,7 +1236,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "1",
+                    "key": "R2-D2",
                     "nodeType": "function",
                     "props": Object {
                       "children": <CharacterCard
@@ -1265,7 +1469,33 @@ ShallowWrapper {
 >
           <GridColumn>
                     <Filters
+                              data={
+                                        Object {
+                                                  "next": null,
+                                                  "previous": "prevURL",
+                                                  "results": Array [
+                                                    Object {
+                                                      "eye_color": "blue",
+                                                      "gender": "male",
+                                                      "height": "172",
+                                                      "mass": "77",
+                                                      "name": "Luke Skywalker",
+                                                      "skin_color": "fair",
+                                                    },
+                                                    Object {
+                                                      "eye_color": "red",
+                                                      "gender": "n/a",
+                                                      "height": "96",
+                                                      "mass": "32",
+                                                      "name": "R2-D2",
+                                                      "skin_color": "white,blue",
+                                                    },
+                                                  ],
+                                                }
+                              }
                               filterCallback={[Function]}
+                              moreCallback={[Function]}
+                              showCharacterCallback={[Function]}
                     />
           </GridColumn>
 </GridRow>,
@@ -1352,7 +1582,33 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn>
             <Filters
+                        data={
+                                    Object {
+                                                "next": null,
+                                                "previous": "prevURL",
+                                                "results": Array [
+                                                  Object {
+                                                    "eye_color": "blue",
+                                                    "gender": "male",
+                                                    "height": "172",
+                                                    "mass": "77",
+                                                    "name": "Luke Skywalker",
+                                                    "skin_color": "fair",
+                                                  },
+                                                  Object {
+                                                    "eye_color": "red",
+                                                    "gender": "n/a",
+                                                    "height": "96",
+                                                    "mass": "32",
+                                                    "name": "R2-D2",
+                                                    "skin_color": "white,blue",
+                                                  },
+                                                ],
+                                              }
+                        }
                         filterCallback={[Function]}
+                        moreCallback={[Function]}
+                        showCharacterCallback={[Function]}
             />
 </GridColumn>,
           "id": "filters-row",
@@ -1364,7 +1620,33 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Filters
+              data={
+                            Object {
+                                          "next": null,
+                                          "previous": "prevURL",
+                                          "results": Array [
+                                            Object {
+                                              "eye_color": "blue",
+                                              "gender": "male",
+                                              "height": "172",
+                                              "mass": "77",
+                                              "name": "Luke Skywalker",
+                                              "skin_color": "fair",
+                                            },
+                                            Object {
+                                              "eye_color": "red",
+                                              "gender": "n/a",
+                                              "height": "96",
+                                              "mass": "32",
+                                              "name": "R2-D2",
+                                              "skin_color": "white,blue",
+                                            },
+                                          ],
+                                        }
+              }
               filterCallback={[Function]}
+              moreCallback={[Function]}
+              showCharacterCallback={[Function]}
 />,
           },
           "ref": null,
@@ -1373,7 +1655,31 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "data": Object {
+                "next": null,
+                "previous": "prevURL",
+                "results": Array [
+                  Object {
+                    "eye_color": "blue",
+                    "gender": "male",
+                    "height": "172",
+                    "mass": "77",
+                    "name": "Luke Skywalker",
+                    "skin_color": "fair",
+                  },
+                  Object {
+                    "eye_color": "red",
+                    "gender": "n/a",
+                    "height": "96",
+                    "mass": "32",
+                    "name": "R2-D2",
+                    "skin_color": "white,blue",
+                  },
+                ],
+              },
               "filterCallback": [Function],
+              "moreCallback": [Function],
+              "showCharacterCallback": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -1597,7 +1903,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "0",
+                  "key": "Luke Skywalker",
                   "nodeType": "function",
                   "props": Object {
                     "children": <CharacterCard
@@ -1642,7 +1948,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "1",
+                  "key": "R2-D2",
                   "nodeType": "function",
                   "props": Object {
                     "children": <CharacterCard
@@ -1785,7 +2091,33 @@ ShallowWrapper {
 >
             <GridColumn>
                         <Filters
+                                    data={
+                                                Object {
+                                                            "next": null,
+                                                            "previous": "prevURL",
+                                                            "results": Array [
+                                                              Object {
+                                                                "eye_color": "blue",
+                                                                "gender": "male",
+                                                                "height": "172",
+                                                                "mass": "77",
+                                                                "name": "Luke Skywalker",
+                                                                "skin_color": "fair",
+                                                              },
+                                                              Object {
+                                                                "eye_color": "red",
+                                                                "gender": "n/a",
+                                                                "height": "96",
+                                                                "mass": "32",
+                                                                "name": "R2-D2",
+                                                                "skin_color": "white,blue",
+                                                              },
+                                                            ],
+                                                          }
+                                    }
                                     filterCallback={[Function]}
+                                    moreCallback={[Function]}
+                                    showCharacterCallback={[Function]}
                         />
             </GridColumn>
 </GridRow>,
@@ -1872,7 +2204,33 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn>
               <Filters
+                            data={
+                                          Object {
+                                                        "next": null,
+                                                        "previous": "prevURL",
+                                                        "results": Array [
+                                                          Object {
+                                                            "eye_color": "blue",
+                                                            "gender": "male",
+                                                            "height": "172",
+                                                            "mass": "77",
+                                                            "name": "Luke Skywalker",
+                                                            "skin_color": "fair",
+                                                          },
+                                                          Object {
+                                                            "eye_color": "red",
+                                                            "gender": "n/a",
+                                                            "height": "96",
+                                                            "mass": "32",
+                                                            "name": "R2-D2",
+                                                            "skin_color": "white,blue",
+                                                          },
+                                                        ],
+                                                      }
+                            }
                             filterCallback={[Function]}
+                            moreCallback={[Function]}
+                            showCharacterCallback={[Function]}
               />
 </GridColumn>,
             "id": "filters-row",
@@ -1884,7 +2242,33 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <Filters
+                data={
+                                Object {
+                                                "next": null,
+                                                "previous": "prevURL",
+                                                "results": Array [
+                                                  Object {
+                                                    "eye_color": "blue",
+                                                    "gender": "male",
+                                                    "height": "172",
+                                                    "mass": "77",
+                                                    "name": "Luke Skywalker",
+                                                    "skin_color": "fair",
+                                                  },
+                                                  Object {
+                                                    "eye_color": "red",
+                                                    "gender": "n/a",
+                                                    "height": "96",
+                                                    "mass": "32",
+                                                    "name": "R2-D2",
+                                                    "skin_color": "white,blue",
+                                                  },
+                                                ],
+                                              }
+                }
                 filterCallback={[Function]}
+                moreCallback={[Function]}
+                showCharacterCallback={[Function]}
 />,
             },
             "ref": null,
@@ -1893,7 +2277,31 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "data": Object {
+                  "next": null,
+                  "previous": "prevURL",
+                  "results": Array [
+                    Object {
+                      "eye_color": "blue",
+                      "gender": "male",
+                      "height": "172",
+                      "mass": "77",
+                      "name": "Luke Skywalker",
+                      "skin_color": "fair",
+                    },
+                    Object {
+                      "eye_color": "red",
+                      "gender": "n/a",
+                      "height": "96",
+                      "mass": "32",
+                      "name": "R2-D2",
+                      "skin_color": "white,blue",
+                    },
+                  ],
+                },
                 "filterCallback": [Function],
+                "moreCallback": [Function],
+                "showCharacterCallback": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -2117,7 +2525,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "0",
+                    "key": "Luke Skywalker",
                     "nodeType": "function",
                     "props": Object {
                       "children": <CharacterCard
@@ -2162,7 +2570,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "1",
+                    "key": "R2-D2",
                     "nodeType": "function",
                     "props": Object {
                       "children": <CharacterCard
@@ -2365,7 +2773,33 @@ ShallowWrapper {
 >
           <GridColumn>
                     <Filters
+                              data={
+                                        Object {
+                                                  "next": "nextURL",
+                                                  "previous": null,
+                                                  "results": Array [
+                                                    Object {
+                                                      "eye_color": "blue",
+                                                      "gender": "male",
+                                                      "height": "172",
+                                                      "mass": "77",
+                                                      "name": "Luke Skywalker",
+                                                      "skin_color": "fair",
+                                                    },
+                                                    Object {
+                                                      "eye_color": "red",
+                                                      "gender": "n/a",
+                                                      "height": "96",
+                                                      "mass": "32",
+                                                      "name": "R2-D2",
+                                                      "skin_color": "white,blue",
+                                                    },
+                                                  ],
+                                                }
+                              }
                               filterCallback={[Function]}
+                              moreCallback={[Function]}
+                              showCharacterCallback={[Function]}
                     />
           </GridColumn>
 </GridRow>,
@@ -2452,7 +2886,33 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn>
             <Filters
+                        data={
+                                    Object {
+                                                "next": "nextURL",
+                                                "previous": null,
+                                                "results": Array [
+                                                  Object {
+                                                    "eye_color": "blue",
+                                                    "gender": "male",
+                                                    "height": "172",
+                                                    "mass": "77",
+                                                    "name": "Luke Skywalker",
+                                                    "skin_color": "fair",
+                                                  },
+                                                  Object {
+                                                    "eye_color": "red",
+                                                    "gender": "n/a",
+                                                    "height": "96",
+                                                    "mass": "32",
+                                                    "name": "R2-D2",
+                                                    "skin_color": "white,blue",
+                                                  },
+                                                ],
+                                              }
+                        }
                         filterCallback={[Function]}
+                        moreCallback={[Function]}
+                        showCharacterCallback={[Function]}
             />
 </GridColumn>,
           "id": "filters-row",
@@ -2464,7 +2924,33 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Filters
+              data={
+                            Object {
+                                          "next": "nextURL",
+                                          "previous": null,
+                                          "results": Array [
+                                            Object {
+                                              "eye_color": "blue",
+                                              "gender": "male",
+                                              "height": "172",
+                                              "mass": "77",
+                                              "name": "Luke Skywalker",
+                                              "skin_color": "fair",
+                                            },
+                                            Object {
+                                              "eye_color": "red",
+                                              "gender": "n/a",
+                                              "height": "96",
+                                              "mass": "32",
+                                              "name": "R2-D2",
+                                              "skin_color": "white,blue",
+                                            },
+                                          ],
+                                        }
+              }
               filterCallback={[Function]}
+              moreCallback={[Function]}
+              showCharacterCallback={[Function]}
 />,
           },
           "ref": null,
@@ -2473,7 +2959,31 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "data": Object {
+                "next": "nextURL",
+                "previous": null,
+                "results": Array [
+                  Object {
+                    "eye_color": "blue",
+                    "gender": "male",
+                    "height": "172",
+                    "mass": "77",
+                    "name": "Luke Skywalker",
+                    "skin_color": "fair",
+                  },
+                  Object {
+                    "eye_color": "red",
+                    "gender": "n/a",
+                    "height": "96",
+                    "mass": "32",
+                    "name": "R2-D2",
+                    "skin_color": "white,blue",
+                  },
+                ],
+              },
               "filterCallback": [Function],
+              "moreCallback": [Function],
+              "showCharacterCallback": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -2697,7 +3207,7 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "0",
+                  "key": "Luke Skywalker",
                   "nodeType": "function",
                   "props": Object {
                     "children": <CharacterCard
@@ -2742,7 +3252,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "1",
+                  "key": "R2-D2",
                   "nodeType": "function",
                   "props": Object {
                     "children": <CharacterCard
@@ -2885,7 +3395,33 @@ ShallowWrapper {
 >
             <GridColumn>
                         <Filters
+                                    data={
+                                                Object {
+                                                            "next": "nextURL",
+                                                            "previous": null,
+                                                            "results": Array [
+                                                              Object {
+                                                                "eye_color": "blue",
+                                                                "gender": "male",
+                                                                "height": "172",
+                                                                "mass": "77",
+                                                                "name": "Luke Skywalker",
+                                                                "skin_color": "fair",
+                                                              },
+                                                              Object {
+                                                                "eye_color": "red",
+                                                                "gender": "n/a",
+                                                                "height": "96",
+                                                                "mass": "32",
+                                                                "name": "R2-D2",
+                                                                "skin_color": "white,blue",
+                                                              },
+                                                            ],
+                                                          }
+                                    }
                                     filterCallback={[Function]}
+                                    moreCallback={[Function]}
+                                    showCharacterCallback={[Function]}
                         />
             </GridColumn>
 </GridRow>,
@@ -2972,7 +3508,33 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn>
               <Filters
+                            data={
+                                          Object {
+                                                        "next": "nextURL",
+                                                        "previous": null,
+                                                        "results": Array [
+                                                          Object {
+                                                            "eye_color": "blue",
+                                                            "gender": "male",
+                                                            "height": "172",
+                                                            "mass": "77",
+                                                            "name": "Luke Skywalker",
+                                                            "skin_color": "fair",
+                                                          },
+                                                          Object {
+                                                            "eye_color": "red",
+                                                            "gender": "n/a",
+                                                            "height": "96",
+                                                            "mass": "32",
+                                                            "name": "R2-D2",
+                                                            "skin_color": "white,blue",
+                                                          },
+                                                        ],
+                                                      }
+                            }
                             filterCallback={[Function]}
+                            moreCallback={[Function]}
+                            showCharacterCallback={[Function]}
               />
 </GridColumn>,
             "id": "filters-row",
@@ -2984,7 +3546,33 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <Filters
+                data={
+                                Object {
+                                                "next": "nextURL",
+                                                "previous": null,
+                                                "results": Array [
+                                                  Object {
+                                                    "eye_color": "blue",
+                                                    "gender": "male",
+                                                    "height": "172",
+                                                    "mass": "77",
+                                                    "name": "Luke Skywalker",
+                                                    "skin_color": "fair",
+                                                  },
+                                                  Object {
+                                                    "eye_color": "red",
+                                                    "gender": "n/a",
+                                                    "height": "96",
+                                                    "mass": "32",
+                                                    "name": "R2-D2",
+                                                    "skin_color": "white,blue",
+                                                  },
+                                                ],
+                                              }
+                }
                 filterCallback={[Function]}
+                moreCallback={[Function]}
+                showCharacterCallback={[Function]}
 />,
             },
             "ref": null,
@@ -2993,7 +3581,31 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "data": Object {
+                  "next": "nextURL",
+                  "previous": null,
+                  "results": Array [
+                    Object {
+                      "eye_color": "blue",
+                      "gender": "male",
+                      "height": "172",
+                      "mass": "77",
+                      "name": "Luke Skywalker",
+                      "skin_color": "fair",
+                    },
+                    Object {
+                      "eye_color": "red",
+                      "gender": "n/a",
+                      "height": "96",
+                      "mass": "32",
+                      "name": "R2-D2",
+                      "skin_color": "white,blue",
+                    },
+                  ],
+                },
                 "filterCallback": [Function],
+                "moreCallback": [Function],
+                "showCharacterCallback": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -3217,7 +3829,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "0",
+                    "key": "Luke Skywalker",
                     "nodeType": "function",
                     "props": Object {
                       "children": <CharacterCard
@@ -3262,7 +3874,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "1",
+                    "key": "R2-D2",
                     "nodeType": "function",
                     "props": Object {
                       "children": <CharacterCard
@@ -3448,7 +4060,16 @@ ShallowWrapper {
 >
           <GridColumn>
                     <Filters
+                              data={
+                                        Object {
+                                                  "next": null,
+                                                  "previous": null,
+                                                  "results": Array [],
+                                                }
+                              }
                               filterCallback={[Function]}
+                              moreCallback={[Function]}
+                              showCharacterCallback={[Function]}
                     />
           </GridColumn>
 </GridRow>,
@@ -3477,7 +4098,16 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn>
             <Filters
+                        data={
+                                    Object {
+                                                "next": null,
+                                                "previous": null,
+                                                "results": Array [],
+                                              }
+                        }
                         filterCallback={[Function]}
+                        moreCallback={[Function]}
+                        showCharacterCallback={[Function]}
             />
 </GridColumn>,
           "id": "filters-row",
@@ -3489,7 +4119,16 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Filters
+              data={
+                            Object {
+                                          "next": null,
+                                          "previous": null,
+                                          "results": Array [],
+                                        }
+              }
               filterCallback={[Function]}
+              moreCallback={[Function]}
+              showCharacterCallback={[Function]}
 />,
           },
           "ref": null,
@@ -3498,7 +4137,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "data": Object {
+                "next": null,
+                "previous": null,
+                "results": Array [],
+              },
               "filterCallback": [Function],
+              "moreCallback": [Function],
+              "showCharacterCallback": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -3592,7 +4238,16 @@ ShallowWrapper {
 >
             <GridColumn>
                         <Filters
+                                    data={
+                                                Object {
+                                                            "next": null,
+                                                            "previous": null,
+                                                            "results": Array [],
+                                                          }
+                                    }
                                     filterCallback={[Function]}
+                                    moreCallback={[Function]}
+                                    showCharacterCallback={[Function]}
                         />
             </GridColumn>
 </GridRow>,
@@ -3621,7 +4276,16 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn>
               <Filters
+                            data={
+                                          Object {
+                                                        "next": null,
+                                                        "previous": null,
+                                                        "results": Array [],
+                                                      }
+                            }
                             filterCallback={[Function]}
+                            moreCallback={[Function]}
+                            showCharacterCallback={[Function]}
               />
 </GridColumn>,
             "id": "filters-row",
@@ -3633,7 +4297,16 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <Filters
+                data={
+                                Object {
+                                                "next": null,
+                                                "previous": null,
+                                                "results": Array [],
+                                              }
+                }
                 filterCallback={[Function]}
+                moreCallback={[Function]}
+                showCharacterCallback={[Function]}
 />,
             },
             "ref": null,
@@ -3642,7 +4315,14 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "data": Object {
+                  "next": null,
+                  "previous": null,
+                  "results": Array [],
+                },
                 "filterCallback": [Function],
+                "moreCallback": [Function],
+                "showCharacterCallback": [Function],
               },
               "ref": null,
               "rendered": null,

@@ -39,31 +39,31 @@ ShallowWrapper {
                     <p
                               id="gender"
                     >
-                              Gender: 
+                              Gender:
                               male
                     </p>
                     <p
                               id="eyes"
                     >
-                              Eye color: 
+                              Eye color:
                               blue
                     </p>
                     <p
                               id="height"
                     >
-                              Height: 
+                              Height:
                               172
                     </p>
                     <p
                               id="mass"
                     >
-                              Mass: 
+                              Mass:
                               77
                     </p>
                     <p
                               id="skin"
                     >
-                              Skin color: 
+                              Skin color:
                               fair
                     </p>
           </ModalDescription>
@@ -99,31 +99,31 @@ ShallowWrapper {
             <p
                         id="gender"
             >
-                        Gender: 
+                        Gender:
                         male
             </p>
             <p
                         id="eyes"
             >
-                        Eye color: 
+                        Eye color:
                         blue
             </p>
             <p
                         id="height"
             >
-                        Height: 
+                        Height:
                         172
             </p>
             <p
                         id="mass"
             >
-                        Mass: 
+                        Mass:
                         77
             </p>
             <p
                         id="skin"
             >
-                        Skin color: 
+                        Skin color:
                         fair
             </p>
 </ModalDescription>,
@@ -138,31 +138,31 @@ ShallowWrapper {
               <p
                 id="gender"
 >
-                Gender: 
+                Gender:
                 male
 </p>,
               <p
                 id="eyes"
 >
-                Eye color: 
+                Eye color:
                 blue
 </p>,
               <p
                 id="height"
 >
-                Height: 
+                Height:
                 172
 </p>,
               <p
                 id="mass"
 >
-                Mass: 
+                Mass:
                 77
 </p>,
               <p
                 id="skin"
 >
-                Skin color: 
+                Skin color:
                 fair
 </p>,
             ],
@@ -175,14 +175,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Gender: ",
+                  "Gender:",
                   "male",
                 ],
                 "id": "gender",
               },
               "ref": null,
               "rendered": Array [
-                "Gender: ",
+                "Gender:",
                 "male",
               ],
               "type": "p",
@@ -193,14 +193,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Eye color: ",
+                  "Eye color:",
                   "blue",
                 ],
                 "id": "eyes",
               },
               "ref": null,
               "rendered": Array [
-                "Eye color: ",
+                "Eye color:",
                 "blue",
               ],
               "type": "p",
@@ -211,14 +211,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Height: ",
+                  "Height:",
                   "172",
                 ],
                 "id": "height",
               },
               "ref": null,
               "rendered": Array [
-                "Height: ",
+                "Height:",
                 "172",
               ],
               "type": "p",
@@ -229,14 +229,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Mass: ",
+                  "Mass:",
                   "77",
                 ],
                 "id": "mass",
               },
               "ref": null,
               "rendered": Array [
-                "Mass: ",
+                "Mass:",
                 "77",
               ],
               "type": "p",
@@ -247,14 +247,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Skin color: ",
+                  "Skin color:",
                   "fair",
                 ],
                 "id": "skin",
               },
               "ref": null,
               "rendered": Array [
-                "Skin color: ",
+                "Skin color:",
                 "fair",
               ],
               "type": "p",
@@ -283,31 +283,31 @@ ShallowWrapper {
                         <p
                                     id="gender"
                         >
-                                    Gender: 
+                                    Gender:
                                     male
                         </p>
                         <p
                                     id="eyes"
                         >
-                                    Eye color: 
+                                    Eye color:
                                     blue
                         </p>
                         <p
                                     id="height"
                         >
-                                    Height: 
+                                    Height:
                                     172
                         </p>
                         <p
                                     id="mass"
                         >
-                                    Mass: 
+                                    Mass:
                                     77
                         </p>
                         <p
                                     id="skin"
                         >
-                                    Skin color: 
+                                    Skin color:
                                     fair
                         </p>
             </ModalDescription>
@@ -343,31 +343,31 @@ ShallowWrapper {
               <p
                             id="gender"
               >
-                            Gender: 
+                            Gender:
                             male
               </p>
               <p
                             id="eyes"
               >
-                            Eye color: 
+                            Eye color:
                             blue
               </p>
               <p
                             id="height"
               >
-                            Height: 
+                            Height:
                             172
               </p>
               <p
                             id="mass"
               >
-                            Mass: 
+                            Mass:
                             77
               </p>
               <p
                             id="skin"
               >
-                            Skin color: 
+                            Skin color:
                             fair
               </p>
 </ModalDescription>,
@@ -382,31 +382,31 @@ ShallowWrapper {
                 <p
                   id="gender"
 >
-                  Gender: 
+                  Gender:
                   male
 </p>,
                 <p
                   id="eyes"
 >
-                  Eye color: 
+                  Eye color:
                   blue
 </p>,
                 <p
                   id="height"
 >
-                  Height: 
+                  Height:
                   172
 </p>,
                 <p
                   id="mass"
 >
-                  Mass: 
+                  Mass:
                   77
 </p>,
                 <p
                   id="skin"
 >
-                  Skin color: 
+                  Skin color:
                   fair
 </p>,
               ],
@@ -419,14 +419,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Gender: ",
+                    "Gender:",
                     "male",
                   ],
                   "id": "gender",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Gender: ",
+                  "Gender:",
                   "male",
                 ],
                 "type": "p",
@@ -437,14 +437,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Eye color: ",
+                    "Eye color:",
                     "blue",
                   ],
                   "id": "eyes",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Eye color: ",
+                  "Eye color:",
                   "blue",
                 ],
                 "type": "p",
@@ -455,14 +455,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Height: ",
+                    "Height:",
                     "172",
                   ],
                   "id": "height",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Height: ",
+                  "Height:",
                   "172",
                 ],
                 "type": "p",
@@ -473,14 +473,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Mass: ",
+                    "Mass:",
                     "77",
                   ],
                   "id": "mass",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Mass: ",
+                  "Mass:",
                   "77",
                 ],
                 "type": "p",
@@ -491,14 +491,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Skin color: ",
+                    "Skin color:",
                     "fair",
                   ],
                   "id": "skin",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Skin color: ",
+                  "Skin color:",
                   "fair",
                 ],
                 "type": "p",

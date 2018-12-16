@@ -43,12 +43,12 @@ describe('Character Modal Test', () => {
     const characterModalHeader = wrapper.find('.header');
     const characterModalContent = wrapper.find('.content .description');
     const expectedHeader = expect.stringMatching(/^.*Luke Skywalker/);
-    const expectedContentGender = expect.stringMatching(/^.*Gender: male/);
-    const expectedContentEyes = expect.stringMatching(/^.*Eye color: blue/);
-    const expectedContentHeight = expect.stringMatching(/^.*Height: 172/);
-    const expectedContentMass = expect.stringMatching(/^.*Mass: 77/);
-    const expectedContentSkin = expect.stringMatching(/^.*Skin color: fair/);
-    
+    const expectedContentGender = expect.stringMatching(/^.*Gender:male/);
+    const expectedContentEyes = expect.stringMatching(/^.*Eye color:blue/);
+    const expectedContentHeight = expect.stringMatching(/^.*Height:172/);
+    const expectedContentMass = expect.stringMatching(/^.*Mass:77/);
+    const expectedContentSkin = expect.stringMatching(/^.*Skin color:fair/);
+
     expect(characterModalHeader.text()).toEqual(expectedHeader);
     expect(characterModalContent.find('#gender').text()).toEqual(expectedContentGender);
     expect(characterModalContent.find('#eyes').text()).toEqual(expectedContentEyes);

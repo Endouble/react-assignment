@@ -2,92 +2,98 @@ import React, { Component } from 'react';
 
 import { Container, Dimmer, Loader, Message } from 'semantic-ui-react';
 
-import CharactersGrid from './../../components/CharactersGrid';
-import CharacterModal from './../../components/CharacterModal';
+import CharactersGrid from '../../components/CharactersGrid';
+import CharacterModal from '../../components/CharacterModal';
 
 const API_URL = 'https://swapi.co/api/people/';
 
 class CharactersGridContainer extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      data: null,
-      isLoading: false,
-      onError: false,
-      selectedCharacter: null
-    }
-  }
-
-  getStarWarsCharacters = (url) => {
-    window.scrollTo(0,0);
-    this.setState({ isLoading: true });
-
-    window.fetch(url)
-      .then(response => response.json())
-      .then((data) => {
-        this.setState({
-          data,
-          isLoading: false,
-          onError: false
-        })
-        return data;
-      })
-      .catch(
-        err => 
-          this.setState({
+        this.state = {
+            data: null,
             isLoading: false,
-            onError: true
-          })
-      )
-  }
+            onError: false,
+            selectedCharacter: null,
+        };
+    }
 
-  filterCharacters = (filter) => {
-    this.getStarWarsCharacters(`${API_URL}?search=${filter.name}`)
-  }
+    componentDidMount() {
+        this.getStarWarsCharacters(API_URL);
+    }
 
-  showCharacterModal = (character) => {
-    this.setState({ selectedCharacter: character });
-  }
+    getStarWarsCharacters = (url) => {
+        window.scrollTo(0, 0);
+        this.setState({ isLoading: true });
 
-  closeCharacterModal = () => {
-    this.setState({ selectedCharacter: null });
-  }
+        window.fetch(url)
+            .then(response => response.json())
+            .then((data) => {
+                this.setState({
+                    data,
+                    isLoading: false,
+                    onError: false,
+                });
+                return data;
+            })
+            .catch(
+                () => this.setState({
+                    isLoading: false,
+                    onError: true,
+                }),
+            );
+    }
 
-  componentDidMount() {
-    this.getStarWarsCharacters(API_URL);
-  }
+    filterCharacters = (filter) => {
+        this.getStarWarsCharacters(`${API_URL}?search=${filter.name}`);
+    }
 
-  render() {
-    const { onError, data, isLoading, selectedCharacter} = this.state;
-    return <Container>
-      <CharactersGrid
-        data={data} 
-        moreCallback={this.getStarWarsCharacters} 
-        showCharacterCallback={this.showCharacterModal} 
-        filterCallback={this.filterCharacters}/>
-      
-      {selectedCharacter?
-        <CharacterModal character={selectedCharacter} onCloseCallback={this.closeCharacterModal} />
-        :null
-      }
+    showCharacterModal = (character) => {
+        this.setState({ selectedCharacter: character });
+    }
 
-      {isLoading?
-        <Dimmer active>
-          <Loader> Loading </Loader>
-        </Dimmer>
-        :null
-      }
+    closeCharacterModal = () => {
+        this.setState({ selectedCharacter: null });
+    }
 
-      {onError?
-        <Message>
-          <p> An error ocurred, please try again later... </p>
-        </Message>
-        :null
-      }
-      
-    </Container>
-  }
-};
+    render() {
+        const { onError, data, isLoading, selectedCharacter } = this.state;
+        return (
+            <Container>
+                <CharactersGrid
+                    data={data}
+                    moreCallback={this.getStarWarsCharacters}
+                    showCharacterCallback={this.showCharacterModal}
+                    filterCallback={this.filterCharacters}
+                />
+
+                {selectedCharacter
+                    ? <CharacterModal character={selectedCharacter} onCloseCallback={this.closeCharacterModal} />
+                    : null
+                }
+
+                {isLoading
+                    ? (
+                        <Dimmer active>
+                            <Loader> Loading </Loader>
+                        </Dimmer>
+                    )
+                    : null
+                }
+
+                {onError
+                    ? (
+                        <Message>
+                            <p> An error ocurred, please try again later... </p>
+                        </Message>
+                    )
+                    : null
+                }
+
+            </Container>
+        );
+    }
+}
 
 export default CharactersGridContainer;

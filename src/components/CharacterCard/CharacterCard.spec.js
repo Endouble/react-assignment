@@ -49,7 +49,7 @@ describe('Character Card Test', () => {
 
   test('Component should call showCharacterModal func on Click over View More link ', () => {
     const wrapper = getCharacterCard();
-    const card = wrapper.find('Card CardContent[extra=true] a');
+    const card = wrapper.find('Card CardContent[extra=true] Button');
     card.simulate('click', { preventDefault: jest.fn() });
     expect(props.showCharacterModal).toHaveBeenCalled();
   });

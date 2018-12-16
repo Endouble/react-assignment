@@ -22,8 +22,10 @@ ShallowWrapper {
       "as": "form",
       "children": Array [
         <FormField>
-          <label>
-                    Search by character's name
+          <label
+                    htmlFor="name"
+          >
+                    Search by name
           </label>
           <input
                     id="name"
@@ -49,8 +51,10 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <label>
-              Search by character's name
+            <label
+              htmlFor="name"
+>
+              Search by name
 </label>,
             <input
               id="name"
@@ -65,10 +69,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Search by character's name",
+              "children": "Search by name",
+              "htmlFor": "name",
             },
             "ref": null,
-            "rendered": "Search by character's name",
+            "rendered": "Search by name",
             "type": "label",
           },
           Object {
@@ -114,8 +119,10 @@ ShallowWrapper {
         "as": "form",
         "children": Array [
           <FormField>
-            <label>
-                        Search by character's name
+            <label
+                        htmlFor="name"
+            >
+                        Search by name
             </label>
             <input
                         id="name"
@@ -141,8 +148,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <label>
-                Search by character's name
+              <label
+                htmlFor="name"
+>
+                Search by name
 </label>,
               <input
                 id="name"
@@ -157,10 +166,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Search by character's name",
+                "children": "Search by name",
+                "htmlFor": "name",
               },
               "ref": null,
-              "rendered": "Search by character's name",
+              "rendered": "Search by name",
               "type": "label",
             },
             Object {

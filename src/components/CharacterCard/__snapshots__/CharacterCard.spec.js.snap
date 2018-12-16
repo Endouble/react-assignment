@@ -33,11 +33,14 @@ ShallowWrapper {
         <CardContent
           extra={true}
 >
-          <a
+          <Button
+                    as="button"
                     onClick={[Function]}
+                    role="link"
+                    tabIndex="0"
           >
                      View More 
-          </a>
+          </Button>
 </CardContent>,
       ],
       "fluid": true,
@@ -74,25 +77,31 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <a
+          "children": <Button
+            as="button"
             onClick={[Function]}
+            role="link"
+            tabIndex="0"
 >
              View More 
-</a>,
+</Button>,
           "extra": true,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
+            "as": "button",
             "children": " View More ",
             "onClick": [Function],
+            "role": "link",
+            "tabIndex": "0",
           },
           "ref": null,
           "rendered": " View More ",
-          "type": "a",
+          "type": [Function],
         },
         "type": [Function],
       },
@@ -114,11 +123,14 @@ ShallowWrapper {
           <CardContent
             extra={true}
 >
-            <a
+            <Button
+                        as="button"
                         onClick={[Function]}
+                        role="link"
+                        tabIndex="0"
             >
                          View More 
-            </a>
+            </Button>
 </CardContent>,
         ],
         "fluid": true,
@@ -155,25 +167,31 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <a
+            "children": <Button
+              as="button"
               onClick={[Function]}
+              role="link"
+              tabIndex="0"
 >
                View More 
-</a>,
+</Button>,
             "extra": true,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
+              "as": "button",
               "children": " View More ",
               "onClick": [Function],
+              "role": "link",
+              "tabIndex": "0",
             },
             "ref": null,
             "rendered": " View More ",
-            "type": "a",
+            "type": [Function],
           },
           "type": [Function],
         },
