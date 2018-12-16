@@ -4,25 +4,25 @@ import { shallow } from 'enzyme';
 import AppHeader from './AppHeader';
 
 describe('Header Test', () => {
-  let shallowHeader;
+    let shallowHeader;
 
-  const getShallowHeader = () => {
-    if (!shallowHeader) {
-      shallowHeader = shallow(<AppHeader />)
-    }
+    const getShallowHeader = () => {
+        if (!shallowHeader) {
+            shallowHeader = shallow(<AppHeader />);
+        }
 
-    return shallowHeader;
-  };
+        return shallowHeader;
+    };
 
-  beforeEach(() => {
-    shallowHeader = undefined;
-  });
+    beforeEach(() => {
+        shallowHeader = undefined;
+    });
 
-  test('Component should render without crashing', () => {
-    expect(getShallowHeader()).toBeDefined();
-  });
+    test('Component should render without crashing', () => {
+        expect(getShallowHeader()).toBeDefined();
+    });
 
-  test('Component should render correctly', () => {
-    expect(getShallowHeader()).toMatchSnapshot();
-  });
+    test('Component should render correctly', () => {
+        expect(getShallowHeader()).toMatchSnapshot();
+    });
 });
