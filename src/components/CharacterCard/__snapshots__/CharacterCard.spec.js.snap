@@ -41,6 +41,8 @@ ShallowWrapper {
 </CardContent>,
       ],
       "fluid": true,
+      "onKeyPress": [Function],
+      "tabIndex": "0",
     },
     "ref": null,
     "rendered": Array [
@@ -120,6 +122,8 @@ ShallowWrapper {
 </CardContent>,
         ],
         "fluid": true,
+        "onKeyPress": [Function],
+        "tabIndex": "0",
       },
       "ref": null,
       "rendered": Array [

@@ -6,7 +6,7 @@ import { Card } from 'semantic-ui-react';
 const CharacterCard = (props) => {
   const showCharacterDetails = () => props.showCharacterModal(props.character);
 
-  return <Card fluid>
+  return <Card fluid tabIndex='0' onKeyPress={showCharacterDetails}>
     <Card.Content>
       <Card.Header>
         { props.character.name }
