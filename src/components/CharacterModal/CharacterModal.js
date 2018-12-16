@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Modal } from 'semantic-ui-react';
 
@@ -19,6 +20,17 @@ const CharacterModal = (props) => {
   </Modal>
 };
 
+CharacterModal.protoTypes = {
+  character: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    eye_color: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    mass: PropTypes.string.isRequired,
+    skin: PropTypes.string.isRequired
+  }).isRequired,
+  onCloseCallback: PropTypes.func.isRequired
+} 
 
 
 export default CharacterModal;
