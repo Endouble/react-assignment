@@ -18,16 +18,14 @@ class Blog extends Component {
     }
 
     componentDidMount () {
-        axios.get( 'https://api.openbrewerydb.org/breweries' )
-        .then( response => {
+        this.fetchData().then(response => {
             this.setState({breweries: response.data, initialBreweries : response.data});
-            // console.log( response );
-        } )
-        .catch(error => {
-            // console.log(error);
-            this.setState({error: true});
         });
     }
+
+    fetchData(){
+        return axios.get( 'https://api.openbrewerydb.org/breweries' )
+    }  
 
     postSelectedHandler = (id) => {
         let selectedBrewery = this.state.breweries.filter(brewery => brewery.id  === id);
