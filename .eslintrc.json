@@ -1,0 +1,7 @@
+{
+  "extends": "@endouble.com/eslint-config-endouble/react",
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
