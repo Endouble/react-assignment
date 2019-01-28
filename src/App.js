@@ -1,8 +1,11 @@
 import React from 'react';
 
+import Grid from './components/Grid';
+import './App.scss';
+
 const App = () => (
     <div className="App">
-            This is a Basic React App Config
+        <Grid />
     </div>
 );
 

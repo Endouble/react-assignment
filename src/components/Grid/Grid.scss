@@ -1,0 +1,41 @@
+@import "../../styles/mixins";
+
+.Grid {
+  display: grid;
+  width: 100%;
+  padding: 20px 40px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+
+  @include sm {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+
+  @include md {
+    padding: 20px 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+
+  @include lg {
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
