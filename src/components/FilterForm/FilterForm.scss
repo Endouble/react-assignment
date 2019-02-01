@@ -1,0 +1,16 @@
+@import "../../assets/colors";
+
+.FilterForm {
+  padding: 15px;
+  background-color: $filter-form-background;
+
+  &__Title {
+    color: $white;
+    text-align: center;
+  }
+
+  > div {
+    max-width: 830px;
+    margin: 0 auto !important;
+  }
+}
